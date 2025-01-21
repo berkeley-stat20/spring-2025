@@ -18,14 +18,14 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#worksheets",
@@ -75,6 +75,27 @@
     "title": "Documentation",
     "section": "",
     "text": "Welcome to the technical documentation of the Stat 20 curriculum and website."
+  },
+  {
+    "objectID": "1-questions-and-data/labs/unvotes/part-2.html",
+    "href": "1-questions-and-data/labs/unvotes/part-2.html",
+    "title": "UN Votes",
+    "section": "",
+    "text": "Answer the following questions in the Quarto document template linked in the slides for the first day of class. Render the document, download the resulting pdf file, and submit it to Gradescope."
+  },
+  {
+    "objectID": "1-questions-and-data/labs/unvotes/part-2.html#the-context-of-the-data",
+    "href": "1-questions-and-data/labs/unvotes/part-2.html#the-context-of-the-data",
+    "title": "UN Votes",
+    "section": "The Context of the Data",
+    "text": "The Context of the Data\nSince its founding in 1946, the United Nation has regularly put forth resolutions that aim to express the will of its members. Impactful historical resolutions have involved the Declaration of Human Rights in 1948, a prohibition on the use of nuclear and thermonuclear weapons in 1968, and the establishment of a no-fly zone in Libya in 2011. After each resolution is proposed, it is voted on in a roll-call vote of the member nations.\nThe data set at hand contains the voting records of every nation in the UN from 1946 - 2019 on three different issues: Colonialism, Human Rights, and Nuclear Weapons."
+  },
+  {
+    "objectID": "1-questions-and-data/labs/unvotes/part-2.html#computing-on-the-data",
+    "href": "1-questions-and-data/labs/unvotes/part-2.html#computing-on-the-data",
+    "title": "UN Votes",
+    "section": "Computing on the Data",
+    "text": "Computing on the Data\n\nQuestion 1\nCreate a data visualization the shows the proportion of “yes” votes over time on three different issues: Colonialism, Human Rights, and Nuclear Weapons. Construct the plot to compare the voting patterns of the United States, the United Kingdom, and one other country of your choosing (not Turkey).\n\n\nQuestion 2\nFormulate two claims about voting behavior that is supported by this graphic. Categorize each claim as begin a summary, generalization, causal claim, or prediction.\n\n\nQuestion 3\nWhat else would you like to learn about this data set or the context of voting at the United Nations that would allow you to make more informed, accurate, thoughtful, and effective claims? List three specific items."
   },
   {
     "objectID": "1-questions-and-data/01-understanding-the-world/notes.html",
@@ -307,6 +328,195 @@
     "title": "Prerequisites",
     "section": "",
     "text": "Prerequisites\nInstall Docker.\nIf you are running on a computer with Apple Silicon (using a new “M” processor), - Update macOS to Venture 13 or newer. - Install Apple’s Rosetta emulation by running softwareupdate --install-rosetta. - In Docker Desktop, enable Settings &gt; Features in development &gt; Use Rosetta for x86/amd64 emulation on Apple Silicon.\nIf you are running Microsoft Windows, - Install WSL. - In a Command or Power Shell window, run wsl --install -d Ubuntu. - In an Ubuntu window, run apt update, then apt install make. - Run exec ssh-agent bash to start your SSH agent.\nCheckout this repository into a new working directory.\n\n\nRun the Container\nIn a terminal window, change into the working directory and run make up. This initializes your environment by creating the file .env. It then runs docker compose.\nWhen your environment changes, for example if you log out and back in, or if you manually copy your working directory to another platform, run make clean or manually delete the .env file. Then run make up.\n\n\nBuild a Custom Image (WIP)\nThe container is normally built automatically by a CI process on GitHub Actions. If you need to alter the image, for example if you want to locally test a new library addition, you can do the following:\n\nCheckout the https://github.com/stat20/stat20-docker repository.\nMake any changes\nRun docker build -t somename:sometag .. If on an alternative hardware platform like Apple’s ARM (modern Apple computers), you can run docker build -t somename:sometag --platform linux/amd64 ..\nCreate a new file names docker-compose.override.yml with the following contents:\n\nversion: \"3.8\"\nservices:\n  stat20:\n    image: somename:sometag"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#agenda",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#agenda",
+    "title": "Understanding the World with Data",
+    "section": "Agenda",
+    "text": "Agenda\n\nIntroductions\nThe Data Science Lifecycle\nTypes of Claims with Practice\nCourse Structure and Syllabus\nIntro to R and RStudio\nLooking forward"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "What’s going on here?"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-2",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-2",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "As a group, formulate at least three possible explanations for what’s going on in the picture.\n\n\n\n\n  \n    −\n    +\n \n 03:00"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-4",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-4",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "These three photos were taken in quick succession by a physician and amateur photographer who was vising the San Diego Zoo Safari Park. He was watching the shoebill as it was walking down a path in the reeds. As the shoebill was ambling along, it encountered a duck in the middle of the path. It leaned down, picked up the duck in its beak, turned to the side, dropped the duck in the reeds, then proceeded to amble down the path."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-5",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-5",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "Understand\nthe World\n\n\n\nData"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-6",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-6",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "Understand\nthe World\n\n\n\nData"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#takeaways-from-this-exercise",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#takeaways-from-this-exercise",
+    "title": "Understanding the World with Data",
+    "section": "Takeaways from this exercise",
+    "text": "Takeaways from this exercise\nWe can call the process of:\n\nhaving a question,\n\n\n\nfinding data to investigate that question,\n\n\n\n\nreaching a conclusion,\n\n\n\n\nand then thinking of a next step which starts everything over again\n\n\n\n\nthe data science lifecycle.\n\nThis lifecycle involves constructing and critiquing claims made using data: which is the main goal of our course!"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#course-goal",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#course-goal",
+    "title": "Understanding the World with Data",
+    "section": "Course Goal",
+    "text": "Course Goal\n\n\nTo learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-7",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-7",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-8",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-8",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-9",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-9",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-10",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-10",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-11",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-11",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-12",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-12",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-13",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-13",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A numerical, graphical, or verbal description of an aspect of data that is on hand.\n\n\n\n\n\n\nExample\nUsing data from the Stat 20 class survey, the proportion of respondents to the survey who reported having no experience writing computer code is 70%."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-14",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-14",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A numerical, graphical, or verbal description of a broader set of units than those on which data was been recorded.\n\n\n\n\n\n\n\nExample\nUsing data from the Stat 20 class survey, the proportion of Berkeley students who have no experience writing computer code is 70%."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-15",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-15",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A claim that changing the value of one variable will influence the value of another variable.\n\n\n\n\n\n\nExample\nData from a randomized controlled experiment shows that taking a new antibiotic eliminates more than 99% of bacterial infections."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-16",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-16",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A guess about the value of an unknown variable, based on other known variables.\n\n\n\n\n\n\nExample\nBased on reading the news and the price of Uber’s stock today, I predict that Uber’s stock price will go up 1.2% tomorrow."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#practice-concept-questions-1",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#practice-concept-questions-1",
+    "title": "Understanding the World with Data",
+    "section": "Practice Concept Questions",
+    "text": "Practice Concept Questions\nWe will now re-examine a few pathways in the data science lifecycle:\n\nForming a question -&gt; collecting data\n\n\n\nCollecting data -&gt; making a claim"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#from-questions-to-data",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#from-questions-to-data",
+    "title": "Understanding the World with Data",
+    "section": "From Questions to Data",
+    "text": "From Questions to Data\n\n\nIs the incidence of COVID on campus going up or down?\n\n\n\n\nDiscuss:\nA. What type of data can help answer this question? Consider\n\nWhich different people / institutions collect relevant data\nIs certain data not available? Why not?\n\nB. Will this question be answered by a summary, a prediction, a generalization, or a causal claim?\n\n\n  \n    −\n    +\n \n 06:00"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#from-data-to-claims",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#from-data-to-claims",
+    "title": "Understanding the World with Data",
+    "section": "From Data to Claims",
+    "text": "From Data to Claims\nOne source of data:\n\n\n\n\n\n“The following dashboard provides information on COVID-19 testing performed at University Health Services or through the PCR Home Test Vending Machines on campus. It does not capture self-reported positive tests. It provides a look at new cases and trends, at a glance.”"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-17",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-17",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "The screenshot above is from https://calviz.berkeley.edu/t/COVIDRecoveryPublic/views/UHSCovidData/UHSDashboard?%3Aiid=3&%3AisGuestRedirectFromVizportal=y&%3Aembed=y and the orange line is campuswide rates. The grey lines are students living on campus, off-campus, or in family housing.\n\n\nFormulate one claim that is supported by this data1.\n\n\n  \n    −\n    +\n \n 03:00\n \nThe positivity rate is the number of positive tests over the total number of tests."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-23",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-23",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "Read lecture notes\nWork through reading questions\n\n\n\n\n\nWork through concept questions solo / in groups / as a class\nMake progress on assignments"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-24",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-24",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "All of the materials and links for the course can be found at:\nhttps://stat20.berkeley.edu/spring-2025\n\n\n\nShow them the shortcuts at the top right of the course page. Explain that the notes will be made available a couple of days before they are scheduled to be covered. They should read the notes, and complete the reading questions the night before lecture. Then, in class, we will review the concepts and work on conceptual problems (worksheets) or coding (labs). The first part of each lab is also conceptual in which we think about the data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#ed-discussion-forum",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#ed-discussion-forum",
+    "title": "Understanding the World with Data",
+    "section": "Ed Discussion Forum",
+    "text": "Ed Discussion Forum\n\n\n\n\n\nForum to ask questions, answer questions, and course announcements\nPlease answer each other’s questions!\n\n\nPractice by asking/answering a question on the “Syllabus Discussion” thread on Ed via the link on the course website.\n\n\nMake a syllabus discussion thread for your class as they begin reading the syllabus, so that they can ask their question there."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#load-the-lab-1-template-into-rstudio",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#load-the-lab-1-template-into-rstudio",
+    "title": "Understanding the World with Data",
+    "section": "Load the Lab 1 Template into RStudio",
+    "text": "Load the Lab 1 Template into RStudio\nClick the link below…\n\n\n\n\nLoad Lab Templates into RStudio"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#general-lab-workflow",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#general-lab-workflow",
+    "title": "Understanding the World with Data",
+    "section": "General Lab Workflow",
+    "text": "General Lab Workflow\n\nLab Questions will be posted to the course website.\nYou’ll author your Lab Reports as Quarto Documents that blend text and code. They should contain only answers.\nRender your .qmd file to a .pdf file then download that file from RStudio to your computer.\nGo to Gradescope and upload your .pdf lab report, being sure to assign questions to the pages."
   },
   {
     "objectID": "docs/slides.html",

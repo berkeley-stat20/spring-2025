@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-project','listing-course-name','listing-semester','listing-site-url','listing-website','listing-format','listing-execute','listing-language','listing-drafts','listing-title','listing-image','listing-sidebar','listing-path','listing-outputHref','listing-date','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-type','listing-sub-type','listing-href','listing-unit','listing-topic','listing-display-date','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-project","listing-course-name","listing-semester","listing-site-url","listing-website","listing-format","listing-execute","listing-language","listing-drafts","listing-title","listing-image","listing-sidebar","listing-path","listing-outputHref","listing-date","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-type","listing-sub-type","listing-href","listing-unit","listing-topic","listing-display-date","listing-draft"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -230,9 +230,6 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <div id="quarto-announcement" data-announcement-id="987d214ace333913a153c6bca7785b6d" class="alert alert-warning hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>Course website under construction until the first day of class!</p>
-</div></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -267,6 +264,20 @@ window.Quarto = {
 <div id="listing-lab-listing" class="quarto-listing quarto-listing-container-custom">
 
 <div class="grid text-center list">
+
+<div class="g-col-12 g-col-sm-6 g-col-md-4">
+<div class="card hovercard">
+<img src="./1-questions-and-data/labs/unvotes/images/un-logo.png" class="card-img-top" loading="lazy" style="border-radius: 40%;" fig-alt="UN Votes logo">
+<div class="card-body">
+<span class="card-title listing-title" style="font-weight: bold;">Lab 1: UN Votes</span><br>
+
+  
+    <a href="./1-questions-and-data/labs/unvotes/part-2.html" class="badge Part-II-badge">Part II</a>
+  
+
+</div>
+</div>
+</div>
 
 </div>
 
