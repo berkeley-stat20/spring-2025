@@ -1,38 +1,52 @@
 [
   {
-    "objectID": "office-hours.html",
-    "href": "office-hours.html",
-    "title": "Office Hours and Group Tutoring",
+    "objectID": "assets/final-exam-slide.html#section",
+    "href": "assets/final-exam-slide.html#section",
+    "title": "Final Exam",
     "section": "",
-    "text": "Office Hours and Group Tutoring\nPlease stop by introduce yourself! Stat 20 offers two types of session to ask chat about the course in person but outside of class.\nInstructor office hours are useful for to discuss topics that come in the reading or broader questions about statistics and data science. They are also a fine place to ask questions about the assignments you’re working on. Please attend only your instructor’s office hours.\nGroup tutoring (GT) sessions are held throughout the week on the 3rd floor of Evans Hall. They’re a great place to work on your assignments with fellow students and seek the help of tutors whenever you get stuck. One thing to know: tutors will expect that you have done the reading and generally been attending class; this is not meant to replace class time.\nYou’re welcome to attend whichever GT sessions work best for your schedule."
+    "text": "Before the exam begins\n\n🧹 Clear your desk of everything except a pen/pencil, your cheat sheet, and your ID.\n🧢 Remove hats, hoods, and sunglasses.\n📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period. All items should be on the floor not on nearby seats.\nSpread out as much as possible. We may reseat you to space people out.\nWhen you get an exam, do not begin.\n\n\nDuring the exam\n\n✅ All answers must be marked on the answer sheet.\n👀 If a proctor sees your eyes wandering to other students’ work, you will be reseated. If it happens again, it is considered academic misconduct.\nIf you need to use the bathroom, bring phone and exam materials to the front of the class.\n⌛ When you are done with this exam, please bring your exam, answer sheet, and cheat sheet to a proctor at the front of the class.\n\n\nGood luck! 🍀\n\n\n\n−+\n90:00\n\n\n\n\n\n\n−+\n90:00"
   },
   {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Prerequisites",
     "section": "",
-    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License.\nThe source materials for the curriculum for this course and the software that builds this website are available under at:\nhttps://github.com/stat20/stat20"
+    "text": "Prerequisites\nInstall Docker.\nIf you are running on a computer with Apple Silicon (using a new “M” processor), - Update macOS to Venture 13 or newer. - Install Apple’s Rosetta emulation by running softwareupdate --install-rosetta. - In Docker Desktop, enable Settings &gt; Features in development &gt; Use Rosetta for x86/amd64 emulation on Apple Silicon.\nIf you are running Microsoft Windows, - Install WSL. - In a Command or Power Shell window, run wsl --install -d Ubuntu. - In an Ubuntu window, run apt update, then apt install make. - Run exec ssh-agent bash to start your SSH agent.\nCheckout this repository into a new working directory.\n\n\nRun the Container\nIn a terminal window, change into the working directory and run make up. This initializes your environment by creating the file .env. It then runs docker compose.\nWhen your environment changes, for example if you log out and back in, or if you manually copy your working directory to another platform, run make clean or manually delete the .env file. Then run make up.\n\n\nBuild a Custom Image (WIP)\nThe container is normally built automatically by a CI process on GitHub Actions. If you need to alter the image, for example if you want to locally test a new library addition, you can do the following:\n\nCheckout the https://github.com/stat20/stat20-docker repository.\nMake any changes\nRun docker build -t somename:sometag .. If on an alternative hardware platform like Apple’s ARM (modern Apple computers), you can run docker build -t somename:sometag --platform linux/amd64 ..\nCreate a new file names docker-compose.override.yml with the following contents:\n\nversion: \"3.8\"\nservices:\n  stat20:\n    image: somename:sometag"
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Assignments",
+    "objectID": "glossary-fns.html",
+    "href": "glossary-fns.html",
+    "title": "Functions",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Questions and Data"
   },
   {
-    "objectID": "assignments.html#labs",
-    "href": "assignments.html#labs",
-    "title": "Assignments",
+    "objectID": "docs/slides.html",
+    "href": "docs/slides.html",
+    "title": "Slides",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Be sure your personal fork of the course-materials is up to date by syncing it to the one on github.com/stat20.\nPull the most recent changes from your fork to your local machine.\nMake changes to slides.qmd and save.\n\n\n\n\nQuarto Pub is a free service for publishing quarto documents, including slides, online. Start by setting up an account at https://quartopub.com/.\n\nOnce you are set up with an account, in the terminal, navigate to the directory that contains your slides, for example: cd summarizing-numerical-data.\nOpen slides.qmd and, ensure that under revealjs: that you add the option self-contained: true. (read more here)\nIn that directory run:\n\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\n\nYou may be prompted to answer a few questions at the terminal. If it successfully published, it will provide a link to your published document\nAt this point, you’re all set!\n\nIf you’d like to learn more about publishing with Quarto Pub, see the official documentation.\n\n\n\nTest it out by working in a much simpler directory than course-materials, one called practice-repo. Since you won’t be pushing any commits back up to GitHub, you don’t need a create your own fork.\n\nCreate a new project in Rstudio from a version control repository and paste in https://github.com/stat20/practice-repo for the url.\nModify slides.qmd in the summarizing-numerical-data directory by, say, replacing \"Instructor\" with your name in the header.\nIn the terminal, navigate into the sub-directory with the slides: cd summarizing-numerical-data\nStill at the terminal, publish your slides:\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\nClick through any prompts you might see at the terminal.\nIf it publishes successfully, the terminal will print a link to your published document. Visit that site and check the link at the top that it says that it has been “Published at …”. It should appear as &lt;user_name&gt;.quarto.pub/summarizing-categorical-data/."
   },
   {
-    "objectID": "assignments.html#worksheets",
-    "href": "assignments.html#worksheets",
-    "title": "Assignments",
-    "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\n\nNo matching items"
+    "objectID": "docs/slides.html#modifying-your-own-slides",
+    "href": "docs/slides.html#modifying-your-own-slides",
+    "title": "Slides",
+    "section": "",
+    "text": "Be sure your personal fork of the course-materials is up to date by syncing it to the one on github.com/stat20.\nPull the most recent changes from your fork to your local machine.\nMake changes to slides.qmd and save."
+  },
+  {
+    "objectID": "docs/slides.html#publishing-your-own-slides",
+    "href": "docs/slides.html#publishing-your-own-slides",
+    "title": "Slides",
+    "section": "",
+    "text": "Quarto Pub is a free service for publishing quarto documents, including slides, online. Start by setting up an account at https://quartopub.com/.\n\nOnce you are set up with an account, in the terminal, navigate to the directory that contains your slides, for example: cd summarizing-numerical-data.\nOpen slides.qmd and, ensure that under revealjs: that you add the option self-contained: true. (read more here)\nIn that directory run:\n\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\n\nYou may be prompted to answer a few questions at the terminal. If it successfully published, it will provide a link to your published document\nAt this point, you’re all set!\n\nIf you’d like to learn more about publishing with Quarto Pub, see the official documentation."
+  },
+  {
+    "objectID": "docs/slides.html#test-it-out",
+    "href": "docs/slides.html#test-it-out",
+    "title": "Slides",
+    "section": "",
+    "text": "Test it out by working in a much simpler directory than course-materials, one called practice-repo. Since you won’t be pushing any commits back up to GitHub, you don’t need a create your own fork.\n\nCreate a new project in Rstudio from a version control repository and paste in https://github.com/stat20/practice-repo for the url.\nModify slides.qmd in the summarizing-numerical-data directory by, say, replacing \"Instructor\" with your name in the header.\nIn the terminal, navigate into the sub-directory with the slides: cd summarizing-numerical-data\nStill at the terminal, publish your slides:\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\nClick through any prompts you might see at the terminal.\nIf it publishes successfully, the terminal will print a link to your published document. Visit that site and check the link at the top that it says that it has been “Published at …”. It should appear as &lt;user_name&gt;.quarto.pub/summarizing-categorical-data/."
   },
   {
     "objectID": "docs/assignments.html",
@@ -56,11 +70,463 @@
     "text": "Labs\n\n\n\n\n\n\nWarning\n\n\n\nUnder Construction"
   },
   {
-    "objectID": "docs/index.html",
-    "href": "docs/index.html",
-    "title": "Documentation",
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "R Tutorials",
     "section": "",
-    "text": "Welcome to the technical documentation of the Stat 20 curriculum and website."
+    "text": "Tutorials serve to introduce you to the fundamentals of the R language.",
+    "crumbs": [
+      "Tutorials",
+      "R Tutorials"
+    ]
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#agenda",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#agenda",
+    "title": "Understanding the World with Data",
+    "section": "Agenda",
+    "text": "Agenda\n\nIntroductions\nThe Data Science Lifecycle\nTypes of Claims with Practice\nCourse Structure and Syllabus\nIntro to R and RStudio\nLooking forward"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "What’s going on here?"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-2",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-2",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "As a group, formulate at least three possible explanations for what’s going on in the picture.\n\n\n\n\n  \n    −\n    +\n \n 03:00"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-4",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-4",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "These three photos were taken in quick succession by a physician and amateur photographer who was vising the San Diego Zoo Safari Park. He was watching the shoebill as it was walking down a path in the reeds. As the shoebill was ambling along, it encountered a duck in the middle of the path. It leaned down, picked up the duck in its beak, turned to the side, dropped the duck in the reeds, then proceeded to amble down the path."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-5",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-5",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "Understand\nthe World\n\n\n\nData"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-6",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-6",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "Understand\nthe World\n\n\n\nData"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#takeaways-from-this-exercise",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#takeaways-from-this-exercise",
+    "title": "Understanding the World with Data",
+    "section": "Takeaways from this exercise",
+    "text": "Takeaways from this exercise\nWe can call the process of:\n\nhaving a question,\n\n\n\nfinding data to investigate that question,\n\n\n\n\nreaching a conclusion,\n\n\n\n\nand then thinking of a next step which starts everything over again\n\n\n\n\nthe data science lifecycle.\n\nThis lifecycle involves constructing and critiquing claims made using data: which is the main goal of our course!"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#course-goal",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#course-goal",
+    "title": "Understanding the World with Data",
+    "section": "Course Goal",
+    "text": "Course Goal\n\n\nTo learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-7",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-7",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-8",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-8",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-9",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-9",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-10",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-10",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-11",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-11",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-12",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-12",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "To learn to critique and construct\nclaims made using data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-13",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-13",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A numerical, graphical, or verbal description of an aspect of data that is on hand.\n\n\n\n\n\n\nExample\nUsing data from the Stat 20 class survey, the proportion of respondents to the survey who reported having no experience writing computer code is 70%."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-14",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-14",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A numerical, graphical, or verbal description of a broader set of units than those on which data was been recorded.\n\n\n\n\n\n\n\nExample\nUsing data from the Stat 20 class survey, the proportion of Berkeley students who have no experience writing computer code is 70%."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-15",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-15",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A claim that changing the value of one variable will influence the value of another variable.\n\n\n\n\n\n\nExample\nData from a randomized controlled experiment shows that taking a new antibiotic eliminates more than 99% of bacterial infections."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-16",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-16",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "A guess about the value of an unknown variable, based on other known variables.\n\n\n\n\n\n\nExample\nBased on reading the news and the price of Uber’s stock today, I predict that Uber’s stock price will go up 1.2% tomorrow."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#practice-concept-questions-1",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#practice-concept-questions-1",
+    "title": "Understanding the World with Data",
+    "section": "Practice Concept Questions",
+    "text": "Practice Concept Questions\nWe will now re-examine a few pathways in the data science lifecycle:\n\nForming a question -&gt; collecting data\n\n\n\nCollecting data -&gt; making a claim"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#from-questions-to-data",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#from-questions-to-data",
+    "title": "Understanding the World with Data",
+    "section": "From Questions to Data",
+    "text": "From Questions to Data\n\n\nIs the incidence of COVID on campus going up or down?\n\n\n\n\nDiscuss:\nA. What type of data can help answer this question? Consider\n\nWhich different people / institutions collect relevant data\nIs certain data not available? Why not?\n\nB. Will this question be answered by a summary, a prediction, a generalization, or a causal claim?\n\n\n  \n    −\n    +\n \n 06:00"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#from-data-to-claims",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#from-data-to-claims",
+    "title": "Understanding the World with Data",
+    "section": "From Data to Claims",
+    "text": "From Data to Claims\nOne source of data:\n\n\n\n\n\n“The following dashboard provides information on COVID-19 testing performed at University Health Services or through the PCR Home Test Vending Machines on campus. It does not capture self-reported positive tests. It provides a look at new cases and trends, at a glance.”"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-17",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-17",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "The screenshot above is from https://calviz.berkeley.edu/t/COVIDRecoveryPublic/views/UHSCovidData/UHSDashboard?%3Aiid=3&%3AisGuestRedirectFromVizportal=y&%3Aembed=y and the orange line is campuswide rates. The grey lines are students living on campus, off-campus, or in family housing.\n\n\nFormulate one claim that is supported by this data1.\n\n\n  \n    −\n    +\n \n 03:00\n \nThe positivity rate is the number of positive tests over the total number of tests."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-23",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-23",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "Read lecture notes\nWork through reading questions\n\n\n\n\n\nWork through concept questions solo / in groups / as a class\nMake progress on assignments"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-24",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-24",
+    "title": "Understanding the World with Data",
+    "section": "",
+    "text": "All of the materials and links for the course can be found at:\nhttps://stat20.berkeley.edu/spring-2025\n\n\n\nShow them the shortcuts at the top right of the course page. Explain that the notes will be made available a couple of days before they are scheduled to be covered. They should read the notes, and complete the reading questions the night before lecture. Then, in class, we will review the concepts and work on conceptual problems (worksheets) or coding (labs). The first part of each lab is also conceptual in which we think about the data."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#ed-discussion-forum",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#ed-discussion-forum",
+    "title": "Understanding the World with Data",
+    "section": "Ed Discussion Forum",
+    "text": "Ed Discussion Forum\n\n\n\n\n\nForum to ask questions, answer questions, and course announcements\nPlease answer each other’s questions!\n\n\nPractice by asking/answering a question on the “Syllabus Discussion” thread on Ed via the link on the course website.\n\n\nMake a syllabus discussion thread for your class as they begin reading the syllabus, so that they can ask their question there."
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#load-the-lab-1-template-into-rstudio",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#load-the-lab-1-template-into-rstudio",
+    "title": "Understanding the World with Data",
+    "section": "Load the Lab 1 Template into RStudio",
+    "text": "Load the Lab 1 Template into RStudio\nClick the link below…\n\n\n\n\nLoad Lab Templates into RStudio"
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#general-lab-workflow",
+    "href": "1-questions-and-data/01-understanding-the-world/slides.html#general-lab-workflow",
+    "title": "Understanding the World with Data",
+    "section": "General Lab Workflow",
+    "text": "General Lab Workflow\n\nLab Questions will be posted to the course website.\nYou’ll author your Lab Reports as Quarto Documents that blend text and code. They should contain only answers.\nRender your .qmd file to a .pdf file then download that file from RStudio to your computer.\nGo to Gradescope and upload your .pdf lab report, being sure to assign questions to the pages."
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html",
+    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html",
+    "title": "The Taxonomy of Data",
+    "section": "",
+    "text": "In the beginning was data, and from that data was built an understanding of the world.\nIn the beginning was understanding, and from that understanding sprung questions that sought to be answered with data.\nSo, which is it?\nThis is a philosophical question and it is up for debate. What is clearer is that in the process of engaging in data science, you will inevitably find yourself at one of these beginnings, puzzling over how to make your way to the other one.\nThe defining element of data science is the centrality of data as the means of advancing our understanding of the world. The word “data” is used in many different ways, so let’s write down a definition to get everyone on the same page.\nThis broad definition permits a staggering diversity in the forms that data can take. When you conducted a chemistry experiment in high school and recorded your measurements in a table in a lab notebook, that was data. When you registered for this class and your name showed on CalCentral, that was data. When the James Webb Space Telescope took a photo of the distant reaches of our solar system, recording levels of light pixel-by-pixel, that was data.\nSuch diversity in data is more precisely described as diversity in the types of variables that are being measured in a data set.\nIn your chemistry notebook you may have recorded the temperature and pressure of a unit of gas, two variables that are of scientific interest. In the CalCentral data set, name is the variable that was recorded (on you!) but you can imagine other variables that the registrars office might have recorded: your year at Cal, your major, etc. Each of these are called variables because the value that is measured generally varies as you move from one object to the next. While your value of the name variable might be Penelope, if we record the same variable on another student we’ll likely come up with different value.",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "The Taxonomy of Data"
+    ]
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-taxonomy-of-data",
+    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-taxonomy-of-data",
+    "title": "The Taxonomy of Data",
+    "section": "A Taxonomy of Data",
+    "text": "A Taxonomy of Data\nWhile the range of variables that we can conceive of is innumerable, there are recurring patterns in those variables that allow us to group them into persistent types that have shared properties. Such a practice of classification results in a taxonomy, which has been applied most notably in evolutionary biology to classify all forms of life.\nWithin the realm of data, an analogous taxonomy has emerged.\n\n\n\n\n\n\nFigure 2: the Taxonomy of Data.\n\n\n\n\nTypes of Variables\nThe principle quality of a variable is whether it is numerical or categorical.\n\n\nNumerical Variable\n\nA variable that take numbers as values and where the magnitude of the number has a quantitative meaning.\n\n\n\n\n\nCategorical Variable\n\nA variable that take categories as values. Each unique category is called a level.\n\n\n\nWhen most people think “data” they tend to think about numerical variables (like the temperature and pressure recorded in your lab notebook) but categorical variables (like the name recorded on CalCentral) are very common.\nAll numerical variables can be classified as either continuous or discrete.\n\n\nContinuous Numerical Variable\n\nA numerical variable that takes values on an interval of the real number line.\n\n\n\n\n\nDiscrete Numerical Variable\n\nA numerical variable that takes values that have jumps between them.\n\n\n\nA good example of a continuous numerical variable is temperature. If we are measuring outside air temperature on Earth in Fahrenheit, it is possible that we would record values anywhere from around -125 degrees F and +135 degrees F. While we might end up rounding our measurement to the nearest integer degree, we can imagine that the phenomenon of temperature itself varies smoothly and continuously across this range.\nA good example of a discrete numerical variable is household size. When the US Census goes door-to-door every year collecting data on every household, they record the number of people living in that household. A household can have 1 person, or 2 people, or 3 people, or 4 people, and so on, but it cannot have 2.83944 people. This makes it discrete.\nWhat unites both types of numerical variables is that the magnitude of the numbers have meaning and you can perform mathematical operations on them and the result also has meaning. It is possible and meaningful to talk about the average air temperature across three locations. It is also possible and meaningful to talk about the sum total number of people across ten households.\nThe ability to perform mathematical operations drops away when we move to ordinal variables. All categorical variables can be classified as either ordinal or nominal.\n\n\nOrdinal Categorical Variable\n\nA categorical variable with levels that have a natural ordering.\n\n\n\n\n\nNominal Categorical Variable\n\nA categorical variable with levels with no ordering.\n\n\n\nYou have likely come across ordinal categorical variables if you have taken an opinion survey. Consider the question:“Do you strongly agree, agree, feel neutral about, disagree, or strongly disagree with the following statement: Dogs are better than cats?” When you record answers to this question, you’re recording measurements on a categorical variable that takes values “strongly agree”, “agree”, “neutral”, “disagree”, “strongly disagree”. Those are the levels of the categorical variable and they have a natural ordering: “strongly agree” is closer to “agree” than it is to “strongly disagree”.\nYou can contrast this with a nominal categorical variable. Consider a second question that asks (as the registrar does): “What is your name?” There are many more possible levels in this case - “Penelope”, “David”, “Shobhana”, etc. - but those levels have no natural ordering. In fact this is very appropriate example of a nominal variable because the word itself derives from the Latin nomen, or “name”.\nLet’s take a look at a real data set to see if we can identify the variables and their types.\n\n\nExample: Palmer Penguins\nDr. Kristen Gorman is a fisheries and wildlife ecologist at the University of Alaska, Fairbanks whose work brought her to Palmer Station, a scientific research station run by the National Science Foundation in Antarctica. At Palmer Station, she took part in a long-term study to build an understanding of the breeding ecology and population structure of penguins.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Dr. Gorman recording measurements on penguins and Palmer Station, a research station in Antarctica.\n\n\n\nIn order to build her understanding of this community of penguins, she and fellow scientists spent time in the field recording measurements on a range of variables that capture important physical characteristics.\n\n\n\nTwo of the variables that were recorded were bill length and bill depth1. Each of these capture a dimension of the bill of a penguin recorded in millimeters These are identifiable as continuous numerical variables. They’re numerical because the values have quantitative meaning and they’re continuous because bill sizes don’t come in fixed, standard increments. They vary continuously.\nAnother variable that was recorded was the species of the penguin, either “Adelie”, “Gentoo”, or “Chinstrap”. Because these values are categories, this is a categorical variable. More specifically, it’s a nominal categorical because there is no obvious natural ordering between these three species.\n\n\n\nThese are just three of many variables that recorded in the penguins data set and published along their scientific findings in the paper, Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis)2. We will return throughout this course to this data set and this study. It is a prime example of how careful data collection and careful scientific reasoning can expand our understanding of a corner of our world about which we know very little.\n\n\nWhy Types Matter\nThe Taxonomy of Data is a useful tool of statistics and data science because it helps guide the manner in which data is recorded, visualized, and analyzed. Many confusing plots have been made by not thinking carefully about whether a categorical variable is ordinal or not or by mistaking a continuous numerical variable for a categorical variable. You will get plenty of practice using this taxonomy to guide your data visualization in the next unit.\nLike many tools built by scientists, though, this taxonomy isn’t perfect. There are many variables that don’t quite seem to fit into the taxonomy or that you can argue should fit into multiple types. That’s usually a sign that something interesting is afoot and is all the more reason to think carefully about the nature of the variables and the values it might take before diving into your analysis.",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "The Taxonomy of Data"
+    ]
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-structure-for-data-the-data-frame",
+    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-structure-for-data-the-data-frame",
+    "title": "The Taxonomy of Data",
+    "section": "A Structure for Data: The Data Frame",
+    "text": "A Structure for Data: The Data Frame\nWhen we seek to grow our understanding of a phenomenon, sometimes we select a single variable that we go out and collect data on. More often, we’re dealing with more complex phenomenon that are characterized by a few, or a few dozen, or hundreds (or even millions!) of variables. CalCentral has far more than just your name on file. To capture all of the complexity of class registration at Cal, it is necessary to record dozens of variables.\nTo keep all of this data organized, we need a structure. While there are several different ways to structure a given data set, the format that has become most central to data science is the data frame.\n\n\nData Frame\n\nAn array that associates the observations (downs the rows) with the variables measured on each observation (across the columns). Each cell stores a value observed for a variable on an observation.\n\n\n\nWhile this definition might seem opaque, you are already familiar with a data frame. You are you just more accustomed to seeing it laid out this like this:\n\n\n\n\n\nbill_length_mm\nbill_depth_mm\nspecies\n\n\n\n\n43.5\n18.1\nChinstrap\n\n\n48.1\n15.1\nGentoo\n\n\n49.0\n19.5\nChinstrap\n\n\n45.4\n18.7\nChinstrap\n\n\n34.6\n21.1\nAdelie\n\n\n49.8\n17.3\nChinstrap\n\n\n40.9\n18.9\nAdelie\n\n\n45.3\n13.7\nGentoo\n\n\n\n\n\n\n\nYou might be accustomed to calling this a “spreadsheet” or a “table”, but the organizational norm of putting the variables down the columns and the observations across the rows make this a more specific structure.\nOne of the first questions that you should address when you first come across a data frame is to determine what the unit of observation is.\n\n\nUnit of Observation\n\nThe class of object on which the variables are observed.\n\n\n\nIn the case of data frame above, the unit of observation is a single penguin near Palmer Station. The first row captures the measurements on the first penguin, the second row captures the measurements of the second penguin, and so on. If I log into CalCentral to see the data frame that records information on the students enrolled in this class, the unit of observation is a single student enrolled in this class.\n\nNot a Data Frame\nBefore you leave thinking that “data frame” = “spreadsheet”, consider this data set:\n\n\n\n\n\nFor it to be a data frame, we would have to read across the columns and see the names of the variables. You can imagine recording whether or not an alien is green or blue, but those variables would take the values “yes” and “no”, not the counts that we see here. Furthermore, total is not a variable that we’ve recorded a single unit; this column captures aggregate properties of the whole data set.\nWhile this structure might well be called a “table” or possibly a “spreadsheet”, it doesn’t meet our definition for a data frame.",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "The Taxonomy of Data"
+    ]
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#summary",
+    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#summary",
+    "title": "The Taxonomy of Data",
+    "section": "Summary",
+    "text": "Summary\nIn this lecture note we have focused on the nature of the data that will serve as the currency from which we’ll construct an improved understanding of the world. A first step is to identify the characteristics of the variables that are being measured and determine their type within the Taxonomy of Data. A second step is to organize them into a data frame to clearly associate the value that is measured for a variable with a particular observational unit.\nWith these ideas in hand, we learned how to bring data onto our computer, so that in our next class, we can begin the process of identifying its structure and communicating that structure numerically and visually.\nContinue on to the tutorial portion of the notes",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "The Taxonomy of Data"
+    ]
+  },
+  {
+    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#footnotes",
+    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#footnotes",
+    "title": "The Taxonomy of Data",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nPenguin artwork by @allison_horst.↩︎\nGorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081↩︎",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "The Taxonomy of Data"
+    ]
+  },
+  {
+    "objectID": "glossary-defs.html",
+    "href": "glossary-defs.html",
+    "title": "Definitions",
+    "section": "",
+    "text": "Questions and Data\n\n\nData\n\nAn item of (chiefly numerical) information, especially one obtained by scientific work, a number of which are typically collected together for reference, analysis, or calculation. From Latin datum: that which is given. Facts.\n\n\n\n\n\nVariable\n\nA characteristic of an object or observational unit that can be measured and recorded.\n\n\n\n\n\nNumerical Variable\n\nA variable that take numbers as values and where the magnitude of the number has a quantitative meaning.\n\n\n\n\n\nCategorical Variable\n\nA variable that take categories as values. Each unique category is called a level.\n\n\n\n\n\nContinuous Numerical Variable\n\nA numerical variable that takes values on an interval of the real number line.\n\n\n\n\n\nDiscrete Numerical Variable\n\nA numerical variable that takes values that have jumps between them.\n\n\n\n\n\nOrdinal Categorical Variable\n\nA categorical variable with levels that have a natural ordering.\n\n\n\n\n\nNominal Categorical Variable\n\nA categorical variable with levels with no ordering.\n\n\n\n\n\nData Frame\n\nAn array that associates the observations (downs the rows) with the variables measured on each observation (across the columns). Each cell stores a value observed for a variable on an observation.\n\n\n\n\n\nUnit of Observation\n\nThe class of object on which the variables are observed.\n\n\n\n\n\nSummary\n\nA numerical, graphical, or verbal description of an aspect of data that is on hand.\n\n\n\n\n\nGeneralization\n\nA numerical, graphical, or verbal description of a broader set of units than those on which data was been recorded.\n\n\n\n\n\nCausal Claim\n\nA claim that changing the value of one variable will influence the value of another variable.\n\n\n\n\n\nPrediction\n\nA guess about the value of an unknown variable, based on other known variables."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/notes.html",
+    "href": "5-prediction/05-logistic-regression/notes.html",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "The framework that we used to build a predictive model for regression followed four distinct steps:\nWe used this process to build our first simple linear regression model to predict high school graduation rates but the same four steps are used by Zillow to build ZestimateTM, their deep learning model to predict house price.\nThese are also the same four steps that we will use as we shift in these notes to the task of classification. In a classification task, we seek to predict a response variable that is categorical, very often a two-level categorical variable. Classification models are everywhere: they help doctors determine whether or not a patient has a disease, whether or not an image contains a particular object (say, a person or a cat), and whether or not customer will purchase an item."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/notes.html#example-spam-filters",
+    "href": "5-prediction/05-logistic-regression/notes.html#example-spam-filters",
+    "title": "Logistic Regression",
+    "section": "Example: Spam filters",
+    "text": "Example: Spam filters\nEmail spam, also referred to as junk email or simply spam, is unsolicited messages sent in bulk by email (spamming). The name comes from a Monty Python sketch in which the name of the canned pork product Spam is ubiquitous, unavoidable, and repetitive1. A spam filter is a classification model that determines whether or not a message is spam based on properties of that message. Every mainstream email client, including Gmail, has a spam filter built in to ensure that the messages that get through to the user are genuine messages.\n\nThe Data\nIn order to build a spam filter, we’ll need a data set to train our model on. This data set must have as the unit of observation a single email message, record whether or not the message was spam (the response), and record various features of the message that are associated with being spam (the predictors). Such a data set, with nearly 4000 observations, can be found in the email data frame in the openintro library.\n\n\n# A tibble: 3,921 × 21\n   spam  to_multiple from     cc sent_email time                image attach\n   &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;      &lt;dttm&gt;              &lt;dbl&gt;  &lt;dbl&gt;\n 1 0     0           1         0 0          2012-01-01 06:16:41     0      0\n 2 0     0           1         0 0          2012-01-01 07:03:59     0      0\n 3 0     0           1         0 0          2012-01-01 16:00:32     0      0\n 4 0     0           1         0 0          2012-01-01 09:09:49     0      0\n 5 0     0           1         0 0          2012-01-01 10:00:01     0      0\n 6 0     0           1         0 0          2012-01-01 10:04:46     0      0\n 7 0     1           1         0 1          2012-01-01 17:55:06     0      0\n 8 0     1           1         1 1          2012-01-01 18:45:21     1      1\n 9 0     0           1         0 0          2012-01-01 21:08:59     0      0\n10 0     0           1         0 0          2012-01-01 18:12:00     0      0\n# ℹ 3,911 more rows\n# ℹ 13 more variables: dollar &lt;dbl&gt;, winner &lt;fct&gt;, inherit &lt;dbl&gt;, viagra &lt;dbl&gt;,\n#   password &lt;dbl&gt;, num_char &lt;dbl&gt;, line_breaks &lt;int&gt;, format &lt;fct&gt;,\n#   re_subj &lt;fct&gt;, exclaim_subj &lt;dbl&gt;, urgent_subj &lt;fct&gt;, exclaim_mess &lt;dbl&gt;,\n#   number &lt;fct&gt;\n\n\nWe see in the left most column the response variable, spam, coded as 0 when a message is not spam and 1 when it is. The first predictor, to_multiple, is a 1 if the message was sent to multiple people and 0 otherwise. cc records the number of people who are cc’ed on the email. winner (listed as a variable below the glimpse of the dataframe) records whether or not the word “winner” showed up in the message. The remaining predictors you may be able to intuit by their names, but you can also read the help file that describes each one.\nThese variables seem like they might be useful in predicting whether or not an email is spam, but take a moment to consider: how were we able to get our hands on data like this?\nThis particular data set arose from selecting a single email account, saving every single messages that comes in to that address over the course of a month, processing each message to create values for the predictor variables, then visually classifying whether or not the message is spam. That’s to say: this data represents a human’s best effort to classify spam2. Can we build a model that will be able to identify the features that mark a message as spam to be able to automatically classify future messages?\n\n\n\n\n\nExploratory Data Analysis\nLet’s see how well a few tempting predictors work at separating spam from not spam by performing some exploratory data analysis. We might expect messages containing the word “winner” to be more likely to be spam than those that do not. A stacked, normalized bar chart can answer that question.\n\n\n\n\n\n\n\n\n\nIndeed, it looks like around 30% of emails with “winner” were spam, compared to roughly 10% of those without. At this point, we could consider a very simple spam filter: if the message contains “winner”, then classify it as spam.\nAlthough this is tempting, it is still a pretty weak classifier. Most of the messages with “winner” are not spam, so calling them spam will result in most of them being misclassified.\nSo if “winner” isn’t the silver bullet predictor we need, let’s try another: num_char. This variable records the total number of characters present in the message – how long it is. We probably have no prior sense of whether spam would be more likely to consist of short or long emails, so let’s visualize them. This predictor is numerical continuous, so let’s overlay two density plots to get a sense of the distribution between spam and not spam.\n\n\n\n\n\n\n\n\n\nThe original plot on the left is very difficult to read because this variable is heavily right-skewed: there are a small number of very long messages that obscure much of the data in the plot. On the right is a more useful visualization, one of the log-transformed version of the same variable.\nWe see a reasonable separation here: spam messages tend to be shorter than non-spam messages. We could consider another very simple spam filter: if the log number of characters is less than 1.2, classify it as spam.\nHowever, this simple filter suffers from the same problem as the first. Although these density plots have the same area, there are in fact far fewer overall instances of spam than not-spam. That means that there are far more not-spam messages with a log number of characters less than 1.2 than there are spam message. This filter, like the first, would misclassify much of the training data.\nWhat we need is a more general framework to fold the strength of these two variables - as well as many of the other ones in the data set - into a model that can produce a single, more accurate prediction. We will start from the framework of multiple linear regression and move to something that can be used for classification."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/notes.html#from-linear-to-logistic-regression",
+    "href": "5-prediction/05-logistic-regression/notes.html#from-linear-to-logistic-regression",
+    "title": "Logistic Regression",
+    "section": "From Linear to Logistic Regression",
+    "text": "From Linear to Logistic Regression\nLet’s start by taking our existing simple linear regression model from the past few notes and applying it in this classification setting. We can visualize the relationship between log_num_char and spam using an ordinary scatter plot.\n\n\n\n\n\nThis is a strange looking scatter plot - the dots can only take y values of 0 or 1 - but it does capture the overall trend observed in the density plots, that spam messages are longer. Since we have a scatter plot, we can fit a simple linear regression model using the method of least squares (in gold).\n\\[ \\hat{y} = b_0 + b_1 x \\]\nWhile this is doable, it leaves us with a bit of a conundrum. For a low value of log_num_char it’s possible that we would predict \\(\\hat{y} = 1\\) and for a high value it’s possible that we’d predict \\(\\hat{y} = 0\\). But what if log_num_char is somewhere in the middle? What does it mean if we predict that the value of spam is .71?\nOne approach to resolving this is to treat our prediction not as a value of \\(y\\), but as a estimate of the probability, \\(\\hat{p}\\), that \\(y = 1\\). We can rewrite the model as:\n\\[ \\hat{p} = b_0 + b_1 x \\]\nThis resolves the conundrum of how to think about a prediction of .71. That is now the model’s determination of the probability that the message is spam. This tweak solves one problem, but it introduces another. How do we interpret predictions at very high values of log_num_char, where \\(\\hat{p}\\) is negative? Surely a probability cannot be negative!\nWe can fix this by changing the mathematical form of the model used to predict the response. Instead of it being a line, we can use an alternative function that prevents predictions greater than 1 and less than zero. The most commonly used function is called the standard logistic function:\n\\[ f(z) = \\frac{1}{1 + e^{-z}}\\]\n\\(z\\) can be any number of the real number line. As \\(z\\) gets large, \\(f(z)\\) approaches 1; as \\(z\\) is negative, \\(f(z)\\) approaches 0; when \\(z\\) is 0, \\(f(z)\\) is .5.\nThis is a very clever idea. It allows us to combine all of the information from our predictors into a single numerical score, \\(z\\). We can obtain \\(z\\) through a form that is familiar to us: \\(b_0 + b_1 x_1 + \\ldots + b_p x_p\\). This score can then be sent through the logistic function to estimate the probability that \\(y = 1\\). This method is called logistic regression.\n\nLogistic Regression (for prediction)\n\nA model to predict the probability that 0-1 response variable \\(y\\) is 1 using the inverse logit of a linear combination of predictors \\(x_1, x_2, \\ldots, x_p\\).\n\\[ \\hat{p} = \\frac{1}{1 + e^{-\\left(b_0 + b_1 x_1 + \\ldots + b_p x_p\\right)}} \\]\nCan be used as a classification model by setting up a rule of the form: if \\(\\hat{p}_i\\) &gt; threshold, then \\(\\hat{y}_i = 1\\).\n\n\nWe can visualize the approach that logistic regression takes by sketching the predictions as a green s-shaped curve on top of our scatter plot."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/notes.html#classification-errors",
+    "href": "5-prediction/05-logistic-regression/notes.html#classification-errors",
+    "title": "Logistic Regression",
+    "section": "Classification errors",
+    "text": "Classification errors\nNow that we have a model archetype to move forward with, we are almost ready to build it and see how it does. First though, we should first consider what happens when our predictions are wrong. Hopefully, we will classify most of our e-mails correctly, but we will fail at least some of the time. We might predict that an e-mail is spam when it is not. In other cases, we might predict that an e-mail is not spam when it actually is. Therefore, there are two types of error we should consider.\nRecall that based on the email dataset, 1 refers to an e-mail which is truly spam. In a binary classification problem, we often call 1 a positive result. Likewise, 0 refers to an e-mail which is genuine. We call 0 a negative result. This sets up formal definitions for the two types of errors mentioned above.\n\nFalse Positives\n\nPredicting a 1 that is in fact a 0\n\nFalse Negatives\n\nPredicting a 0 that is in fact a 1\n\n\n\nMisclassification rate\nWhile thinking about failing is not exciting, it does give us a way to think about how well our classification model is doing. We would like the number of misclassifications over a large number of e-mails to be as small as possible. This fraction can be quantified as the misclassification rate or \\(\\text{MCR}\\) for short.\nMisclassification Rate\n\\[\\text{MCR} = \\frac{\\text{no. FP} + \\text{no. FN}}{\\text{no. of predictions}} = \\frac{\\text{no. of misclassifications}}{\\text{no. of predictions}}\\]\nJust like in a multiple linear regression context, we can fit a suite of different models on the training set and evaluate their performance on the testing set. Now, our model type of choice is logistic regression and our evaluation metric is \\(\\text{MCR}\\)."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/notes.html#the-ideas-in-code",
+    "href": "5-prediction/05-logistic-regression/notes.html#the-ideas-in-code",
+    "title": "Logistic Regression",
+    "section": "The Ideas in Code",
+    "text": "The Ideas in Code\n\nFitting Logistic Regression with glm()\nThe computational machinery for fitting logistic regression looks almost identical to what we used for linear least squares regression. The primary function we’ll use is glm(). We will also use a different broom function called tidy() to display the coefficients \\(b_0\\) and \\(b_1\\). tidy() can also be used in a linear regression context as well.\n\n\n# A tibble: 2 × 3\n  term          estimate std.error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)     -1.72     0.0606\n2 log(num_char)   -0.544    0.0365\n\n\nThese coefficients are a bit more challenging to interpret since they’re no longer linearly related to the response. The sign of the coefficient for log(num_char), however, is informative: it tells us that messages with more characters will be predicted to have a lower probability of being spam.\n\n\nEvaluating model performance\n\nCalculating \\(\\text{MCR}\\)\nLet’s take a look at the predictions that this model makes back into the data set that it was trained on. When using the predict() function on logistic regression models, there are several different types of predictions that it can return, so be sure to use the additional argument type and supply it with \"response\". This will return \\(\\hat{p}_i\\) (probability of 1) for each observation.\nWe can then move from values of \\(\\hat{p}_i\\) to values of \\(\\hat{y}_i\\). In general, our rule will be to check and see whether each value of \\(\\hat{p}_i\\) is greater than .5. If so, we will assign the value of 1; otherwise, we will assign it 0. This sounds similar to creating a logical variable, but assigning something different than TRUE and FALSE to each observation in the dataset. We will use a function called ifelse(), therefore, which will allow us to assign we want (1 and 0).\nThe following block of code completes both of these two steps and saves the results back into the email data frame.\nWe are now ready to calculate \\(\\text{MCR}\\). First, we can find all of the emails for which the y and y_hat_m1 don’t match. Then, we can take the proportion of those e-mails out of all e-mails in the dataset.\n\n\n# A tibble: 1 × 1\n     MCR\n   &lt;dbl&gt;\n1 0.0956\n\n\nOverall, we are misclassifying around 10 percent of all e-mails (both spam and genuine), which doesn’t look like a bad start, but we might want to take a little deeper of a dive to see how the model is misclassifying observations.\n\n\n\nFalse positives versus false negatives\nIndeed, we can see if the model is failing at classifiying one type of e-mail more than another. To do this, we can find the number of false positives and false negatives. We can group our observations by their actual class versus their predicted class. There are four possibilities, so there will be four groups.\n\nemail |&gt;\n  group_by(spam, y_hat_m1) |&gt;\n  summarise(n = n())\n\n# A tibble: 4 × 3\n# Groups:   spam [2]\n  spam  y_hat_m1     n\n  &lt;fct&gt;    &lt;dbl&gt; &lt;int&gt;\n1 0            0  3541\n2 0            1    13\n3 1            0   362\n4 1            1     5\n\n\nWe actually see that the model is doing great at predicting correctly when the e-mail is genuine (few false positives), but doing horribly at detecting spam (many, many false negatives). Only \\(5\\) out of the \\(367\\) spam e-mails are being classified correctly. Essentially all of our mistakes are in the form of false negatives! We also can see here that there are way more genuine e-mails than spam e-mails in the dataset, so our misclassification rate is being inflated as a result. Clearly, more than just the length of an e-mail is necessary to help us detect spam.\n\nTraining and testing sets\nOne final note: this \\(\\text{MCR}\\) was calculated over all of the data. The best way to evaluate the performance of the model is to split the data into training and testing sets, fit the model on the training set and evaluate it on the testing set. We can calculate both training and testing versions of \\(\\text{MCR}\\) and compare them to see if the model is doing well on e-mails it hasn’t yet seen."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/notes.html#summary",
+    "href": "5-prediction/05-logistic-regression/notes.html#summary",
+    "title": "Logistic Regression",
+    "section": "Summary",
+    "text": "Summary\nIn these notes we introduced the concept of classification using a logistic regression model. Logistic regression uses the logistic function to transform predictions into a probability that the response is 1. These probabilities can be used to classify y as 0 or 1 by checked to see if they exceed a threshold (often .5).\nWe then went through the process of fitting logistic regression to help us classify spam e-mails, and evaluated our results using the misclassification rate."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/notes.html#footnotes",
+    "href": "5-prediction/05-logistic-regression/notes.html#footnotes",
+    "title": "Logistic Regression",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDefinition from Wikipedia, along with the image, by freezelight/flickr.↩︎\nThis data collection and manual processing was done by a graduate student in statistics at UCLA. One of the many humdrum but valuable tasks asked of graduates students . . .↩︎"
+  },
+  {
+    "objectID": "office-hours.html",
+    "href": "office-hours.html",
+    "title": "Office Hours and Group Tutoring",
+    "section": "",
+    "text": "Office Hours and Group Tutoring\nPlease stop by introduce yourself! Stat 20 offers two types of session to ask chat about the course in person but outside of class.\nInstructor office hours are useful for to discuss topics that come in the reading or broader questions about statistics and data science. They are also a fine place to ask questions about the assignments you’re working on. Please attend only your instructor’s office hours.\nGroup tutoring (GT) sessions are held throughout the week on the 3rd floor of Evans Hall. They’re a great place to work on your assignments with fellow students and seek the help of tutors whenever you get stuck. One thing to know: tutors will expect that you have done the reading and generally been attending class; this is not meant to replace class time.\nYou’re welcome to attend whichever GT sessions work best for your schedule."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Navigate the notes using the menu in the left sidebar or the search in the upper right corner of the page.",
+    "crumbs": [
+      "Notes"
+    ]
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#agenda",
+    "href": "5-prediction/05-logistic-regression/slides.html#agenda",
+    "title": "Logistic Regression",
+    "section": "Agenda",
+    "text": "Agenda\n\nAnnouncements\nConcept Questions\nBreak\nLab 6.2\nAppendix: Logistic Regression with the penguins dataset"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#announcements",
+    "href": "5-prediction/05-logistic-regression/slides.html#announcements",
+    "title": "Logistic Regression",
+    "section": "Announcements",
+    "text": "Announcements\n\nQuiz 4:\n\nMonday in class.\nWrong By Design through Logistic Regression\n\n\n\n\nProblem Sets:\n\nPS 18 (Overfitting) due next Tuesday at 9am\nExtra Practice (Logistic Regression)\n\n\n\n\n\nLab 6:\n\nboth parts due Tuesday at 9am"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section",
+    "href": "5-prediction/05-logistic-regression/slides.html#section",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "A logistic regression model was fit in an attempt to predict the sex of a penguin \"male\" or \"female\" based on its body mass (grams).\n\nAssuming that no change to the penguins dataset was made, will the model be predicting the probability of the penguin being male or the probability of the penguin being female?\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section-1",
+    "href": "5-prediction/05-logistic-regression/slides.html#section-1",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "m1 &lt;- glm(sex ~ body_mass_g, data = penguins, family = \"binomial\")\n\n\n\n (Intercept)  body_mass_g \n-5.162541644  0.001239819 \n\n\n\nWhich of the expressions given in the poll (math or code) will correctly calculate the predicted probability that a penguin that weighs 4000 g is a female? Select all that apply\n\n\n\n\n−+\n01:00\n\n\n\n\nTo answer this one correctly, they’ll need to know (or remember from the RQ) that the reference level is female, so this model is predicting the probability male.\nYou can show that they can either use R as a calculator or use the predict function.\n1/(1 + exp(-(-5.15 + .00124 * 4000))) predict(m1, newdata = data.frame(body_mass_g = 4000), type = “response”)\nThe latter is more precise, which is useful here since p-hat (prob of male) is .449 therefore prob of female is .55.\nAs a bonus, try sketching this function on a scatterplot!\nWhen sketching this, the positive slope means the s-curve goes up and to the right. The negative intercept shifts the whole curve a tiny bit to the left, reflecting the base rate of a couple more males than females (168 vs 165)."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section-2",
+    "href": "5-prediction/05-logistic-regression/slides.html#section-2",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "What is the misclassification rate of this model?\n\n\n\n# A tibble: 4 × 3\n# Groups:   sex [2]\n  sex    y_hat      n\n  &lt;fct&gt;  &lt;chr&gt;  &lt;int&gt;\n1 female female   109\n2 female male      56\n3 male   female    74\n4 male   male      94\n\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section-3",
+    "href": "5-prediction/05-logistic-regression/slides.html#section-3",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "m2 &lt;- glm(sex ~ body_mass_g + bill_length_mm, \n          data = penguins, family = \"binomial\")\n\n\n\n   (Intercept)    body_mass_g bill_length_mm \n   -6.91208086     0.00101530     0.06112808 \n\n\n\nOpen up RStudio and fit the model here in the slides. What are the predicted sexes of these two penguins?\n\nbody mass = 3900 g, bill length = 50\nbody mass = 4100 g, bill length = 35\n\n\n\n\n\n−+\n01:00\n\n\n\n\nYou can have students work on their laptops for this question.\nThis one extends the task of the previous one by having them include another covariate and also to do the thresholding procedure to go from p-hat to y-hat. This doesn’t specify the threshold, so using .5 is probably a good default.\npredict(m2, newdata = data.frame(body_mass_g = 3900, bill_length_mm = 50), type = “response”) # male predict(m2, newdata = data.frame(body_mass_g = 4100, bill_length_mm = 35), type = “response”) # female"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
+    "href": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
+    "title": "Logistic Regression",
+    "section": "Building a predictive model",
+    "text": "Building a predictive model\n\nDecide on the mathematical form of the model: logistic linear regression\n\n\n\nSelect a metric that defines the “best” fit: the coefficients in logistic regression are the ones that minimize not the RSS function but a function called log-loss (which we don’t have time to cover)\n\n\n\n\nEstimating the coefficients of the model that are best using the training data: we know how to do this: test + train + glm()!\n\n\n\n\nEvaluating predictive accuracy using a test data set:\\(R^2\\) isn’t relevant here. We need a new metric!"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins",
+    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins",
+    "title": "Logistic Regression",
+    "section": "Example: penguins",
+    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
+    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
+    "title": "Logistic Regression",
+    "section": "Example: penguins",
+    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))\n\ntrain &lt;- penguins |&gt;\n  filter(set_type == \"train\")\n\ntest &lt;- penguins |&gt;\n  filter(set_type == \"test\")"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex)\n\n# A tibble: 70 × 1\n   sex   \n   &lt;fct&gt; \n 1 female\n 2 male  \n 3 female\n 4 male  \n 5 male  \n 6 female\n 7 male  \n 8 female\n 9 male  \n10 male  \n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat)\n\n# A tibble: 70 × 2\n   sex    p_hat\n   &lt;fct&gt;  &lt;dbl&gt;\n 1 female 0.345\n 2 male   0.566\n 3 female 0.259\n 4 male   0.280\n 5 male   0.365\n 6 female 0.196\n 7 male   0.428\n 8 female 0.220\n 9 male   0.559\n10 male   0.279\n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = predict(m2, test, type = \"response\"),\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"))\n\n# A tibble: 70 × 3\n   sex    p_hat y_hat \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt; \n 1 female 0.345 female\n 2 male   0.566 male  \n 3 female 0.259 female\n 4 male   0.280 female\n 5 male   0.365 female\n 6 female 0.196 female\n 7 male   0.428 female\n 8 female 0.220 female\n 9 male   0.559 male  \n10 male   0.279 female\n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#classification-errors",
+    "href": "5-prediction/05-logistic-regression/slides.html#classification-errors",
+    "title": "Logistic Regression",
+    "section": "Classification errors",
+    "text": "Classification errors\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"),\n         FP = sex == \"female\" & y_hat == \"male\",\n         FN = sex == \"male\" & y_hat == \"female\")\n\n# A tibble: 70 × 5\n   sex    p_hat y_hat  FP    FN   \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;lgl&gt; &lt;lgl&gt;\n 1 female 0.345 female FALSE FALSE\n 2 male   0.566 male   FALSE FALSE\n 3 female 0.259 female FALSE FALSE\n 4 male   0.280 female FALSE TRUE \n 5 male   0.365 female FALSE TRUE \n 6 female 0.196 female FALSE FALSE\n 7 male   0.428 female FALSE TRUE \n 8 female 0.220 female FALSE FALSE\n 9 male   0.559 male   FALSE FALSE\n10 male   0.279 female FALSE TRUE \n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
+    "href": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
+    "title": "Logistic Regression",
+    "section": "Misclassification Rate",
+    "text": "Misclassification Rate\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\")) |&gt;\n  summarize(MCR = mean(sex != y_hat))\n\n# A tibble: 1 × 1\n    MCR\n  &lt;dbl&gt;\n1 0.371"
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "assignments.html#labs",
+    "href": "assignments.html#labs",
+    "title": "Assignments",
+    "section": "",
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "assignments.html#worksheets",
+    "href": "assignments.html#worksheets",
+    "title": "Assignments",
+    "section": "Worksheets",
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\n\nNo matching items"
   },
   {
     "objectID": "1-questions-and-data/labs/unvotes/part-2.html",
@@ -82,42 +548,6 @@
     "title": "UN Votes",
     "section": "Computing on the Data",
     "text": "Computing on the Data\n\nQuestion 1\nCreate a data visualization the shows the proportion of “yes” votes over time on three different issues: Colonialism, Human Rights, and Nuclear Weapons. Construct the plot to compare the voting patterns of the United States, the United Kingdom, and one other country of your choosing (not Turkey).\n\n\nQuestion 2\nFormulate two claims about voting behavior that is supported by this graphic. Categorize each claim as begin a summary, generalization, causal claim, or prediction.\n\n\nQuestion 3\nWhat else would you like to learn about this data set or the context of voting at the United Nations that would allow you to make more informed, accurate, thoughtful, and effective claims? List three specific items."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/notes.html",
-    "href": "1-questions-and-data/01-understanding-the-world/notes.html",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "Welcome to Stat 20! We are very excited to have you here this semester. There are no reading questions for today’s content, but make sure that you have:\n\ngotten the name of your instructor and in-class tutors\nread the syllabus and asked any questions you have about it on your lecture’s corresponding Ed thread\nstarted the first lab assignment\n\nThe goal of our course is to construct and critique claims made using data. This raises the question: what type of claims can be made?",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "Understanding the World with Data"
-    ]
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/notes.html#intro-and-syllabus",
-    "href": "1-questions-and-data/01-understanding-the-world/notes.html#intro-and-syllabus",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "Welcome to Stat 20! We are very excited to have you here this semester. There are no reading questions for today’s content, but make sure that you have:\n\ngotten the name of your instructor and in-class tutors\nread the syllabus and asked any questions you have about it on your lecture’s corresponding Ed thread\nstarted the first lab assignment\n\nThe goal of our course is to construct and critique claims made using data. This raises the question: what type of claims can be made?",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "Understanding the World with Data"
-    ]
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/notes.html#types-of-claims",
-    "href": "1-questions-and-data/01-understanding-the-world/notes.html#types-of-claims",
-    "title": "Understanding the World with Data",
-    "section": "Types of Claims",
-    "text": "Types of Claims\n\n\n\n\n\n\n\nSummary\n\nA numerical, graphical, or verbal description of an aspect of data that is on hand.\n\n\n\nExample: Using data from the Stat 20 class survey, the proportion of respondents to the survey who reported having no experience writing computer code is 70%.\n\n\nGeneralization\n\nA numerical, graphical, or verbal description of a broader set of units than those on which data was been recorded.\n\n\n\n\nExample: Using data from the Stat 20 class survey, the proportion of Berkeley students who have no experience writing computer code is 70%.\n\n\nCausal Claim\n\nA claim that changing the value of one variable will influence the value of another variable.\n\n\n\nExample: Data from a randomized controlled experiment shows that taking a new antibiotic eliminates more than 99% of bacterial infections.\n\n\nPrediction\n\nA guess about the value of an unknown variable, based on other known variables.\n\n\n\nExample: Based on reading the news and the price of Uber’s stock today, I predict that Uber’s stock price will go up 1.2% tomorrow.",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "Understanding the World with Data"
-    ]
   },
   {
     "objectID": "1-questions-and-data/02-taxonomy-of-data/tutorial.html",
@@ -397,60 +827,75 @@
     "text": "Your Turn\n\n\nCreate a new .qmd file, name it, and save it.\nInsert a new code cell.\nCreate three vectors, name, hometown, and sibs_and_pets that contain observations on those variables from 6 people in this class.\nCombine them into a data frame called my_classmates.\n\n\n\n  \n    −\n    +\n \n 06:00"
   },
   {
-    "objectID": "5-prediction/05-logistic-regression/notes.html",
-    "href": "5-prediction/05-logistic-regression/notes.html",
-    "title": "Logistic Regression",
+    "objectID": "1-questions-and-data/01-understanding-the-world/notes.html",
+    "href": "1-questions-and-data/01-understanding-the-world/notes.html",
+    "title": "Understanding the World with Data",
     "section": "",
-    "text": "The framework that we used to build a predictive model for regression followed four distinct steps:\nWe used this process to build our first simple linear regression model to predict high school graduation rates but the same four steps are used by Zillow to build ZestimateTM, their deep learning model to predict house price.\nThese are also the same four steps that we will use as we shift in these notes to the task of classification. In a classification task, we seek to predict a response variable that is categorical, very often a two-level categorical variable. Classification models are everywhere: they help doctors determine whether or not a patient has a disease, whether or not an image contains a particular object (say, a person or a cat), and whether or not customer will purchase an item."
+    "text": "Welcome to Stat 20! We are very excited to have you here this semester. There are no reading questions for today’s content, but make sure that you have:\n\ngotten the name of your instructor and in-class tutors\nread the syllabus and asked any questions you have about it on your lecture’s corresponding Ed thread\nstarted the first lab assignment\n\nThe goal of our course is to construct and critique claims made using data. This raises the question: what type of claims can be made?",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "Understanding the World with Data"
+    ]
   },
   {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#example-spam-filters",
-    "href": "5-prediction/05-logistic-regression/notes.html#example-spam-filters",
-    "title": "Logistic Regression",
-    "section": "Example: Spam filters",
-    "text": "Example: Spam filters\nEmail spam, also referred to as junk email or simply spam, is unsolicited messages sent in bulk by email (spamming). The name comes from a Monty Python sketch in which the name of the canned pork product Spam is ubiquitous, unavoidable, and repetitive1. A spam filter is a classification model that determines whether or not a message is spam based on properties of that message. Every mainstream email client, including Gmail, has a spam filter built in to ensure that the messages that get through to the user are genuine messages.\n\nThe Data\nIn order to build a spam filter, we’ll need a data set to train our model on. This data set must have as the unit of observation a single email message, record whether or not the message was spam (the response), and record various features of the message that are associated with being spam (the predictors). Such a data set, with nearly 4000 observations, can be found in the email data frame in the openintro library.\n\n\n# A tibble: 3,921 × 21\n   spam  to_multiple from     cc sent_email time                image attach\n   &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;      &lt;dttm&gt;              &lt;dbl&gt;  &lt;dbl&gt;\n 1 0     0           1         0 0          2012-01-01 06:16:41     0      0\n 2 0     0           1         0 0          2012-01-01 07:03:59     0      0\n 3 0     0           1         0 0          2012-01-01 16:00:32     0      0\n 4 0     0           1         0 0          2012-01-01 09:09:49     0      0\n 5 0     0           1         0 0          2012-01-01 10:00:01     0      0\n 6 0     0           1         0 0          2012-01-01 10:04:46     0      0\n 7 0     1           1         0 1          2012-01-01 17:55:06     0      0\n 8 0     1           1         1 1          2012-01-01 18:45:21     1      1\n 9 0     0           1         0 0          2012-01-01 21:08:59     0      0\n10 0     0           1         0 0          2012-01-01 18:12:00     0      0\n# ℹ 3,911 more rows\n# ℹ 13 more variables: dollar &lt;dbl&gt;, winner &lt;fct&gt;, inherit &lt;dbl&gt;, viagra &lt;dbl&gt;,\n#   password &lt;dbl&gt;, num_char &lt;dbl&gt;, line_breaks &lt;int&gt;, format &lt;fct&gt;,\n#   re_subj &lt;fct&gt;, exclaim_subj &lt;dbl&gt;, urgent_subj &lt;fct&gt;, exclaim_mess &lt;dbl&gt;,\n#   number &lt;fct&gt;\n\n\nWe see in the left most column the response variable, spam, coded as 0 when a message is not spam and 1 when it is. The first predictor, to_multiple, is a 1 if the message was sent to multiple people and 0 otherwise. cc records the number of people who are cc’ed on the email. winner (listed as a variable below the glimpse of the dataframe) records whether or not the word “winner” showed up in the message. The remaining predictors you may be able to intuit by their names, but you can also read the help file that describes each one.\nThese variables seem like they might be useful in predicting whether or not an email is spam, but take a moment to consider: how were we able to get our hands on data like this?\nThis particular data set arose from selecting a single email account, saving every single messages that comes in to that address over the course of a month, processing each message to create values for the predictor variables, then visually classifying whether or not the message is spam. That’s to say: this data represents a human’s best effort to classify spam2. Can we build a model that will be able to identify the features that mark a message as spam to be able to automatically classify future messages?\n\n\n\n\n\nExploratory Data Analysis\nLet’s see how well a few tempting predictors work at separating spam from not spam by performing some exploratory data analysis. We might expect messages containing the word “winner” to be more likely to be spam than those that do not. A stacked, normalized bar chart can answer that question.\n\n\n\n\n\n\n\n\n\nIndeed, it looks like around 30% of emails with “winner” were spam, compared to roughly 10% of those without. At this point, we could consider a very simple spam filter: if the message contains “winner”, then classify it as spam.\nAlthough this is tempting, it is still a pretty weak classifier. Most of the messages with “winner” are not spam, so calling them spam will result in most of them being misclassified.\nSo if “winner” isn’t the silver bullet predictor we need, let’s try another: num_char. This variable records the total number of characters present in the message – how long it is. We probably have no prior sense of whether spam would be more likely to consist of short or long emails, so let’s visualize them. This predictor is numerical continuous, so let’s overlay two density plots to get a sense of the distribution between spam and not spam.\n\n\n\n\n\n\n\n\n\nThe original plot on the left is very difficult to read because this variable is heavily right-skewed: there are a small number of very long messages that obscure much of the data in the plot. On the right is a more useful visualization, one of the log-transformed version of the same variable.\nWe see a reasonable separation here: spam messages tend to be shorter than non-spam messages. We could consider another very simple spam filter: if the log number of characters is less than 1.2, classify it as spam.\nHowever, this simple filter suffers from the same problem as the first. Although these density plots have the same area, there are in fact far fewer overall instances of spam than not-spam. That means that there are far more not-spam messages with a log number of characters less than 1.2 than there are spam message. This filter, like the first, would misclassify much of the training data.\nWhat we need is a more general framework to fold the strength of these two variables - as well as many of the other ones in the data set - into a model that can produce a single, more accurate prediction. We will start from the framework of multiple linear regression and move to something that can be used for classification."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#from-linear-to-logistic-regression",
-    "href": "5-prediction/05-logistic-regression/notes.html#from-linear-to-logistic-regression",
-    "title": "Logistic Regression",
-    "section": "From Linear to Logistic Regression",
-    "text": "From Linear to Logistic Regression\nLet’s start by taking our existing simple linear regression model from the past few notes and applying it in this classification setting. We can visualize the relationship between log_num_char and spam using an ordinary scatter plot.\n\n\n\n\n\nThis is a strange looking scatter plot - the dots can only take y values of 0 or 1 - but it does capture the overall trend observed in the density plots, that spam messages are longer. Since we have a scatter plot, we can fit a simple linear regression model using the method of least squares (in gold).\n\\[ \\hat{y} = b_0 + b_1 x \\]\nWhile this is doable, it leaves us with a bit of a conundrum. For a low value of log_num_char it’s possible that we would predict \\(\\hat{y} = 1\\) and for a high value it’s possible that we’d predict \\(\\hat{y} = 0\\). But what if log_num_char is somewhere in the middle? What does it mean if we predict that the value of spam is .71?\nOne approach to resolving this is to treat our prediction not as a value of \\(y\\), but as a estimate of the probability, \\(\\hat{p}\\), that \\(y = 1\\). We can rewrite the model as:\n\\[ \\hat{p} = b_0 + b_1 x \\]\nThis resolves the conundrum of how to think about a prediction of .71. That is now the model’s determination of the probability that the message is spam. This tweak solves one problem, but it introduces another. How do we interpret predictions at very high values of log_num_char, where \\(\\hat{p}\\) is negative? Surely a probability cannot be negative!\nWe can fix this by changing the mathematical form of the model used to predict the response. Instead of it being a line, we can use an alternative function that prevents predictions greater than 1 and less than zero. The most commonly used function is called the standard logistic function:\n\\[ f(z) = \\frac{1}{1 + e^{-z}}\\]\n\\(z\\) can be any number of the real number line. As \\(z\\) gets large, \\(f(z)\\) approaches 1; as \\(z\\) is negative, \\(f(z)\\) approaches 0; when \\(z\\) is 0, \\(f(z)\\) is .5.\nThis is a very clever idea. It allows us to combine all of the information from our predictors into a single numerical score, \\(z\\). We can obtain \\(z\\) through a form that is familiar to us: \\(b_0 + b_1 x_1 + \\ldots + b_p x_p\\). This score can then be sent through the logistic function to estimate the probability that \\(y = 1\\). This method is called logistic regression.\n\nLogistic Regression (for prediction)\n\nA model to predict the probability that 0-1 response variable \\(y\\) is 1 using the inverse logit of a linear combination of predictors \\(x_1, x_2, \\ldots, x_p\\).\n\\[ \\hat{p} = \\frac{1}{1 + e^{-\\left(b_0 + b_1 x_1 + \\ldots + b_p x_p\\right)}} \\]\nCan be used as a classification model by setting up a rule of the form: if \\(\\hat{p}_i\\) &gt; threshold, then \\(\\hat{y}_i = 1\\).\n\n\nWe can visualize the approach that logistic regression takes by sketching the predictions as a green s-shaped curve on top of our scatter plot."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#classification-errors",
-    "href": "5-prediction/05-logistic-regression/notes.html#classification-errors",
-    "title": "Logistic Regression",
-    "section": "Classification errors",
-    "text": "Classification errors\nNow that we have a model archetype to move forward with, we are almost ready to build it and see how it does. First though, we should first consider what happens when our predictions are wrong. Hopefully, we will classify most of our e-mails correctly, but we will fail at least some of the time. We might predict that an e-mail is spam when it is not. In other cases, we might predict that an e-mail is not spam when it actually is. Therefore, there are two types of error we should consider.\nRecall that based on the email dataset, 1 refers to an e-mail which is truly spam. In a binary classification problem, we often call 1 a positive result. Likewise, 0 refers to an e-mail which is genuine. We call 0 a negative result. This sets up formal definitions for the two types of errors mentioned above.\n\nFalse Positives\n\nPredicting a 1 that is in fact a 0\n\nFalse Negatives\n\nPredicting a 0 that is in fact a 1\n\n\n\nMisclassification rate\nWhile thinking about failing is not exciting, it does give us a way to think about how well our classification model is doing. We would like the number of misclassifications over a large number of e-mails to be as small as possible. This fraction can be quantified as the misclassification rate or \\(\\text{MCR}\\) for short.\nMisclassification Rate\n\\[\\text{MCR} = \\frac{\\text{no. FP} + \\text{no. FN}}{\\text{no. of predictions}} = \\frac{\\text{no. of misclassifications}}{\\text{no. of predictions}}\\]\nJust like in a multiple linear regression context, we can fit a suite of different models on the training set and evaluate their performance on the testing set. Now, our model type of choice is logistic regression and our evaluation metric is \\(\\text{MCR}\\)."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#the-ideas-in-code",
-    "href": "5-prediction/05-logistic-regression/notes.html#the-ideas-in-code",
-    "title": "Logistic Regression",
-    "section": "The Ideas in Code",
-    "text": "The Ideas in Code\n\nFitting Logistic Regression with glm()\nThe computational machinery for fitting logistic regression looks almost identical to what we used for linear least squares regression. The primary function we’ll use is glm(). We will also use a different broom function called tidy() to display the coefficients \\(b_0\\) and \\(b_1\\). tidy() can also be used in a linear regression context as well.\n\n\n# A tibble: 2 × 3\n  term          estimate std.error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)     -1.72     0.0606\n2 log(num_char)   -0.544    0.0365\n\n\nThese coefficients are a bit more challenging to interpret since they’re no longer linearly related to the response. The sign of the coefficient for log(num_char), however, is informative: it tells us that messages with more characters will be predicted to have a lower probability of being spam.\n\n\nEvaluating model performance\n\nCalculating \\(\\text{MCR}\\)\nLet’s take a look at the predictions that this model makes back into the data set that it was trained on. When using the predict() function on logistic regression models, there are several different types of predictions that it can return, so be sure to use the additional argument type and supply it with \"response\". This will return \\(\\hat{p}_i\\) (probability of 1) for each observation.\nWe can then move from values of \\(\\hat{p}_i\\) to values of \\(\\hat{y}_i\\). In general, our rule will be to check and see whether each value of \\(\\hat{p}_i\\) is greater than .5. If so, we will assign the value of 1; otherwise, we will assign it 0. This sounds similar to creating a logical variable, but assigning something different than TRUE and FALSE to each observation in the dataset. We will use a function called ifelse(), therefore, which will allow us to assign we want (1 and 0).\nThe following block of code completes both of these two steps and saves the results back into the email data frame.\nWe are now ready to calculate \\(\\text{MCR}\\). First, we can find all of the emails for which the y and y_hat_m1 don’t match. Then, we can take the proportion of those e-mails out of all e-mails in the dataset.\n\n\n# A tibble: 1 × 1\n     MCR\n   &lt;dbl&gt;\n1 0.0956\n\n\nOverall, we are misclassifying around 10 percent of all e-mails (both spam and genuine), which doesn’t look like a bad start, but we might want to take a little deeper of a dive to see how the model is misclassifying observations.\n\n\n\nFalse positives versus false negatives\nIndeed, we can see if the model is failing at classifiying one type of e-mail more than another. To do this, we can find the number of false positives and false negatives. We can group our observations by their actual class versus their predicted class. There are four possibilities, so there will be four groups.\n\nemail |&gt;\n  group_by(spam, y_hat_m1) |&gt;\n  summarise(n = n())\n\n# A tibble: 4 × 3\n# Groups:   spam [2]\n  spam  y_hat_m1     n\n  &lt;fct&gt;    &lt;dbl&gt; &lt;int&gt;\n1 0            0  3541\n2 0            1    13\n3 1            0   362\n4 1            1     5\n\n\nWe actually see that the model is doing great at predicting correctly when the e-mail is genuine (few false positives), but doing horribly at detecting spam (many, many false negatives). Only \\(5\\) out of the \\(367\\) spam e-mails are being classified correctly. Essentially all of our mistakes are in the form of false negatives! We also can see here that there are way more genuine e-mails than spam e-mails in the dataset, so our misclassification rate is being inflated as a result. Clearly, more than just the length of an e-mail is necessary to help us detect spam.\n\nTraining and testing sets\nOne final note: this \\(\\text{MCR}\\) was calculated over all of the data. The best way to evaluate the performance of the model is to split the data into training and testing sets, fit the model on the training set and evaluate it on the testing set. We can calculate both training and testing versions of \\(\\text{MCR}\\) and compare them to see if the model is doing well on e-mails it hasn’t yet seen."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#summary",
-    "href": "5-prediction/05-logistic-regression/notes.html#summary",
-    "title": "Logistic Regression",
-    "section": "Summary",
-    "text": "Summary\nIn these notes we introduced the concept of classification using a logistic regression model. Logistic regression uses the logistic function to transform predictions into a probability that the response is 1. These probabilities can be used to classify y as 0 or 1 by checked to see if they exceed a threshold (often .5).\nWe then went through the process of fitting logistic regression to help us classify spam e-mails, and evaluated our results using the misclassification rate."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#footnotes",
-    "href": "5-prediction/05-logistic-regression/notes.html#footnotes",
-    "title": "Logistic Regression",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nDefinition from Wikipedia, along with the image, by freezelight/flickr.↩︎\nThis data collection and manual processing was done by a graduate student in statistics at UCLA. One of the many humdrum but valuable tasks asked of graduates students . . .↩︎"
-  },
-  {
-    "objectID": "assets/final-exam-slide.html#section",
-    "href": "assets/final-exam-slide.html#section",
-    "title": "Final Exam",
+    "objectID": "1-questions-and-data/01-understanding-the-world/notes.html#intro-and-syllabus",
+    "href": "1-questions-and-data/01-understanding-the-world/notes.html#intro-and-syllabus",
+    "title": "Understanding the World with Data",
     "section": "",
-    "text": "Before the exam begins\n\n🧹 Clear your desk of everything except a pen/pencil, your cheat sheet, and your ID.\n🧢 Remove hats, hoods, and sunglasses.\n📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period. All items should be on the floor not on nearby seats.\nSpread out as much as possible. We may reseat you to space people out.\nWhen you get an exam, do not begin.\n\n\nDuring the exam\n\n✅ All answers must be marked on the answer sheet.\n👀 If a proctor sees your eyes wandering to other students’ work, you will be reseated. If it happens again, it is considered academic misconduct.\nIf you need to use the bathroom, bring phone and exam materials to the front of the class.\n⌛ When you are done with this exam, please bring your exam, answer sheet, and cheat sheet to a proctor at the front of the class.\n\n\nGood luck! 🍀\n\n\n\n−+\n90:00\n\n\n\n\n\n\n−+\n90:00"
+    "text": "Welcome to Stat 20! We are very excited to have you here this semester. There are no reading questions for today’s content, but make sure that you have:\n\ngotten the name of your instructor and in-class tutors\nread the syllabus and asked any questions you have about it on your lecture’s corresponding Ed thread\nstarted the first lab assignment\n\nThe goal of our course is to construct and critique claims made using data. This raises the question: what type of claims can be made?",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "Understanding the World with Data"
+    ]
+  },
+  {
+    "objectID": "1-questions-and-data/01-understanding-the-world/notes.html#types-of-claims",
+    "href": "1-questions-and-data/01-understanding-the-world/notes.html#types-of-claims",
+    "title": "Understanding the World with Data",
+    "section": "Types of Claims",
+    "text": "Types of Claims\n\n\n\n\n\n\n\nSummary\n\nA numerical, graphical, or verbal description of an aspect of data that is on hand.\n\n\n\nExample: Using data from the Stat 20 class survey, the proportion of respondents to the survey who reported having no experience writing computer code is 70%.\n\n\nGeneralization\n\nA numerical, graphical, or verbal description of a broader set of units than those on which data was been recorded.\n\n\n\n\nExample: Using data from the Stat 20 class survey, the proportion of Berkeley students who have no experience writing computer code is 70%.\n\n\nCausal Claim\n\nA claim that changing the value of one variable will influence the value of another variable.\n\n\n\nExample: Data from a randomized controlled experiment shows that taking a new antibiotic eliminates more than 99% of bacterial infections.\n\n\nPrediction\n\nA guess about the value of an unknown variable, based on other known variables.\n\n\n\nExample: Based on reading the news and the price of Uber’s stock today, I predict that Uber’s stock price will go up 1.2% tomorrow.",
+    "crumbs": [
+      "Notes",
+      "Questions and Data",
+      "Understanding the World with Data"
+    ]
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License.\nThe source materials for the curriculum for this course and the software that builds this website are available under at:\nhttps://github.com/stat20/stat20"
+  },
+  {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "Welcome to the technical documentation of the Stat 20 curriculum and website."
+  },
+  {
+    "objectID": "docs/website.html",
+    "href": "docs/website.html",
+    "title": "Configuring this Website",
+    "section": "",
+    "text": "One repo to rule them all.\n\n\n\nOrganization: files should be organized in a way that prioritizes thinking of it as a curriculum (instead of a website or a series of assignments). (subpoint: modularity)\nReproducibility:\nDocumentation:\nAutomation: automate as many non-human tasks as possible."
+  },
+  {
+    "objectID": "docs/website.html#design",
+    "href": "docs/website.html#design",
+    "title": "Configuring this Website",
+    "section": "",
+    "text": "One repo to rule them all.\n\n\n\nOrganization: files should be organized in a way that prioritizes thinking of it as a curriculum (instead of a website or a series of assignments). (subpoint: modularity)\nReproducibility:\nDocumentation:\nAutomation: automate as many non-human tasks as possible."
+  },
+  {
+    "objectID": "docs/website.html#contributing",
+    "href": "docs/website.html#contributing",
+    "title": "Configuring this Website",
+    "section": "Contributing",
+    "text": "Contributing\n\nConfiguring your machine\n\nOn your machine, a new RStudio project from version control, linked directly to the repo at https://github.com/stat20/stat20.\nBe sure you’ve configured git on your machine (allowing you to make commits) and stored a Personal Access Token (PAT) (allowing your machine to push commits to your repo on GitHub).\n\n\n\nWorkflow\n\nIn RStudio on main, pull any new changes.\nCreate a new branch named with what you’re adding, prepended with your name (e.g. andrew-update-lab-6).\nEdit the files you wish to work on. As you go, the easiest way to see how your changes look is to run quarto preview --profile staff-site at the terminal. That will do a minimal render of the website to show you the document that you’re working on and will re-render that document every time you save. You can also run quarto preview if you want to see the student-facing site (with no staff guide).\nCommit your changes to your new branch and push them to GitHub.\nGo to your GitHub and make a pull request from your new branch into stat20/stat20, main branch. Once the PR is made, it will kick-off a test rendering of both the student site and the staff site (the staff site will take &gt; 10 min to fully render). Once they’re done, you can go to https://stat20-pr.netlify.app/ and https://stat20staff-pr.netlify.app/ to see how they look. Note: this action will kickoff anew for each commit that you add to the PR, so it can be good to make the PR when you have just one commit on the branch, then check back as you push more commits to see how it looks.\nOnce the PR is merged into main, it will kick-off an action that will render and publish the staff site to https://stat20staff.netlify.app/. https://stat20.org/ doesn’t get rendered and published when main is changed, but instead of a pre-programmed schedule. After merging the branch, that branch can be deleted.\n\n\n\nAdding a page\n\nCreate a new qmd file\nAdd your content like normal\n\n\n\nCourse Settings"
   },
   {
     "objectID": "syllabus.html",
@@ -479,450 +924,5 @@
     "title": "Quiz",
     "section": "Group Quiz",
     "text": "Group Quiz\n\n\nBefore the quiz begins\n\nForm groups of 2-3 people.\n🧹 Everything except a pen/pencil and your cheat sheet must remain off your desk.\n📱 All electronic devices (laptop, phone, airbuds, smart watch) should be remain in your bag for the entire class period.\nWhen you get a group quiz, write all group members names on it but do not begin.\n\n\nDuring the quiz\n\n🗣️Discuss each of the problems and decide as a group which answer is best.\n⌛If you finish early, please raise your hand and we will pick it up.\n❗You must stop writing when time is called or risk a 0.\n\nGood luck! 🍀\n\n\n  \n    −\n    +\n \n 15:00"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#agenda",
-    "href": "5-prediction/05-logistic-regression/slides.html#agenda",
-    "title": "Logistic Regression",
-    "section": "Agenda",
-    "text": "Agenda\n\nAnnouncements\nConcept Questions\nBreak\nLab 6.2\nAppendix: Logistic Regression with the penguins dataset"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#announcements",
-    "href": "5-prediction/05-logistic-regression/slides.html#announcements",
-    "title": "Logistic Regression",
-    "section": "Announcements",
-    "text": "Announcements\n\nQuiz 4:\n\nMonday in class.\nWrong By Design through Logistic Regression\n\n\n\n\nProblem Sets:\n\nPS 18 (Overfitting) due next Tuesday at 9am\nExtra Practice (Logistic Regression)\n\n\n\n\n\nLab 6:\n\nboth parts due Tuesday at 9am"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section",
-    "href": "5-prediction/05-logistic-regression/slides.html#section",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "A logistic regression model was fit in an attempt to predict the sex of a penguin \"male\" or \"female\" based on its body mass (grams).\n\nAssuming that no change to the penguins dataset was made, will the model be predicting the probability of the penguin being male or the probability of the penguin being female?\n\n\n\n\n−+\n01:00"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section-1",
-    "href": "5-prediction/05-logistic-regression/slides.html#section-1",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "m1 &lt;- glm(sex ~ body_mass_g, data = penguins, family = \"binomial\")\n\n\n\n (Intercept)  body_mass_g \n-5.162541644  0.001239819 \n\n\n\nWhich of the expressions given in the poll (math or code) will correctly calculate the predicted probability that a penguin that weighs 4000 g is a female? Select all that apply\n\n\n\n\n−+\n01:00\n\n\n\n\nTo answer this one correctly, they’ll need to know (or remember from the RQ) that the reference level is female, so this model is predicting the probability male.\nYou can show that they can either use R as a calculator or use the predict function.\n1/(1 + exp(-(-5.15 + .00124 * 4000))) predict(m1, newdata = data.frame(body_mass_g = 4000), type = “response”)\nThe latter is more precise, which is useful here since p-hat (prob of male) is .449 therefore prob of female is .55.\nAs a bonus, try sketching this function on a scatterplot!\nWhen sketching this, the positive slope means the s-curve goes up and to the right. The negative intercept shifts the whole curve a tiny bit to the left, reflecting the base rate of a couple more males than females (168 vs 165)."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section-2",
-    "href": "5-prediction/05-logistic-regression/slides.html#section-2",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "What is the misclassification rate of this model?\n\n\n\n# A tibble: 4 × 3\n# Groups:   sex [2]\n  sex    y_hat      n\n  &lt;fct&gt;  &lt;chr&gt;  &lt;int&gt;\n1 female female   109\n2 female male      56\n3 male   female    74\n4 male   male      94\n\n\n\n\n\n−+\n01:00"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section-3",
-    "href": "5-prediction/05-logistic-regression/slides.html#section-3",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "m2 &lt;- glm(sex ~ body_mass_g + bill_length_mm, \n          data = penguins, family = \"binomial\")\n\n\n\n   (Intercept)    body_mass_g bill_length_mm \n   -6.91208086     0.00101530     0.06112808 \n\n\n\nOpen up RStudio and fit the model here in the slides. What are the predicted sexes of these two penguins?\n\nbody mass = 3900 g, bill length = 50\nbody mass = 4100 g, bill length = 35\n\n\n\n\n\n−+\n01:00\n\n\n\n\nYou can have students work on their laptops for this question.\nThis one extends the task of the previous one by having them include another covariate and also to do the thresholding procedure to go from p-hat to y-hat. This doesn’t specify the threshold, so using .5 is probably a good default.\npredict(m2, newdata = data.frame(body_mass_g = 3900, bill_length_mm = 50), type = “response”) # male predict(m2, newdata = data.frame(body_mass_g = 4100, bill_length_mm = 35), type = “response”) # female"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
-    "href": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
-    "title": "Logistic Regression",
-    "section": "Building a predictive model",
-    "text": "Building a predictive model\n\nDecide on the mathematical form of the model: logistic linear regression\n\n\n\nSelect a metric that defines the “best” fit: the coefficients in logistic regression are the ones that minimize not the RSS function but a function called log-loss (which we don’t have time to cover)\n\n\n\n\nEstimating the coefficients of the model that are best using the training data: we know how to do this: test + train + glm()!\n\n\n\n\nEvaluating predictive accuracy using a test data set:\\(R^2\\) isn’t relevant here. We need a new metric!"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins",
-    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins",
-    "title": "Logistic Regression",
-    "section": "Example: penguins",
-    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
-    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
-    "title": "Logistic Regression",
-    "section": "Example: penguins",
-    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))\n\ntrain &lt;- penguins |&gt;\n  filter(set_type == \"train\")\n\ntest &lt;- penguins |&gt;\n  filter(set_type == \"test\")"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex)\n\n# A tibble: 70 × 1\n   sex   \n   &lt;fct&gt; \n 1 female\n 2 male  \n 3 female\n 4 male  \n 5 male  \n 6 female\n 7 male  \n 8 female\n 9 male  \n10 male  \n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat)\n\n# A tibble: 70 × 2\n   sex    p_hat\n   &lt;fct&gt;  &lt;dbl&gt;\n 1 female 0.345\n 2 male   0.566\n 3 female 0.259\n 4 male   0.280\n 5 male   0.365\n 6 female 0.196\n 7 male   0.428\n 8 female 0.220\n 9 male   0.559\n10 male   0.279\n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = predict(m2, test, type = \"response\"),\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"))\n\n# A tibble: 70 × 3\n   sex    p_hat y_hat \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt; \n 1 female 0.345 female\n 2 male   0.566 male  \n 3 female 0.259 female\n 4 male   0.280 female\n 5 male   0.365 female\n 6 female 0.196 female\n 7 male   0.428 female\n 8 female 0.220 female\n 9 male   0.559 male  \n10 male   0.279 female\n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#classification-errors",
-    "href": "5-prediction/05-logistic-regression/slides.html#classification-errors",
-    "title": "Logistic Regression",
-    "section": "Classification errors",
-    "text": "Classification errors\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"),\n         FP = sex == \"female\" & y_hat == \"male\",\n         FN = sex == \"male\" & y_hat == \"female\")\n\n# A tibble: 70 × 5\n   sex    p_hat y_hat  FP    FN   \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;lgl&gt; &lt;lgl&gt;\n 1 female 0.345 female FALSE FALSE\n 2 male   0.566 male   FALSE FALSE\n 3 female 0.259 female FALSE FALSE\n 4 male   0.280 female FALSE TRUE \n 5 male   0.365 female FALSE TRUE \n 6 female 0.196 female FALSE FALSE\n 7 male   0.428 female FALSE TRUE \n 8 female 0.220 female FALSE FALSE\n 9 male   0.559 male   FALSE FALSE\n10 male   0.279 female FALSE TRUE \n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
-    "href": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
-    "title": "Logistic Regression",
-    "section": "Misclassification Rate",
-    "text": "Misclassification Rate\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\")) |&gt;\n  summarize(MCR = mean(sex != y_hat))\n\n# A tibble: 1 × 1\n    MCR\n  &lt;dbl&gt;\n1 0.371"
-  },
-  {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "Prerequisites\nInstall Docker.\nIf you are running on a computer with Apple Silicon (using a new “M” processor), - Update macOS to Venture 13 or newer. - Install Apple’s Rosetta emulation by running softwareupdate --install-rosetta. - In Docker Desktop, enable Settings &gt; Features in development &gt; Use Rosetta for x86/amd64 emulation on Apple Silicon.\nIf you are running Microsoft Windows, - Install WSL. - In a Command or Power Shell window, run wsl --install -d Ubuntu. - In an Ubuntu window, run apt update, then apt install make. - Run exec ssh-agent bash to start your SSH agent.\nCheckout this repository into a new working directory.\n\n\nRun the Container\nIn a terminal window, change into the working directory and run make up. This initializes your environment by creating the file .env. It then runs docker compose.\nWhen your environment changes, for example if you log out and back in, or if you manually copy your working directory to another platform, run make clean or manually delete the .env file. Then run make up.\n\n\nBuild a Custom Image (WIP)\nThe container is normally built automatically by a CI process on GitHub Actions. If you need to alter the image, for example if you want to locally test a new library addition, you can do the following:\n\nCheckout the https://github.com/stat20/stat20-docker repository.\nMake any changes\nRun docker build -t somename:sometag .. If on an alternative hardware platform like Apple’s ARM (modern Apple computers), you can run docker build -t somename:sometag --platform linux/amd64 ..\nCreate a new file names docker-compose.override.yml with the following contents:\n\nversion: \"3.8\"\nservices:\n  stat20:\n    image: somename:sometag"
-  },
-  {
-    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html",
-    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html",
-    "title": "The Taxonomy of Data",
-    "section": "",
-    "text": "In the beginning was data, and from that data was built an understanding of the world.\nIn the beginning was understanding, and from that understanding sprung questions that sought to be answered with data.\nSo, which is it?\nThis is a philosophical question and it is up for debate. What is clearer is that in the process of engaging in data science, you will inevitably find yourself at one of these beginnings, puzzling over how to make your way to the other one.\nThe defining element of data science is the centrality of data as the means of advancing our understanding of the world. The word “data” is used in many different ways, so let’s write down a definition to get everyone on the same page.\nThis broad definition permits a staggering diversity in the forms that data can take. When you conducted a chemistry experiment in high school and recorded your measurements in a table in a lab notebook, that was data. When you registered for this class and your name showed on CalCentral, that was data. When the James Webb Space Telescope took a photo of the distant reaches of our solar system, recording levels of light pixel-by-pixel, that was data.\nSuch diversity in data is more precisely described as diversity in the types of variables that are being measured in a data set.\nIn your chemistry notebook you may have recorded the temperature and pressure of a unit of gas, two variables that are of scientific interest. In the CalCentral data set, name is the variable that was recorded (on you!) but you can imagine other variables that the registrars office might have recorded: your year at Cal, your major, etc. Each of these are called variables because the value that is measured generally varies as you move from one object to the next. While your value of the name variable might be Penelope, if we record the same variable on another student we’ll likely come up with different value.",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "The Taxonomy of Data"
-    ]
-  },
-  {
-    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-taxonomy-of-data",
-    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-taxonomy-of-data",
-    "title": "The Taxonomy of Data",
-    "section": "A Taxonomy of Data",
-    "text": "A Taxonomy of Data\nWhile the range of variables that we can conceive of is innumerable, there are recurring patterns in those variables that allow us to group them into persistent types that have shared properties. Such a practice of classification results in a taxonomy, which has been applied most notably in evolutionary biology to classify all forms of life.\nWithin the realm of data, an analogous taxonomy has emerged.\n\n\n\n\n\n\nFigure 2: the Taxonomy of Data.\n\n\n\n\nTypes of Variables\nThe principle quality of a variable is whether it is numerical or categorical.\n\n\nNumerical Variable\n\nA variable that take numbers as values and where the magnitude of the number has a quantitative meaning.\n\n\n\n\n\nCategorical Variable\n\nA variable that take categories as values. Each unique category is called a level.\n\n\n\nWhen most people think “data” they tend to think about numerical variables (like the temperature and pressure recorded in your lab notebook) but categorical variables (like the name recorded on CalCentral) are very common.\nAll numerical variables can be classified as either continuous or discrete.\n\n\nContinuous Numerical Variable\n\nA numerical variable that takes values on an interval of the real number line.\n\n\n\n\n\nDiscrete Numerical Variable\n\nA numerical variable that takes values that have jumps between them.\n\n\n\nA good example of a continuous numerical variable is temperature. If we are measuring outside air temperature on Earth in Fahrenheit, it is possible that we would record values anywhere from around -125 degrees F and +135 degrees F. While we might end up rounding our measurement to the nearest integer degree, we can imagine that the phenomenon of temperature itself varies smoothly and continuously across this range.\nA good example of a discrete numerical variable is household size. When the US Census goes door-to-door every year collecting data on every household, they record the number of people living in that household. A household can have 1 person, or 2 people, or 3 people, or 4 people, and so on, but it cannot have 2.83944 people. This makes it discrete.\nWhat unites both types of numerical variables is that the magnitude of the numbers have meaning and you can perform mathematical operations on them and the result also has meaning. It is possible and meaningful to talk about the average air temperature across three locations. It is also possible and meaningful to talk about the sum total number of people across ten households.\nThe ability to perform mathematical operations drops away when we move to ordinal variables. All categorical variables can be classified as either ordinal or nominal.\n\n\nOrdinal Categorical Variable\n\nA categorical variable with levels that have a natural ordering.\n\n\n\n\n\nNominal Categorical Variable\n\nA categorical variable with levels with no ordering.\n\n\n\nYou have likely come across ordinal categorical variables if you have taken an opinion survey. Consider the question:“Do you strongly agree, agree, feel neutral about, disagree, or strongly disagree with the following statement: Dogs are better than cats?” When you record answers to this question, you’re recording measurements on a categorical variable that takes values “strongly agree”, “agree”, “neutral”, “disagree”, “strongly disagree”. Those are the levels of the categorical variable and they have a natural ordering: “strongly agree” is closer to “agree” than it is to “strongly disagree”.\nYou can contrast this with a nominal categorical variable. Consider a second question that asks (as the registrar does): “What is your name?” There are many more possible levels in this case - “Penelope”, “David”, “Shobhana”, etc. - but those levels have no natural ordering. In fact this is very appropriate example of a nominal variable because the word itself derives from the Latin nomen, or “name”.\nLet’s take a look at a real data set to see if we can identify the variables and their types.\n\n\nExample: Palmer Penguins\nDr. Kristen Gorman is a fisheries and wildlife ecologist at the University of Alaska, Fairbanks whose work brought her to Palmer Station, a scientific research station run by the National Science Foundation in Antarctica. At Palmer Station, she took part in a long-term study to build an understanding of the breeding ecology and population structure of penguins.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Dr. Gorman recording measurements on penguins and Palmer Station, a research station in Antarctica.\n\n\n\nIn order to build her understanding of this community of penguins, she and fellow scientists spent time in the field recording measurements on a range of variables that capture important physical characteristics.\n\n\n\nTwo of the variables that were recorded were bill length and bill depth1. Each of these capture a dimension of the bill of a penguin recorded in millimeters These are identifiable as continuous numerical variables. They’re numerical because the values have quantitative meaning and they’re continuous because bill sizes don’t come in fixed, standard increments. They vary continuously.\nAnother variable that was recorded was the species of the penguin, either “Adelie”, “Gentoo”, or “Chinstrap”. Because these values are categories, this is a categorical variable. More specifically, it’s a nominal categorical because there is no obvious natural ordering between these three species.\n\n\n\nThese are just three of many variables that recorded in the penguins data set and published along their scientific findings in the paper, Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis)2. We will return throughout this course to this data set and this study. It is a prime example of how careful data collection and careful scientific reasoning can expand our understanding of a corner of our world about which we know very little.\n\n\nWhy Types Matter\nThe Taxonomy of Data is a useful tool of statistics and data science because it helps guide the manner in which data is recorded, visualized, and analyzed. Many confusing plots have been made by not thinking carefully about whether a categorical variable is ordinal or not or by mistaking a continuous numerical variable for a categorical variable. You will get plenty of practice using this taxonomy to guide your data visualization in the next unit.\nLike many tools built by scientists, though, this taxonomy isn’t perfect. There are many variables that don’t quite seem to fit into the taxonomy or that you can argue should fit into multiple types. That’s usually a sign that something interesting is afoot and is all the more reason to think carefully about the nature of the variables and the values it might take before diving into your analysis.",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "The Taxonomy of Data"
-    ]
-  },
-  {
-    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-structure-for-data-the-data-frame",
-    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#a-structure-for-data-the-data-frame",
-    "title": "The Taxonomy of Data",
-    "section": "A Structure for Data: The Data Frame",
-    "text": "A Structure for Data: The Data Frame\nWhen we seek to grow our understanding of a phenomenon, sometimes we select a single variable that we go out and collect data on. More often, we’re dealing with more complex phenomenon that are characterized by a few, or a few dozen, or hundreds (or even millions!) of variables. CalCentral has far more than just your name on file. To capture all of the complexity of class registration at Cal, it is necessary to record dozens of variables.\nTo keep all of this data organized, we need a structure. While there are several different ways to structure a given data set, the format that has become most central to data science is the data frame.\n\n\nData Frame\n\nAn array that associates the observations (downs the rows) with the variables measured on each observation (across the columns). Each cell stores a value observed for a variable on an observation.\n\n\n\nWhile this definition might seem opaque, you are already familiar with a data frame. You are you just more accustomed to seeing it laid out this like this:\n\n\n\n\n\nbill_length_mm\nbill_depth_mm\nspecies\n\n\n\n\n43.5\n18.1\nChinstrap\n\n\n48.1\n15.1\nGentoo\n\n\n49.0\n19.5\nChinstrap\n\n\n45.4\n18.7\nChinstrap\n\n\n34.6\n21.1\nAdelie\n\n\n49.8\n17.3\nChinstrap\n\n\n40.9\n18.9\nAdelie\n\n\n45.3\n13.7\nGentoo\n\n\n\n\n\n\n\nYou might be accustomed to calling this a “spreadsheet” or a “table”, but the organizational norm of putting the variables down the columns and the observations across the rows make this a more specific structure.\nOne of the first questions that you should address when you first come across a data frame is to determine what the unit of observation is.\n\n\nUnit of Observation\n\nThe class of object on which the variables are observed.\n\n\n\nIn the case of data frame above, the unit of observation is a single penguin near Palmer Station. The first row captures the measurements on the first penguin, the second row captures the measurements of the second penguin, and so on. If I log into CalCentral to see the data frame that records information on the students enrolled in this class, the unit of observation is a single student enrolled in this class.\n\nNot a Data Frame\nBefore you leave thinking that “data frame” = “spreadsheet”, consider this data set:\n\n\n\n\n\nFor it to be a data frame, we would have to read across the columns and see the names of the variables. You can imagine recording whether or not an alien is green or blue, but those variables would take the values “yes” and “no”, not the counts that we see here. Furthermore, total is not a variable that we’ve recorded a single unit; this column captures aggregate properties of the whole data set.\nWhile this structure might well be called a “table” or possibly a “spreadsheet”, it doesn’t meet our definition for a data frame.",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "The Taxonomy of Data"
-    ]
-  },
-  {
-    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#summary",
-    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#summary",
-    "title": "The Taxonomy of Data",
-    "section": "Summary",
-    "text": "Summary\nIn this lecture note we have focused on the nature of the data that will serve as the currency from which we’ll construct an improved understanding of the world. A first step is to identify the characteristics of the variables that are being measured and determine their type within the Taxonomy of Data. A second step is to organize them into a data frame to clearly associate the value that is measured for a variable with a particular observational unit.\nWith these ideas in hand, we learned how to bring data onto our computer, so that in our next class, we can begin the process of identifying its structure and communicating that structure numerically and visually.\nContinue on to the tutorial portion of the notes",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "The Taxonomy of Data"
-    ]
-  },
-  {
-    "objectID": "1-questions-and-data/02-taxonomy-of-data/notes.html#footnotes",
-    "href": "1-questions-and-data/02-taxonomy-of-data/notes.html#footnotes",
-    "title": "The Taxonomy of Data",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nPenguin artwork by @allison_horst.↩︎\nGorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081↩︎",
-    "crumbs": [
-      "Notes",
-      "Questions and Data",
-      "The Taxonomy of Data"
-    ]
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#agenda",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#agenda",
-    "title": "Understanding the World with Data",
-    "section": "Agenda",
-    "text": "Agenda\n\nIntroductions\nThe Data Science Lifecycle\nTypes of Claims with Practice\nCourse Structure and Syllabus\nIntro to R and RStudio\nLooking forward"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "What’s going on here?"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-2",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-2",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "As a group, formulate at least three possible explanations for what’s going on in the picture.\n\n\n\n\n  \n    −\n    +\n \n 03:00"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-4",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-4",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "These three photos were taken in quick succession by a physician and amateur photographer who was vising the San Diego Zoo Safari Park. He was watching the shoebill as it was walking down a path in the reeds. As the shoebill was ambling along, it encountered a duck in the middle of the path. It leaned down, picked up the duck in its beak, turned to the side, dropped the duck in the reeds, then proceeded to amble down the path."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-5",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-5",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "Understand\nthe World\n\n\n\nData"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-6",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-6",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "Understand\nthe World\n\n\n\nData"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#takeaways-from-this-exercise",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#takeaways-from-this-exercise",
-    "title": "Understanding the World with Data",
-    "section": "Takeaways from this exercise",
-    "text": "Takeaways from this exercise\nWe can call the process of:\n\nhaving a question,\n\n\n\nfinding data to investigate that question,\n\n\n\n\nreaching a conclusion,\n\n\n\n\nand then thinking of a next step which starts everything over again\n\n\n\n\nthe data science lifecycle.\n\nThis lifecycle involves constructing and critiquing claims made using data: which is the main goal of our course!"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#course-goal",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#course-goal",
-    "title": "Understanding the World with Data",
-    "section": "Course Goal",
-    "text": "Course Goal\n\n\nTo learn to critique and construct\nclaims made using data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-7",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-7",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "To learn to critique and construct\nclaims made using data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-8",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-8",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "To learn to critique and construct\nclaims made using data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-9",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-9",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "To learn to critique and construct\nclaims made using data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-10",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-10",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "To learn to critique and construct\nclaims made using data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-11",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-11",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "To learn to critique and construct\nclaims made using data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-12",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-12",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "To learn to critique and construct\nclaims made using data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-13",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-13",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "A numerical, graphical, or verbal description of an aspect of data that is on hand.\n\n\n\n\n\n\nExample\nUsing data from the Stat 20 class survey, the proportion of respondents to the survey who reported having no experience writing computer code is 70%."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-14",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-14",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "A numerical, graphical, or verbal description of a broader set of units than those on which data was been recorded.\n\n\n\n\n\n\n\nExample\nUsing data from the Stat 20 class survey, the proportion of Berkeley students who have no experience writing computer code is 70%."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-15",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-15",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "A claim that changing the value of one variable will influence the value of another variable.\n\n\n\n\n\n\nExample\nData from a randomized controlled experiment shows that taking a new antibiotic eliminates more than 99% of bacterial infections."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-16",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-16",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "A guess about the value of an unknown variable, based on other known variables.\n\n\n\n\n\n\nExample\nBased on reading the news and the price of Uber’s stock today, I predict that Uber’s stock price will go up 1.2% tomorrow."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#practice-concept-questions-1",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#practice-concept-questions-1",
-    "title": "Understanding the World with Data",
-    "section": "Practice Concept Questions",
-    "text": "Practice Concept Questions\nWe will now re-examine a few pathways in the data science lifecycle:\n\nForming a question -&gt; collecting data\n\n\n\nCollecting data -&gt; making a claim"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#from-questions-to-data",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#from-questions-to-data",
-    "title": "Understanding the World with Data",
-    "section": "From Questions to Data",
-    "text": "From Questions to Data\n\n\nIs the incidence of COVID on campus going up or down?\n\n\n\n\nDiscuss:\nA. What type of data can help answer this question? Consider\n\nWhich different people / institutions collect relevant data\nIs certain data not available? Why not?\n\nB. Will this question be answered by a summary, a prediction, a generalization, or a causal claim?\n\n\n  \n    −\n    +\n \n 06:00"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#from-data-to-claims",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#from-data-to-claims",
-    "title": "Understanding the World with Data",
-    "section": "From Data to Claims",
-    "text": "From Data to Claims\nOne source of data:\n\n\n\n\n\n“The following dashboard provides information on COVID-19 testing performed at University Health Services or through the PCR Home Test Vending Machines on campus. It does not capture self-reported positive tests. It provides a look at new cases and trends, at a glance.”"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-17",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-17",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "The screenshot above is from https://calviz.berkeley.edu/t/COVIDRecoveryPublic/views/UHSCovidData/UHSDashboard?%3Aiid=3&%3AisGuestRedirectFromVizportal=y&%3Aembed=y and the orange line is campuswide rates. The grey lines are students living on campus, off-campus, or in family housing.\n\n\nFormulate one claim that is supported by this data1.\n\n\n  \n    −\n    +\n \n 03:00\n \nThe positivity rate is the number of positive tests over the total number of tests."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-23",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-23",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "Read lecture notes\nWork through reading questions\n\n\n\n\n\nWork through concept questions solo / in groups / as a class\nMake progress on assignments"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#section-24",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#section-24",
-    "title": "Understanding the World with Data",
-    "section": "",
-    "text": "All of the materials and links for the course can be found at:\nhttps://stat20.berkeley.edu/spring-2025\n\n\n\nShow them the shortcuts at the top right of the course page. Explain that the notes will be made available a couple of days before they are scheduled to be covered. They should read the notes, and complete the reading questions the night before lecture. Then, in class, we will review the concepts and work on conceptual problems (worksheets) or coding (labs). The first part of each lab is also conceptual in which we think about the data."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#ed-discussion-forum",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#ed-discussion-forum",
-    "title": "Understanding the World with Data",
-    "section": "Ed Discussion Forum",
-    "text": "Ed Discussion Forum\n\n\n\n\n\nForum to ask questions, answer questions, and course announcements\nPlease answer each other’s questions!\n\n\nPractice by asking/answering a question on the “Syllabus Discussion” thread on Ed via the link on the course website.\n\n\nMake a syllabus discussion thread for your class as they begin reading the syllabus, so that they can ask their question there."
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#load-the-lab-1-template-into-rstudio",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#load-the-lab-1-template-into-rstudio",
-    "title": "Understanding the World with Data",
-    "section": "Load the Lab 1 Template into RStudio",
-    "text": "Load the Lab 1 Template into RStudio\nClick the link below…\n\n\n\n\nLoad Lab Templates into RStudio"
-  },
-  {
-    "objectID": "1-questions-and-data/01-understanding-the-world/slides.html#general-lab-workflow",
-    "href": "1-questions-and-data/01-understanding-the-world/slides.html#general-lab-workflow",
-    "title": "Understanding the World with Data",
-    "section": "General Lab Workflow",
-    "text": "General Lab Workflow\n\nLab Questions will be posted to the course website.\nYou’ll author your Lab Reports as Quarto Documents that blend text and code. They should contain only answers.\nRender your .qmd file to a .pdf file then download that file from RStudio to your computer.\nGo to Gradescope and upload your .pdf lab report, being sure to assign questions to the pages."
-  },
-  {
-    "objectID": "docs/slides.html",
-    "href": "docs/slides.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Be sure your personal fork of the course-materials is up to date by syncing it to the one on github.com/stat20.\nPull the most recent changes from your fork to your local machine.\nMake changes to slides.qmd and save.\n\n\n\n\nQuarto Pub is a free service for publishing quarto documents, including slides, online. Start by setting up an account at https://quartopub.com/.\n\nOnce you are set up with an account, in the terminal, navigate to the directory that contains your slides, for example: cd summarizing-numerical-data.\nOpen slides.qmd and, ensure that under revealjs: that you add the option self-contained: true. (read more here)\nIn that directory run:\n\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\n\nYou may be prompted to answer a few questions at the terminal. If it successfully published, it will provide a link to your published document\nAt this point, you’re all set!\n\nIf you’d like to learn more about publishing with Quarto Pub, see the official documentation.\n\n\n\nTest it out by working in a much simpler directory than course-materials, one called practice-repo. Since you won’t be pushing any commits back up to GitHub, you don’t need a create your own fork.\n\nCreate a new project in Rstudio from a version control repository and paste in https://github.com/stat20/practice-repo for the url.\nModify slides.qmd in the summarizing-numerical-data directory by, say, replacing \"Instructor\" with your name in the header.\nIn the terminal, navigate into the sub-directory with the slides: cd summarizing-numerical-data\nStill at the terminal, publish your slides:\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\nClick through any prompts you might see at the terminal.\nIf it publishes successfully, the terminal will print a link to your published document. Visit that site and check the link at the top that it says that it has been “Published at …”. It should appear as &lt;user_name&gt;.quarto.pub/summarizing-categorical-data/."
-  },
-  {
-    "objectID": "docs/slides.html#modifying-your-own-slides",
-    "href": "docs/slides.html#modifying-your-own-slides",
-    "title": "Slides",
-    "section": "",
-    "text": "Be sure your personal fork of the course-materials is up to date by syncing it to the one on github.com/stat20.\nPull the most recent changes from your fork to your local machine.\nMake changes to slides.qmd and save."
-  },
-  {
-    "objectID": "docs/slides.html#publishing-your-own-slides",
-    "href": "docs/slides.html#publishing-your-own-slides",
-    "title": "Slides",
-    "section": "",
-    "text": "Quarto Pub is a free service for publishing quarto documents, including slides, online. Start by setting up an account at https://quartopub.com/.\n\nOnce you are set up with an account, in the terminal, navigate to the directory that contains your slides, for example: cd summarizing-numerical-data.\nOpen slides.qmd and, ensure that under revealjs: that you add the option self-contained: true. (read more here)\nIn that directory run:\n\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\n\nYou may be prompted to answer a few questions at the terminal. If it successfully published, it will provide a link to your published document\nAt this point, you’re all set!\n\nIf you’d like to learn more about publishing with Quarto Pub, see the official documentation."
-  },
-  {
-    "objectID": "docs/slides.html#test-it-out",
-    "href": "docs/slides.html#test-it-out",
-    "title": "Slides",
-    "section": "",
-    "text": "Test it out by working in a much simpler directory than course-materials, one called practice-repo. Since you won’t be pushing any commits back up to GitHub, you don’t need a create your own fork.\n\nCreate a new project in Rstudio from a version control repository and paste in https://github.com/stat20/practice-repo for the url.\nModify slides.qmd in the summarizing-numerical-data directory by, say, replacing \"Instructor\" with your name in the header.\nIn the terminal, navigate into the sub-directory with the slides: cd summarizing-numerical-data\nStill at the terminal, publish your slides:\n\n\nTerminal\n\nquarto publish quarto-pub slides.qmd\n\nClick through any prompts you might see at the terminal.\nIf it publishes successfully, the terminal will print a link to your published document. Visit that site and check the link at the top that it says that it has been “Published at …”. It should appear as &lt;user_name&gt;.quarto.pub/summarizing-categorical-data/."
-  },
-  {
-    "objectID": "docs/website.html",
-    "href": "docs/website.html",
-    "title": "Configuring this Website",
-    "section": "",
-    "text": "One repo to rule them all.\n\n\n\nOrganization: files should be organized in a way that prioritizes thinking of it as a curriculum (instead of a website or a series of assignments). (subpoint: modularity)\nReproducibility:\nDocumentation:\nAutomation: automate as many non-human tasks as possible."
-  },
-  {
-    "objectID": "docs/website.html#design",
-    "href": "docs/website.html#design",
-    "title": "Configuring this Website",
-    "section": "",
-    "text": "One repo to rule them all.\n\n\n\nOrganization: files should be organized in a way that prioritizes thinking of it as a curriculum (instead of a website or a series of assignments). (subpoint: modularity)\nReproducibility:\nDocumentation:\nAutomation: automate as many non-human tasks as possible."
-  },
-  {
-    "objectID": "docs/website.html#contributing",
-    "href": "docs/website.html#contributing",
-    "title": "Configuring this Website",
-    "section": "Contributing",
-    "text": "Contributing\n\nConfiguring your machine\n\nOn your machine, a new RStudio project from version control, linked directly to the repo at https://github.com/stat20/stat20.\nBe sure you’ve configured git on your machine (allowing you to make commits) and stored a Personal Access Token (PAT) (allowing your machine to push commits to your repo on GitHub).\n\n\n\nWorkflow\n\nIn RStudio on main, pull any new changes.\nCreate a new branch named with what you’re adding, prepended with your name (e.g. andrew-update-lab-6).\nEdit the files you wish to work on. As you go, the easiest way to see how your changes look is to run quarto preview --profile staff-site at the terminal. That will do a minimal render of the website to show you the document that you’re working on and will re-render that document every time you save. You can also run quarto preview if you want to see the student-facing site (with no staff guide).\nCommit your changes to your new branch and push them to GitHub.\nGo to your GitHub and make a pull request from your new branch into stat20/stat20, main branch. Once the PR is made, it will kick-off a test rendering of both the student site and the staff site (the staff site will take &gt; 10 min to fully render). Once they’re done, you can go to https://stat20-pr.netlify.app/ and https://stat20staff-pr.netlify.app/ to see how they look. Note: this action will kickoff anew for each commit that you add to the PR, so it can be good to make the PR when you have just one commit on the branch, then check back as you push more commits to see how it looks.\nOnce the PR is merged into main, it will kick-off an action that will render and publish the staff site to https://stat20staff.netlify.app/. https://stat20.org/ doesn’t get rendered and published when main is changed, but instead of a pre-programmed schedule. After merging the branch, that branch can be deleted.\n\n\n\nAdding a page\n\nCreate a new qmd file\nAdd your content like normal\n\n\n\nCourse Settings"
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Notes",
-    "section": "",
-    "text": "Navigate the notes using the menu in the left sidebar or the search in the upper right corner of the page.",
-    "crumbs": [
-      "Notes"
-    ]
-  },
-  {
-    "objectID": "tutorials.html",
-    "href": "tutorials.html",
-    "title": "R Tutorials",
-    "section": "",
-    "text": "Tutorials serve to introduce you to the fundamentals of the R language.",
-    "crumbs": [
-      "Tutorials",
-      "R Tutorials"
-    ]
-  },
-  {
-    "objectID": "glossary-fns.html",
-    "href": "glossary-fns.html",
-    "title": "Functions",
-    "section": "",
-    "text": "Questions and Data"
-  },
-  {
-    "objectID": "glossary-defs.html",
-    "href": "glossary-defs.html",
-    "title": "Definitions",
-    "section": "",
-    "text": "Questions and Data\n\n\nData\n\nAn item of (chiefly numerical) information, especially one obtained by scientific work, a number of which are typically collected together for reference, analysis, or calculation. From Latin datum: that which is given. Facts.\n\n\n\n\n\nVariable\n\nA characteristic of an object or observational unit that can be measured and recorded.\n\n\n\n\n\nNumerical Variable\n\nA variable that take numbers as values and where the magnitude of the number has a quantitative meaning.\n\n\n\n\n\nCategorical Variable\n\nA variable that take categories as values. Each unique category is called a level.\n\n\n\n\n\nContinuous Numerical Variable\n\nA numerical variable that takes values on an interval of the real number line.\n\n\n\n\n\nDiscrete Numerical Variable\n\nA numerical variable that takes values that have jumps between them.\n\n\n\n\n\nOrdinal Categorical Variable\n\nA categorical variable with levels that have a natural ordering.\n\n\n\n\n\nNominal Categorical Variable\n\nA categorical variable with levels with no ordering.\n\n\n\n\n\nData Frame\n\nAn array that associates the observations (downs the rows) with the variables measured on each observation (across the columns). Each cell stores a value observed for a variable on an observation.\n\n\n\n\n\nUnit of Observation\n\nThe class of object on which the variables are observed.\n\n\n\n\n\nSummary\n\nA numerical, graphical, or verbal description of an aspect of data that is on hand.\n\n\n\n\n\nGeneralization\n\nA numerical, graphical, or verbal description of a broader set of units than those on which data was been recorded.\n\n\n\n\n\nCausal Claim\n\nA claim that changing the value of one variable will influence the value of another variable.\n\n\n\n\n\nPrediction\n\nA guess about the value of an unknown variable, based on other known variables."
   }
 ]
