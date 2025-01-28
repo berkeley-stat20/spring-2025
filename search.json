@@ -499,6 +499,62 @@
     ]
   },
   {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#cq-1",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#cq-1",
+    "title": "Summarizing Categorical Data",
+    "section": "CQ 1",
+    "text": "CQ 1\n\nThe next four subquestions are based on the same table."
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "The table below displays data from a survey on a class of students.\n\n\nWhat proportion of the class was in the marching band?\n\n\n  \n    −\n    +\n \n 00:30\n \n\nAn example of a marginal proportion."
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-1",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-1",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "What proportion of those in the marching band where juniors?\n\n\n  \n    −\n    +\n \n 00:30\n \n\nAn example of a conditional proportion."
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-2",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-2",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "What proportion were sophomores not in the marching band?\n\n\n  \n    −\n    +\n \n 00:30\n \n\nAn example of a joint proportion."
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-3",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-3",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "What were the dimensions of the raw data from which this table was constructed?\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-4",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-4",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "How would you characterize the association between these two variables?\n\n\n  \n    −\n    +\n \n 00:30"
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#cq-2",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#cq-2",
+    "title": "Summarizing Categorical Data",
+    "section": "CQ 2",
+    "text": "CQ 2\nPolitical affiliation and college degree status of 500 survey participants.\n\n\nWhich group is the largest?\n\n\nThe General Social Survey is a widely used sources of data on the attitudes, behaviors, and attributes of Americans. This plot shows the relationship between the political affiliation and college degree status of 500 participants.\nCannot tell which group is the largest since this plot as been normalized so that the proportions within each party sum to 1. The unnormalized plot on the following slide is one that allows us to answer this questions.\nThe unnormalized bar chart of counts preserves original counts and thus is good at comparing joint proportions. The normalized bar count shows condition proportions and thus is good for showing associations between variables.\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-5",
+    "href": "2-summarizing-data/01-summarizing-categorical-data/slides.html#section-5",
+    "title": "Summarizing Categorical Data",
+    "section": "",
+    "text": "What does this plot show?\n\n\nImportant note: it looks like a leading “1” was cropped from the numbers along the y axis.\nThis is a confusing stacked bar chart! (unfortunately I wasn’t able to track down the source.)\nThe height of each total bar appears to be the energy supply from renewables worldwide in each of these years. The proportion on top, however, appears to be that number divided by the global total energy supply, which changes every year. The fact that those proportions are decreasing left to right as the bar heights are increasing suggests that renewables are increasing every year (the numerator) but the total energy supply (the denominator) is increasing at a faster rate.\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
     "objectID": "5-prediction/05-logistic-regression/slides.html#agenda",
     "href": "5-prediction/05-logistic-regression/slides.html#agenda",
     "title": "Logistic Regression",
@@ -608,21 +664,21 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#worksheets",
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\n\nNo matching items"
   },
   {
     "objectID": "1-questions-and-data/labs/unvotes/part-2.html",
