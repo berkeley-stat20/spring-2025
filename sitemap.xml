@@ -2,134 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/assets/final-exam-slide.html</loc>
-    <lastmod>2025-01-29T03:51:31.347Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.398Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/CONTRIBUTING.html</loc>
-    <lastmod>2025-01-29T03:51:31.057Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.116Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/glossary-fns.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/docs/slides.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/docs/assignments.html</loc>
-    <lastmod>2025-01-29T03:51:31.351Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.402Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/tutorials.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/1-questions-and-data/01-understanding-the-world/slides.html</loc>
-    <lastmod>2025-01-29T03:51:30.450Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.513Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/1-questions-and-data/02-taxonomy-of-data/notes.html</loc>
-    <lastmod>2025-01-29T03:51:30.504Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.567Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/1-questions-and-data/notes.html</loc>
-    <lastmod>2025-01-29T03:51:30.534Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.597Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/glossary-defs.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/5-prediction/05-logistic-regression/notes.html</loc>
-    <lastmod>2025-01-29T03:51:30.942Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.003Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/01-summarizing-categorical-data/notes.html</loc>
-    <lastmod>2025-01-29T03:51:30.587Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.650Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/02-summarizing-numerical-data/slides.html</loc>
+    <lastmod>2025-01-30T07:04:37.662Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/02-summarizing-numerical-data/tutorial.html</loc>
-    <lastmod>2025-01-29T03:51:30.599Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.662Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/office-hours.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/notes.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/02-summarizing-numerical-data/notes.html</loc>
-    <lastmod>2025-01-29T03:51:30.599Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.662Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/notes.html</loc>
-    <lastmod>2025-01-29T03:51:30.714Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.777Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/01-summarizing-categorical-data/tutorial.html</loc>
-    <lastmod>2025-01-29T03:51:30.587Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.650Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/01-summarizing-categorical-data/slides.html</loc>
-    <lastmod>2025-01-29T03:51:30.587Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.650Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/labs/class-survey/slides.html</loc>
-    <lastmod>2025-01-29T03:51:30.706Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stat20.berkeley.edu/spring-2025/2-summarizing-data/labs/class-survey/part-2.html</loc>
+    <lastmod>2025-01-30T07:04:37.769Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/5-prediction/05-logistic-regression/slides.html</loc>
-    <lastmod>2025-01-29T03:51:30.942Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.003Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/assignments.html</loc>
-    <lastmod>2025-01-29T03:51:31.351Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.401Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/1-questions-and-data/labs/unvotes/part-2.html</loc>
-    <lastmod>2025-01-29T03:51:30.534Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.597Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/1-questions-and-data/02-taxonomy-of-data/tutorial.html</loc>
-    <lastmod>2025-01-29T03:51:30.505Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.567Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/1-questions-and-data/02-taxonomy-of-data/slides.html</loc>
-    <lastmod>2025-01-29T03:51:30.504Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.567Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/1-questions-and-data/01-understanding-the-world/notes.html</loc>
-    <lastmod>2025-01-29T03:51:30.450Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.513Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/index.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/license.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/docs/index.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/docs/website.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/syllabus.html</loc>
-    <lastmod>2025-01-29T03:51:31.356Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.406Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/3-generalization/labs/elections/learning-objectives.html</loc>
-    <lastmod>2025-01-29T03:51:30.824Z</lastmod>
+    <lastmod>2025-01-30T07:04:37.887Z</lastmod>
   </url>
   <url>
     <loc>https://stat20.berkeley.edu/spring-2025/assets/quiz-slides.html</loc>
-    <lastmod>2025-01-29T03:51:31.347Z</lastmod>
+    <lastmod>2025-01-30T07:04:38.398Z</lastmod>
   </url>
 </urlset>
