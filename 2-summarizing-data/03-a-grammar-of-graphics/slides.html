@@ -369,7 +369,7 @@ STAT 20: Introduction to Probability and Statistics
 <li>What are the aesthetics and geometry of this plot?</li>
 </ol>
 </div>
-<div id="timer_5d45f35b226e49d64688a35183da26c33415ddb1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_201c38f4505f08c9a040535fbb29cde57d5a2a29" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -377,7 +377,8 @@ STAT 20: Introduction to Probability and Statistics
  <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
  </div>
 <aside class="notes">
-<p>Correct answer: see code above.</p>
+<p>ggplot(penguins, aes(x = bill_length_mm, y = species)) + geom_boxplot()</p>
+<p>Correct answer: Bill length is mapped to the x, species is mapped to the y, and it uses the boxplot geometry.</p>
 <p>This is a warm up to get them thinking about the fundamental concept of aesthetic mappings and geometries on a plot style and data set they’ll be familiar with. This should be quite easy.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -397,7 +398,7 @@ STAT 20: Introduction to Probability and Statistics
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="poll">
 <p>What code was used to make this plot?</p>
 </div>
-<div id="timer_5d45f35b226e49d64688a35183da26c33415ddb1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_201c38f4505f08c9a040535fbb29cde57d5a2a29" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -405,7 +406,7 @@ STAT 20: Introduction to Probability and Statistics
  <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
  </div>
 <aside class="notes">
-<p>Correct answer: see above.</p>
+<p>Correct answer: ggplot(penguins, aes(x = island, fill = island)) + geom_bar()</p>
 <p>This demonstrates a practice called “double-mapping”, when the same column is mapped to two different aesthetic attributes. Most consider this a bad practice.</p>
 <p>In a setting like this, usually the author is really just trying to get more color onto the plot. That can be accomplished by <em>setting</em> the color of the bars using something like:</p>
 <style type="text/css">
@@ -429,7 +430,7 @@ STAT 20: Introduction to Probability and Statistics
 <li>What are the aesthetics and geometry of this plot?</li>
 </ol>
 </div>
-<div id="timer_5d45f35b226e49d64688a35183da26c33415ddb1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_201c38f4505f08c9a040535fbb29cde57d5a2a29" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -440,10 +441,11 @@ STAT 20: Introduction to Probability and Statistics
 <p>Correct answer: Color is mapped to taxonomic family, size is mapped to prevalence, the diseases are represented using the point geometry.</p>
 <p>Good follow up questions and boardwork include:</p>
 <ul>
-<li>What does the data frame look like that made this plot?</li>
-<li>What determines where the bubbles are placed in the chart? Answer: bubble charts have different methods of doing this. This one appears to use a packing algorithm so get them close together. Important, none of those methods refer to a column in the data frame therefore are not aesthetic mappings.</li>
-<li>If you really want to go far afield, you could show an example of a beeswarm chart, which is a bubble chart that uses one of the x or the y to map a numerical variable and then uses a packing algorithm to determine placement on the other axis.</li>
-<li>One of the lessons of this bubble chart is that our “named” charts correspond to particular combos of aesthetic mappings and geometriess. A “scatterplot” uses the point geometry and maps numerical data to the x and y axes. A “bubble chart” uses the point geometry too, but maps size to a numerical variable (and often uses color too).</li>
+<li><p>What does the data frame look like that made this plot? (taxonomy is a categorical variable with three categories: bacteria, virus, and protoza, prevalence is proportion of population affected by disease, seems that disease is the observation so each point is a disease.)</p></li>
+<li><p>What determines where the bubbles are placed in the chart? Answer: bubble charts have different methods of doing this. This one appears to use a packing algorithm so get them close together. Important, none of those methods refer to a column in the data frame therefore are not aesthetic mappings.</p></li>
+<li><p>nice example of bubble chart that might appeal at <a href="https://www.mekkographics.com/top-english-premier-league-goal-scorers/" class="uri">https://www.mekkographics.com/top-english-premier-league-goal-scorers/</a></p></li>
+<li><p>If you really want to go far afield, you could show an example of a beeswarm chart, which is a bubble chart that uses one of the x or the y to map a numerical variable and then uses a packing algorithm to determine placement on the other axis. Here is one showing [Sherlock Holmes canon and adaptations]<a href="https://public.tableau.com/app/profile/jessica.bautista/viz/SherlockHolmesCanon/Beeswarm" class="uri">https://public.tableau.com/app/profile/jessica.bautista/viz/SherlockHolmesCanon/Beeswarm</a></p></li>
+<li><p>One of the lessons of this bubble chart is that our “named” charts correspond to particular combos of aesthetic mappings and geometriess. A “scatterplot” uses the point geometry and maps numerical data to the x and y axes. A “bubble chart” uses the point geometry too, but maps size to a numerical variable (and often uses color too), so adds two more variables.</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -482,7 +484,7 @@ What has changed when moving from the left to the right?
 
 
 ```{=html}
-<div class="countdown" id="timer_e932e86d" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_7059795c" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -514,6 +516,19 @@ What has changed when moving from the left to the right?
 <iframe src="https://embed.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen="">
 </iframe>
 </center>
+<aside class="notes">
+<p>If you don’t have much time, begin the video at 2:19 and stop at 4:53. If you have a bit of time, begin the video at the beginning, but still, stop at 4:53.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
@@ -526,13 +541,26 @@ What has changed when moving from the left to the right?
 <li>the geometry</li>
 </ul>
 </div>
-<div id="timer_5d45f35b226e49d64688a35183da26c33415ddb1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_201c38f4505f08c9a040535fbb29cde57d5a2a29" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
  </div>
  <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
  </div>
+<aside class="notes">
+<p>Change timer to at <em>least</em> 5:00. Then go on to the next slide, but pause with the slide still blank. Ask them what were the variables and aesthetic attributes, and write them down on the board.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-were-the-variables-and-aesthetic-attributes" class="slide level2">
 <h2>What were the variables and aesthetic attributes?</h2>
@@ -703,7 +731,7 @@ What has changed when moving from the left to the right?
 </section></section>
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
-<div id="timer_5d45f35b226e49d64688a35183da26c33415ddb1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_201c38f4505f08c9a040535fbb29cde57d5a2a29" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -714,7 +742,7 @@ What has changed when moving from the left to the right?
 
 <section id="worksheet-a-grammar-of-graphics" class="title-slide slide level1 center">
 <h1>Worksheet: A Grammar of Graphics</h1>
-<div id="timer_5d45f35b226e49d64688a35183da26c33415ddb1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_201c38f4505f08c9a040535fbb29cde57d5a2a29" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -725,7 +753,7 @@ What has changed when moving from the left to the right?
 
 <section id="lab-2.2-class-survey" class="title-slide slide level1 center">
 <h1>Lab 2.2: Class Survey</h1>
-<div id="timer_5d45f35b226e49d64688a35183da26c33415ddb1" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_201c38f4505f08c9a040535fbb29cde57d5a2a29" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
