@@ -386,6 +386,27 @@
     "text": "Footnotes\n\n\nDefinition from Wikipedia, along with the image, by freezelight/flickr.↩︎\nThis data collection and manual processing was done by a graduate student in statistics at UCLA. One of the many humdrum but valuable tasks asked of graduates students . . .↩︎"
   },
   {
+    "objectID": "2-summarizing-data/labs/flights/slides.html#section",
+    "href": "2-summarizing-data/labs/flights/slides.html#section",
+    "title": "Lab: Flights",
+    "section": "",
+    "text": "This headline is a good introduction to the impact that the pandemic had on flights and on SFO in particular."
+  },
+  {
+    "objectID": "2-summarizing-data/labs/flights/slides.html#section-1",
+    "href": "2-summarizing-data/labs/flights/slides.html#section-1",
+    "title": "Lab: Flights",
+    "section": "",
+    "text": "The Bureau of Transportation Statistics is the federal agency that collects and hosts this data for public download.\nAs a side note, if students are interested in pulling down more recent data, this data was pulled using the allflights R package, which they can download and install in RStudio."
+  },
+  {
+    "objectID": "2-summarizing-data/labs/flights/slides.html#section-2",
+    "href": "2-summarizing-data/labs/flights/slides.html#section-2",
+    "title": "Lab: Flights",
+    "section": "",
+    "text": "The goal of the “Think before you compute” design of these labs is that the students should be able to do their thinking without the distractions of technology. If you project this data frame, that should be sufficient for them to answer all of the questions in Part I.\n\n\n  \n    −\n    +\n \n 25:00"
+  },
+  {
     "objectID": "2-summarizing-data/01-summarizing-categorical-data/notes.html",
     "href": "2-summarizing-data/01-summarizing-categorical-data/notes.html",
     "title": "Summarizing Categorical Data",
@@ -865,6 +886,118 @@
     ]
   },
   {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#section",
+    "href": "2-summarizing-data/04-conditioning/slides.html#section",
+    "title": "Conditioning",
+    "section": "",
+    "text": "c(\"fruit\", \"fruit\", \"vegetable\") == \"fruit\"\n\n\nWhat will this line of code return?\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#evaluating-equivalence-cont.",
+    "href": "2-summarizing-data/04-conditioning/slides.html#evaluating-equivalence-cont.",
+    "title": "Conditioning",
+    "section": "Evaluating equivalence, cont.",
+    "text": "Evaluating equivalence, cont.\nIn R, this evaluation happens element-wise when operating on vectors.\n\nc(\"fruit\", \"fruit\", \"vegetable\") == \"fruit\"\n\n\n\n[1]  TRUE  TRUE FALSE\n\n\n\n\nc(\"fruit\", \"fruit\", \"vegetable\") != \"fruit\"\n\n\n\n\n\n[1] FALSE FALSE  TRUE\n\n\n\n\n\nc(\"fruit\", \"vegetable\", \"boba\") %in% c(\"fruit\", \"vegetable\")\n\n\n\n\n\n[1]  TRUE  TRUE FALSE"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#question-2",
+    "href": "2-summarizing-data/04-conditioning/slides.html#question-2",
+    "title": "Conditioning",
+    "section": "Question 2",
+    "text": "Question 2\n\nclass_survey |&gt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \"Speed skating\"),\n         is_entrepreneur == TRUE)\n\n\nWhich observations will be included in the following data frame?\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#question-3",
+    "href": "2-summarizing-data/04-conditioning/slides.html#question-3",
+    "title": "Conditioning",
+    "section": "Question 3",
+    "text": "Question 3\n\nWhich data frame will have fewer rows?\n\n\n\n# A\nfilter(class_survey, time_at_cal == \"This is my first semester!\")\n\n# B\nclass_survey |&gt;\n  mutate(first_sem = (time_at_cal == \"This is my first semester!\")) |&gt;\n  filter(first_sem)\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#building-data-pipelines",
+    "href": "2-summarizing-data/04-conditioning/slides.html#building-data-pipelines",
+    "title": "Conditioning",
+    "section": "Building data pipelines",
+    "text": "Building data pipelines\nConsider the subset of students here:\n\nclass_survey |&gt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \"Speed skating\"),\n         is_entrepreneur == TRUE)\n\n\nHow do we extract the average of these students’ chance that class will be disrupted by a new COVID variant?\n\nLet’s look at three different ways to answer this question"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nfilter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE)\n\n\nThis set of slides walks through the three different approaches to stringing together functions in R, identifies the pros and cons of each, and encourages students to use the pipe."
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-1",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-1",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nselect(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_xcale,\n       olympics,\n       is_entrepreneur,\n       covid)"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-2",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-2",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nsummarize(select(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_scale,\n       olympics,\n       is_entrepreneur,\n       covid),\n       covid_avg = mean(covid))"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-3",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-3",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nsummarize(select(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_scale,\n       olympics,\n       is_entrepreneur,\n       covid),\n       covid_avg = mean(covid))\n\n# A tibble: 1 × 1\n  covid_avg\n      &lt;dbl&gt;\n1     0.428"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#nesting-4",
+    "href": "2-summarizing-data/04-conditioning/slides.html#nesting-4",
+    "title": "Conditioning",
+    "section": "Nesting",
+    "text": "Nesting\n\nsummarize(select(filter(class_survey, \n       coding_exp_scale &lt; 3,\n       olympics %in% c(\"Ice skating\", \"Speed skating\"),\n       is_entrepreneur == TRUE),\n       coding_exp_scale,\n       olympics,\n       is_entrepreneur,\n       covid),\n       covid_avg = mean(covid))\n\n\n\n\nCons\n\nMust be read from inside out 👎\nHard to keep track of arguments 👎\n\n\nPros\n\nAll in one line of code 👍\nOnly refer to one data frame 👍"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#step-by-step",
+    "href": "2-summarizing-data/04-conditioning/slides.html#step-by-step",
+    "title": "Conditioning",
+    "section": "Step-by-step",
+    "text": "Step-by-step\n\n\ndf1 &lt;- filter(class_survey, \n              coding_exp_scale &lt; 3,\n              olympics %in% c(\"Ice skating\", \"Speed skating\"),\n              is_entrepreneur == TRUE)\ndf2 &lt;- select(df1, \n              coding_exp_scale,\n              olympics,\n              is_entrepreneur,\n              covid)\nsummarize(df2,\n          covid_avg = mean(covid))\n\n\n\n\n\nCons\n\nHave to repeat data frame names 👎\nCreates unnecessary objects 👎\n\n\nPros\n\nStores intermediate objects 👍\nCan be read top to bottom 👍"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#using-the-pipe-operator",
+    "href": "2-summarizing-data/04-conditioning/slides.html#using-the-pipe-operator",
+    "title": "Conditioning",
+    "section": "Using the pipe operator",
+    "text": "Using the pipe operator\n\n\nclass_survey |&gt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \"Speed skating\"),\n         is_entrepreneur == TRUE) |&gt;\n  select(coding_exp_scale,\n         olympics,\n         is_entrepreneur,\n         covid) |&gt;\n  summarize(covid_avg = mean(covid))\n\n\n\nCons\n\n🤷\n\n\nPros\n\nCan be read like an english paragraph 👍\nOnly type the data once 👍\nNo leftovers objects 👍"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#understanding-your-pipeline",
+    "href": "2-summarizing-data/04-conditioning/slides.html#understanding-your-pipeline",
+    "title": "Conditioning",
+    "section": "Understanding your pipeline",
+    "text": "Understanding your pipeline\n\nIt’s good practice to understand the output of each line of code by breaking the pipe.\n\n\n\n\n\nclass_survey |&gt;\n  select(covid) |&gt;\n  filter(time_at_cal == \"It's my first time_at_cal.\")\n\nError in `filter()`:\nℹ In argument: `time_at_cal == \"It's my first time_at_cal.\"`.\nCaused by error:\n! object 'time_at_cal' not found\n\n\n\n\nclass_survey |&gt;\n  select(covid)\n\n# A tibble: 816 × 1\n   covid\n   &lt;dbl&gt;\n 1  0   \n 2  0.5 \n 3  0.6 \n 4  0.7 \n 5 NA   \n 6  0.15\n 7  0.7 \n 8  0   \n 9  0.8 \n10 NA   \n# ℹ 806 more rows"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#concept-question",
+    "href": "2-summarizing-data/04-conditioning/slides.html#concept-question",
+    "title": "Conditioning",
+    "section": "Concept Question",
+    "text": "Concept Question\n\nclass_survey |&gt; # A #&lt;&lt;\n  filter(coding_exp_scale &lt; 3,\n         olympics %in% c(\"Ice skating\", \n                         \"Speed skating\"),\n         is_entrepreneur == TRUE) |&gt; # B #&lt;&lt;\n  select(coding_exp_scale,\n         olympics,\n         is_entrepreneur,\n         covid) |&gt; # C #&lt;&lt;\n  summarize(covid_avg = mean(covid)) # D #&lt;&lt;\n\n\n# note\ndim(class_survey)\n\n[1] 816  30\n\n\n\nWhat are the dimensions (rows x columns) of the data frames output at each stage of this pipe?\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#section-2",
+    "href": "2-summarizing-data/04-conditioning/slides.html#section-2",
+    "title": "Conditioning",
+    "section": "",
+    "text": "summarize(class_survey,\n          mean(time_at_cal == \"I'm in my first year.\", na.rm = TRUE))\n\n\nWhat is will this line of code return?\n\n\n  \n    −\n    +\n \n 01:00\n \n\nThis will return the proportion of students who answered “I’m in my first year”. This is surprising to students because it’s not immediately clear that a mean of a logical vector is the same as the proportion of cases that are true."
+  },
+  {
+    "objectID": "2-summarizing-data/04-conditioning/slides.html#boolean-algebra",
+    "href": "2-summarizing-data/04-conditioning/slides.html#boolean-algebra",
+    "title": "Conditioning",
+    "section": "Boolean Algebra",
+    "text": "Boolean Algebra\nLogical vectors have a dual representation as TRUE FALSE and 1, 0, so you can do math on logicals accordingly.\n\nTRUE + TRUE\n\n[1] 2\n\n\n\n\nTRUE * TRUE\n\n[1] 1\n\n\n\n\n\nTaking the mean of a logical vector is equivalent to find the proportion of rows that are TRUE (i.e. the proportion of rows that meet the condition)."
+  },
+  {
     "objectID": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html",
     "href": "2-summarizing-data/01-summarizing-categorical-data/tutorial.html",
     "title": "Summarizing Categorical Data",
@@ -1092,21 +1225,21 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#worksheets",
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\n\nNo matching items"
   },
   {
     "objectID": "1-questions-and-data/labs/unvotes/part-2.html",
