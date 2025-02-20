@@ -358,7 +358,7 @@ STAT 20: Introduction to Probability and Statistics
 <h2>Do you want a car or do you want a goat?</h2>
 
 <img data-src="https://imgs.xkcd.com/comics/monty_hall.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
-<p>Of course, this is the Monty Hall problem. The text for this comic is “A few minutes later, the goat behind door C drives away in the car. Can have some fun and ask them to if they chose door A and door B had a goat, would they stay with A or would they switch to C? (pollev) Setup: There are three doors A, B, C. Car behind one of them, goats behind other two. You pick a door at random (say you pick A), host opens one of the doors you didn’t pick (say they open B), and shows you a goat. Now should you stick with your original choice of A or should you switch to C. Will be fun to see what they input. The right answer is that they should switch. Waving hands, the total mass of 1 was split 1/3 to 2/3 (win to not win) with the choice of A. A is kept aside, and B is opened.Now the P(A doesn’t win) = 2/3 is moved to C.Therefore better to switch. Not worth doing it with formal notation even after going over Bayes</p>
+<p>Of course, this is the Monty Hall problem. The text for this comic is “A few minutes later, the goat behind door C drives away in the car. Can have some fun and ask them to if they chose door A and door B had a goat, would they stay with A or would they switch to C? (pollev) Setup: There are three doors A, B, C. Car behind one of them, goats behind other two. You pick a door at random (say you pick A), host opens one of the doors you didn’t pick (say they open B), and shows you a goat. Now should you stick with your original choice of A or should you switch to C. Will be fun to see what they input. The right answer is that they should switch. Waving hands, the total mass of 1 was split 1/3 to 2/3 (win to not win) with the choice of A. A is kept aside, and B is opened.Now the P(A doesn’t win) = 2/3 is moved to C.Therefore better to switch. Not worth doing it with formal notation even after going over Bayes. From Everett’s suggestions (spring 2025): Have the class”play” this game. Explain the scenario, draw “doors” on the board, maybe even invite a “contestant,” and have a poll to ask “should they switch?” with options (yes | no | it doesn’t matter). Then show (through code/simulation, then math) why switching is better. For conditional probability, one good example to share is election polling. Trump/Harris was pretty much 50/50 by all reasonable pollsters, but then trump won by kind of a lot. Among other reasons, this is because the “swing states” probabilities were not independent - there was some latent unknown “trumpiness” that affected all of them.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -370,54 +370,6 @@ STAT 20: Introduction to Probability and Statistics
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="agenda" class="slide level2">
-<h2>Agenda</h2>
-<ul>
-<li>Announcements</li>
-<li>PS 6</li>
-<li>Concept Review</li>
-<li>Concept Questions</li>
-<li>Break</li>
-<li>PS 7 (computing probabilities)</li>
-<li>Break</li>
-</ul>
-<aside class="notes">
-<ul>
-<li>PS 7 ~ 20/25 minutes: time for them to work, and to review the PS (If you have already given enough time, do the coin flipping activity)</li>
-<li>Lecture on conditional probability and independence</li>
-<li>Concept Review</li>
-<li>Concept questions</li>
-<li>Break ~3 mins</li>
-<li>Handout: PS 8 (computing probabilities)</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="announcements" class="slide level2">
-<h2>Announcements</h2>
-<ul>
-<li>Problem Sets 6 and 7 (paper, max. 3) due Tuesday at 9am</li>
-</ul>
-<div class="fragment">
-<ul>
-<li>No lab this week.</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>RQ: Probability Distributions due Mon/Tues 11:59pm</li>
-</ul>
-</div>
 </section>
 <section>
 <section id="concept-questions-review" class="title-slide slide level1 center">
@@ -439,6 +391,13 @@ STAT 20: Introduction to Probability and Statistics
 </ul>
 <p><span class="math inline">\(P(A^C) = 1 - P(A)\)</span></p>
 <aside class="notes">
+<ul>
+<li>WS needs 20/25 minutes: time for them to work, and for you to review the problems (If you have already given enough time, do the coin flipping activity)</li>
+<li>Lecture on conditional probability and independence</li>
+<li>Concept Review</li>
+<li>Concept questions</li>
+<li>Break ~3 mins</li>
+</ul>
 <p>You can tell them here that <span class="math inline">\(A^C\)</span> is “not A”, and then maybe use dice or coin toss examples. Review mutually exclusive vs independent events, emphasizing that these are very different ideas, though both apply to pairs of events.</p>
 <ul>
 <li>Mutually exclusive events means that the occurrence of one event prevents the occurrence of the other. (that is, it reduces the chance of the other occurring to 0.)</li>
@@ -460,7 +419,7 @@ STAT 20: Introduction to Probability and Statistics
 <h2>Concept Question 1</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a90f0c87" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_c9243acb" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -471,10 +430,11 @@ STAT 20: Introduction to Probability and Statistics
 <p><span class="math inline">\(B\)</span> is the event that the first two coins flipped both show heads</p>
 <p><span class="math inline">\(C\)</span> is the event that the last two coins flipped both show tails</p>
 <div class="poll">
-<p>The events A and B are: ________</p>
+<p>The events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are: ________</p>
 </div>
 <aside class="notes">
-<p>After they do this and next, write out the outcome space for the results of flipping 3 coins. And go through what are A, B, and C. A and B are neither independent nor mutually exclusive.</p>
+<p>After they do this and next, write out the outcome space for the results of flipping 3 coins. And go through what are A, B, and C.</p>
+<p>A and B are neither independent nor mutually exclusive.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -491,7 +451,7 @@ STAT 20: Introduction to Probability and Statistics
 <h2>Concept Question 2</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a0f2f00a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_5958a7d2" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -505,7 +465,8 @@ STAT 20: Introduction to Probability and Statistics
 <p>The events <span class="math inline">\(A\)</span> and <span class="math inline">\(C\)</span> are: ________</p>
 </div>
 <aside class="notes">
-<p>After they do this and next, write out the outcome space for the results of flipping 3 coins. And go through what are A, B, and C. A and C are independent. Show that P(A &amp; C ) = 1/8 = P(A)P(C) = 1/4 * 1/2</p>
+<p>After they do this and next, write out the outcome space for the results of flipping 3 coins. And go through what are A, B, and C.</p>
+<p>A and C are independent. P(A &amp; C ) = 1/8 = P(A)P(C) = 1/4 * 1/2</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -520,19 +481,20 @@ STAT 20: Introduction to Probability and Statistics
 </section>
 <section id="concept-question-3" class="slide level2 scrollable">
 <h2>Concept Question 3</h2>
-<p>Suppose we draw 2 tickets at random without replacement from a box with tickets marked {1, 2, 3, . . . , 9}. Let A be the event that at least one of the tickets drawn is labeled with an even number, let B be the event that at least one of the tickets drawn is labeled with a prime number (recall that the number 1 is not regarded as a prime number). Suppose the numbers on the tickets drawn are <strong>3</strong> and <strong>9</strong>.</p>
+<p>Suppose we draw 2 tickets at random without replacement from a box with tickets marked {1, 2, 3, . . . , 9}. Let <span class="math inline">\(A\)</span> be the event that <em>at least one</em> of the tickets drawn is labeled with an <em>even</em> number, let <span class="math inline">\(B\)</span> be the event that <em>at least one</em> of the tickets drawn is labeled with a <em>prime</em> number (recall that the number 1 is <strong>not</strong> regarded as a prime number). Suppose the numbers on the tickets drawn are <strong>3</strong> and <strong>9</strong>.</p>
 <div class="poll">
 <p>Which of the following events occur?</p>
 <ol type="i">
 <li><p><span class="math inline">\(A\)</span></p></li>
 <li><p><span class="math inline">\(B\)</span></p></li>
-<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> (<span class="math inline">\(A \cap B\)</span>)</p></li>
-<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B^C\)</span></p></li>
-<li><p><span class="math inline">\(A^C\)</span> and <span class="math inline">\(B\)</span></p></li>
+<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> (<span class="math inline">\(= A \cap B\)</span>)</p></li>
+<li><p><span class="math inline">\(A\)</span> and <span class="math inline">\(B^c\)</span> (<span class="math inline">\(= A \cap B^c\)</span>)</p></li>
+<li><p><span class="math inline">\(A^c\)</span> and <span class="math inline">\(B\)</span> (<span class="math inline">\(= A^c \cap B\)</span>)</p></li>
 </ol>
 </div>
 <aside class="notes">
 <p>ii and v, I told them they can immediately see that A^C is true since no even number, so definitely (v) and then we do have a prime number and both are odd so (ii) is true.</p>
+<p>You could give other events for practice such as 2 and 9, or 4 and 9 etc.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -546,30 +508,32 @@ STAT 20: Introduction to Probability and Statistics
       }</style></aside>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a7f3ef18" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_c6f103bd" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_75d608ea" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+</section>
+<section id="section" class="slide level2 scrollable">
+<h2></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_d7d8e2c5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 
-<img data-src="images/phillies-astros.jpg" width="300" class="r-stretch"><div class="poll">
-<p>The Houston Astros beat the Philadelphia Phillies in the 2022 World Series. The winners in the World Series have to win a majority of 7 games, so the first team to win 4 games wins the series (best of 7). The Astros were heavily favored to win, so the outcome wasn’t really a suprise. Suppose we assumed that the probability that the Astros would have beaten the Phillies in any single game was estimated at 60%, independently of all the other games. <strong>What was the probability that the Astros would have won in a clean sweep?</strong></p>
-<p>(Clean sweep means that they won in the first 4 games - which didn’t happen, they won in 6 games.)</p>
+<img data-src="images/lad-nyy-ws24.png" class="quarto-figure quarto-figure-center, r-stretch quarto-figure-center" width="300"><div class="poll">
+<p>The 2024 World Series was the championship series was a best-of-seven playoff between the Los Angeles Dodgers and the New York Yankees. The winners in the World Series have to win a majority of 7 games, so the first team to win 4 games wins the series. Suppose we assumed that the probability that the Dodgers would have beaten the Yankees in any single game was estimated at 56%, <em>independently</em> of all the other games.</p>
+<p><strong>What was the probability that the Dodgers would have won in a clean sweep?</strong></p>
 </div>
 <aside class="notes">
-<p>Straightforward application of multiplication rule for independent events. probability is 0.6^4 = 0.1296. Follow up comment/question: if the teams were more evenly matched, say probability of either team winning is 50%, the probability of going to 7 games and probability of winning in 6 games is equal given 5 games are played.</p>
+<p>It was the Dodgers’ first World Series appearance and win since 2020, and the Yankees’ first World Series appearance since 2009. Straightforward application of multiplication rule for independent events. probability is 0.56^4 = 0.098. You could even ask more or less than 10%?</p>
+<p>You may have to explain Clean sweep means that they won in the first 4 games - which didn’t happen, they won in 5 games.</p>
+<p>Follow up comment/question: if the teams were more evenly matched, say probability of either team winning is 50%, the probability of going to 7 games and probability of winning in 6 games is equal given 5 games are played.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -586,15 +550,15 @@ STAT 20: Introduction to Probability and Statistics
 <h2>Concept Question 5</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a644c89e" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_b46c9ac4" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 
-<img data-src="images/phillies-astros.jpg" width="300" class="r-stretch"><div class="poll">
-<p>Suppose we assume, instead, that the probability that the Astros would have beaten the Phillies in any single game was 50%, independently of all the other games. In this case, was the probability that the series would have gone to 6 games higher than the probability that the series would have gone to 7 games, <strong>given</strong> that 5 games were played?</p>
+<img data-src="images/lad-nyy-ws24.png" class="quarto-figure quarto-figure-center, r-stretch quarto-figure-center" width="300"><div class="poll">
+<p>Suppose we assume, instead, that the probability that the Dodgers would have beaten the Yankees in any single game was 50%, independently of all the other games. In this case, was the probability that the series would have gone to 6 games higher than the probability that the series would have gone to 7 games, <strong>given</strong> that 5 games were played?</p>
 </div>
 <aside class="notes">
 <p>if 5 games are played it means one of the teams is leading 3-2. Therefore there are two scenarios: the team that is ahead wins game 6 and the series, or the team that is behind wins game 6 and they go to 7 games. Both are equally likely.</p>
@@ -619,7 +583,7 @@ STAT 20: Introduction to Probability and Statistics
 
 
 ```{=html}
-<div class="countdown" id="timer_c5718107" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_1d3bfd91" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -646,7 +610,7 @@ Given I roll a k what is the probability that I flip all heads?
 
 
 ```{=html}
-<div class="countdown" id="timer_54f294b5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a260815f" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -680,7 +644,7 @@ P(win) = P(roll 1 and all H) + P(roll 2 and all H) + ... = P(all H | roll = 1)*P
 
 
 ```{=html}
-<div class="countdown" id="timer_1d644d8a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_57782909" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -725,26 +689,26 @@ Draw a picture here to show how we can write B like this. Now can go over proble
 <h1>Break</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_8bf30086" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_dfae0904" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
 
-<section id="ps-7" class="title-slide slide level1 center">
-<h1>PS 7</h1>
+<section id="worksheet-computing-probabilities" class="title-slide slide level1 center">
+<h1>Worksheet: Computing Probabilities</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f14634aa" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_56b52028" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>Then review PS 7. If you have time, go over coin flipping code</p>
+<p>Then review the WS</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
