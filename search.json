@@ -578,6 +578,41 @@
     ]
   },
   {
+    "objectID": "3-generalization/10-hypothesis-tests/slides.html#section",
+    "href": "3-generalization/10-hypothesis-tests/slides.html#section",
+    "title": "Hypothesis Testing",
+    "section": "",
+    "text": "Which of the following statements below represents claims that correspond to a null hypothesis (as opposed to an alternative hypothesis)?\nHint: try to write them using parameters (statements about means / proportions / etc)\nA. King cheetahs on average run the same speed as standard spotted cheetahs.\nB. For a particular student, the probability of correctly answering a 5-option multiple choice test is larger than 0.2 (i.e., better than guessing).\nC. The mean length of African elephant tusks has changed over the last 100 years.\nD. The risk of facial clefts is equal for babies born to mothers who take folic acid supplements compared with those from mothers who do not.\nE. Mean birth weight of newborns is dependent on caffeine intake during pregnancy.\nF. The probability of getting in a car accident is the same if using a cell phone than if not using a cell phone.\n\n\n  \n    −\n    +\n \n 01:00\n \n\nCorrect answers: A, D, F.\nMost of these they haven’t seen examples of, so it will be worth laying out the null hypotheses."
+  },
+  {
+    "objectID": "3-generalization/10-hypothesis-tests/slides.html#section-1",
+    "href": "3-generalization/10-hypothesis-tests/slides.html#section-1",
+    "title": "Hypothesis Testing",
+    "section": "",
+    "text": "A pharmaceutical company developed a new treatment for eczema and performed a hypothesis test to see if it worked better than the company’s old treatment. The P-value for the test was \\(10\\%\\). Which one of the following statements are true?\n\n\nA. The probability that the null hypothesis is false is \\(10\\%\\).\nB. The P-value of about \\(10\\%\\) was computed assuming that the null hypothesis was true.\nC. The new drug is significantly better than the old.\nD. The alternative hypothesis is 10 times more likely the null.\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "3-generalization/10-hypothesis-tests/slides.html#what-do-you-think",
+    "href": "3-generalization/10-hypothesis-tests/slides.html#what-do-you-think",
+    "title": "Hypothesis Testing",
+    "section": "What do you think?",
+    "text": "What do you think?\nAnswer at pollev.com."
+  },
+  {
+    "objectID": "3-generalization/10-hypothesis-tests/slides.html#what-do-you-think-about-the-of-the-experiment-in-the-video",
+    "href": "3-generalization/10-hypothesis-tests/slides.html#what-do-you-think-about-the-of-the-experiment-in-the-video",
+    "title": "Hypothesis Testing",
+    "section": "What do you think about the of the experiment in the video?",
+    "text": "What do you think about the of the experiment in the video?\n\nDiscuss with your group, identifying anything that seems amiss.\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "3-generalization/10-hypothesis-tests/slides.html#do-you-still-think-yawning-is-contagious",
+    "href": "3-generalization/10-hypothesis-tests/slides.html#do-you-still-think-yawning-is-contagious",
+    "title": "Hypothesis Testing",
+    "section": "Do you still think yawning is contagious?",
+    "text": "Do you still think yawning is contagious?\nAnswer at pollev.com."
+  },
+  {
     "objectID": "3-generalization/08-confidence-intervals/notes.html",
     "href": "3-generalization/08-confidence-intervals/notes.html",
     "title": "Confidence Intervals",
@@ -917,7 +952,7 @@
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Probability Foundations\n\n\nWS: Computing Probabilities\n\n\nWS: Probability Distributions\n\n\nWS: Random Variables\n\n\nWS: Expected Value and Variance\n\n\nWS: Sampling Distributions\n\n\nWS: Bootstrapping\n\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Probability Foundations\n\n\nWS: Computing Probabilities\n\n\nWS: Probability Distributions\n\n\nWS: Random Variables\n\n\nWS: Expected Value and Variance\n\n\nWS: Sampling Distributions\n\n\nWS: Bootstrapping\n\n\nWS: Hypothesis Testing\n\n\n\nNo matching items"
   },
   {
     "objectID": "1-questions-and-data/labs/unvotes/part-2.html",
