@@ -214,7 +214,7 @@
     "href": "3-generalization/12-wrong-by-design/slides.html#section-5",
     "title": "Wrong By Design",
     "section": "",
-    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.495\n 2 2         0.499\n 3 3         0.498\n 4 4         0.477\n 5 5         0.499\n 6 6         0.491\n 7 7         0.486\n 8 8         0.485\n 9 9         0.489\n10 10        0.519\n# ℹ 490 more rows"
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.482\n 2 2         0.509\n 3 3         0.490\n 4 4         0.5  \n 5 5         0.489\n 6 6         0.511\n 7 7         0.501\n 8 8         0.493\n 9 9         0.509\n10 10        0.490\n# ℹ 490 more rows"
   },
   {
     "objectID": "3-generalization/12-wrong-by-design/slides.html#section-6",
@@ -1092,14 +1092,14 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 6: A Matter of Taste\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 6: A Matter of Taste\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#worksheets",
@@ -1131,6 +1131,41 @@
       "Generalization",
       "Causation"
     ]
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/slides.html#section",
+    "href": "4-causation/01-defining-causality/slides.html#section",
+    "title": "Defining Causality",
+    "section": "",
+    "text": "Suppose that a prisoner is about to be executed by a firing squad. A certain chain of events must occur for this to happen. First, the judge orders the execution. The order goes to a captain, who signals the two soldiers of the firing squad (soldier 1 and soldier 2) to fire. They are obedient and expert marksmen, so they only fire on command, and if either one of them shoots, the prisoner dies.\n\nUsing the conditional counterfactual definition, who caused the death of the prisoner?\nA. The judge\nB. The captain\nC. Soldier 1\nD. Soldier 2\n\n\n\n\n−+\n02:00\n\n\n\n\nThe goal of this example is to reinforce the definition of cause and effect by applying it to a fairly complicated causal graph. The correct answers are A and B, because had the judge not ordered, or had the captain not signaled, the prisoner would not have died. Each of the soldiers individually fail this definition because if one of them doesn’t fire (and they’re acting independently), the prisoner will still die.\nYou can debrief this one by drawing a causal diagram with judge -&gt; captain -&gt; -&gt; two arrows to separate solider 1 and soldier 2 -&gt; -&gt; two arrows back to prisoner. You can start at the top, drawing 2 by 3 data frames of first the judge, then captain, then soldiers, showing one world in the first row and the other world in the second row and showing that the potential outcomes would differ based on the action of the first two.\nYou can also use the graph method of: if you break the causal chain after a given node, is there still a connected path to the prisoner? The answer is no for judge and captain but yes for each solider.\nStudents may bring up good points about ambiguity in the wording of the problem or a different interpretation of the “rules of the game” around how the causal structure works. That’s good! If students suggest different interpretations, you could draw that graph or draw that data frame, and analyze that one to identify causes.\nAs a postscript, this is likely one reason why firing squads are have multiple shooters. Each one has plausible deniability that “the prisoner would have died anyways”, so they didn’t cause the death. Apparently, it’s common for marksmen to occasionally neglect to fire, so this also has redundancy. The judge and captain, though they might be insolated from guilt because they are higher up the causal chain, they are still a cause of the death by this definition."
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/slides.html#section-1",
+    "href": "4-causation/01-defining-causality/slides.html#section-1",
+    "title": "Defining Causality",
+    "section": "",
+    "text": "All of the four people in the table below need to travel from Berkeley to San Francisco today, and are trying to decide whether to take BART or to drive. The table below shows travel times for each individual (assume these are the true, known numbers, not just predictions).\n\n\n\nName\nTravel time by car (min)\nTravel time by BART (min)\n\n\n\n\nMaria\n35\n28\n\n\nFan\n30\n32\n\n\nAlice\n40\n55\n\n\nMuhammad\n30\n40\n\n\n\n\n\nPick the correct way to fill in the following sentence: “Taking BART instead of driving will cause ___ to arrive more than ___ minutes later.”\n\n\nThis is the first of two questions that deal with a hypothetical world: what if we could see both potential outcomes of each unit? This question is distinctive in that it has us thinking about unit-level causation, so the options all refer to one of the four people and then their causal effect - just the difference in travel times.\nThis one should be quick - only 30 seconds or so.\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/slides.html#section-2",
+    "href": "4-causation/01-defining-causality/slides.html#section-2",
+    "title": "Defining Causality",
+    "section": "",
+    "text": "All of the four people in the table below need to travel from Berkeley to San Francisco today, and are trying to decide whether to take BART or to drive. The table below shows travel times for each individual (assume these are the true, known numbers, not just predictions).\n\n\n\nName\nTravel time by car (min)\nTravel time by BART (min)\n\n\n\n\nMaria\n35\n28\n\n\nFan\n30\n32\n\n\nAlice\n40\n55\n\n\nMuhammad\n30\n40\n\n\n\n\n\nWhat is the average treatment effect of taking BART on travel time for these four subjects?\n\n\nNote that we’re still in a hypothetical world where we’re able to see both potential outcomes.\nThis question shifts the focus from individual causal effects to group causal effects - the average treatment effect. The answer here the difference in average travel times of each travel type:\nmean(bart times) - mean(car times) = 38.75 - 33.75 = +5\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/slides.html#section-3",
+    "href": "4-causation/01-defining-causality/slides.html#section-3",
+    "title": "Defining Causality",
+    "section": "",
+    "text": "All of the four people in the table below need to travel from Berkeley to San Francisco today. The table below shows the actual travel times for each individual using the method they chose to use.\n\n\n\nName\nTravel time by car (min)\nTravel time by BART (min)\n\n\n\n\nMaria\n?\n28\n\n\nFan\n?\n32\n\n\nAlice\n40\n?\n\n\nMuhammad\n30\n?\n\n\n\n\n\nWhat is a natural estimate of the average effect of taking BART (rather than driving) if we only observed this data?\n\n\nWe’ve now left the hypothetical world and entered the real world scenario where on every unit we only get to observe one of the potential outcomes.\nThe answer is still a difference in average travel times, but the particular times that are now observed cause the average treatment effect to flip it’s sign from +5 to -5.\nmean(bart times) - mean(car times) = 30 - 35 = -5\n\n\n  \n    −\n    +\n \n 01:00"
+  },
+  {
+    "objectID": "4-causation/01-defining-causality/slides.html#section-4",
+    "href": "4-causation/01-defining-causality/slides.html#section-4",
+    "title": "Defining Causality",
+    "section": "",
+    "text": "All of the four people in the table below need to travel from Berkeley to San Francisco today. The table below shows the actual travel times for each individual using the method they chose to use.\n\n\n\nName\nTravel time by car (min)\nTravel time by BART (min)\n\n\n\n\nMaria\n?\n28\n\n\nFan\n?\n32\n\n\nAlice\n40\n?\n\n\nMuhammad\n30\n?\n\n\n\n\n\nWhat are two different reasons why this estimate of the average treatment effect might not be very reliable?\n\n\n  \n    −\n    +\n \n 03:00\n \n\nThis last question is designed to be a “pair and share” exercise and does not have an associated PollEV item. After they discuss you can ask a couple of them to share. Common answers include:\n\nMaria and Fan live closer to Bart stations than Alice and Muhammad\nAlice and Muhammad migth travel to SF during rush hour, lengthening car travel times, while Maria and Fan do not.\n\nThis is a good chance to talk about why it’s hard to measure causal effects. Asking “How would you try to collect data about this causal claim differently to get a better measure of the causal effect?” provides a nice lead-in to the lab."
   },
   {
     "objectID": "1-questions-and-data/labs/unvotes/part-2.html",
@@ -2983,6 +3018,157 @@
       "Generalization",
       "Defining Causality"
     ]
+  },
+  {
+    "objectID": "4-causation/02-experiments/notes.html",
+    "href": "4-causation/02-experiments/notes.html",
+    "title": "Randomized Experiments",
+    "section": "",
+    "text": "Causation has a tricky relationship with data. We can’t observe the precise counterfactual that would allow us to identify an individual cause. Instead, statisticians use a host of methods to find a good approximation of the counterfactual, usually by focusing on a group-level quantity called an average treatment effect.\nWe now introduce the most important tool for approximating group-level counterfactuals, the randomized experiment.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Randomized Experiments"
+    ]
+  },
+  {
+    "objectID": "4-causation/02-experiments/notes.html#principles-of-experimental-design",
+    "href": "4-causation/02-experiments/notes.html#principles-of-experimental-design",
+    "title": "Randomized Experiments",
+    "section": "Principles of Experimental Design",
+    "text": "Principles of Experimental Design\nAn experiment is generally characterized as being a setting where the researcher actively assigns subjects or units to one particular condition or another. The most potent design of an experiment to determine whether one variable, the treatment, affects the outcome at the group level is the aptly named Randomized Controlled Trial (RCT).\nAs a running example, consider an immediately relevant question: would reading these notes as a PDF lead to a deeper understanding and a correspondingly better score on the final exam than reading them as a webpage? Let’s run through each term one-by-one to think through how to design an RCT and effectively answers this question.\n\nControl\n\nControl\n\n(noun) A second condition to which a subject or unit could be assigned that draws a contrast with the treatment condition.\n\n\n(verb) Actions taken to eliminate other possible causal factors and ensure that the only difference between the treatment and control group is the factor of interest.\n\n\nWhen designing an RCT, an essential decision is the nature of your control group. Our research question is: will reading these notes as a webpage result in a deeper understanding? Deeper . . . than what? Deeper than if you didn’t read the notes at all? Deeper than if you read them aloud?\nIf we’re most interested in the difference between reading the notes as a webpage and reading them as a pdf, we could declare those who read the website part of the control group and those who read the pdf as part of the treatment group. Small changes to the control group can make an important difference in the precise question that you’ll be answering.\nWe can visualize the distinction between the two groups in a small example with three people in the control group (website) and three people in the treatment group (pdf).\n\n\n\n\n\n\n\n\nname\ngroup\nunderstanding\n\n\n\n\nEvelyn\npdf\ndeep\n\n\nGrace\npdf\nshallow\n\n\nJuan\npdf\ndeep\n\n\nAlex\nwebsite\ndeep\n\n\nMonica\nwebsite\nshallow\n\n\nSriya\nwebsite\nshallow\n\n\n\n\n\n\n\n\n\nThe process of computing a difference in proportions and conducting a hypothesis test for this dataset is no different than in the examples from the generalization notes. What makes this study special is the process that generated this data. Because this was a randomized controlled experiment, the difference in proportions provides a good estimate of the average treatment effect, and if it differs significantly from zero we have compelling evidence that reader format has a causal impact on understanding. We now describe some aspects of experimental design that help establish this stronger interpretation.\n\n\nRandom Assignment\n\nRandom Assignment\n\nThe process of assigning subjects to either the treatment or control group in a random fashion, where they’re equally likely to be assigned to each group.\n\n\nBecause we are conducting an experiment, we are intervening in the process and directly assigning subjects to either the treatment (pdf readers) and control (website readers). There are many ways we could do this. The morning sections could all be assigned the pdf and the afternoon sections the website. Or the instructors could choose to exclusively assign either the pdf or the website version of the notes to their individual sections.\nThe problem with both of these approaches is that our two groups might differ on more characteristics than just their reading format. The morning sections perhaps have students who are early risers and more conscientious students. Or perhaps the instructors who choose the website are more tech-savvy and more effective at teaching computing. In both cases, we invite the skeptical observer to question whether it was truly the medium of the notes that led to a difference in course grades or if it was something else.\nThe mechanism of random assignment is brilliant because it can snuff out every such skeptical inquiry in one fell swoop. If instead we assigned each student to read the pdf or the website totally at random, every other possible characteristic between these groups should, on average, be balanced. If students are assigned at random, we’d expect an equal number of early-risers to be in both the pdf and the website group. We’d also expect the students with the more effective instructors to be evenly represented in both groups. And so on and so forth, for every possible other characteristic that might muddy the waters of our causal claim.\n\n\nReplication\n\nReplication\n\nThe practice of assigning multiple subjects to both the treatment and control group. Also, the practice of repeating an experiment a second time to see if the result is consistent.\n\n\nThe careful reader will have noted a weakness in the brilliance of the random assignment mechanism for balancing the characteristics between the groups. What if, purely due to bad luck, we happen to randomly assign all of the early-risers to the pdf group and all of the late-risers to the website group? That would indeed bring us back to the problem of there being many ways in which our treatment group is different from our control group.\nThe random assignment mechanism will balance out all possible confounding factors on average, but for a given experiment that is not guaranteed. However, it becomes much more likely if we have a large sample size. If you just have four students total in the class, two of whom are early risers, it’s quite easy for both of them to end up in the pdf group if they were assigned at random. If instead you have 800 students, 400 of whom are early risers, it’s very very unlikely that all 400 will have made their way into the pdf group.\n\n\nBlinding\nRandomized controlled trials have long been considered the gold standard for establishing a group-level causal claim, but care must be taken to ensure that your result means what you think it means. Here we reconsider a study where a new drug was used to treat heart attack patients. In particular, researchers wanted to know if the drug reduced deaths in patients.\nThese researchers designed a randomized control trial because they wanted to draw causal conclusions about the drug’s effect. Study volunteers were randomly assigned to one of two study groups. One group, the treatment group, received the drug. The control group did not receive any drug treatment.\nPut yourself in the place of a person in the study. If you are in the treatment group, you are given a fancy new drug that you anticipate will help you. If you are in the control group, you are not treated at all but instead sit by idly, knowing you are missing out on potentially life-saving treatment. These perspectives suggest there are actually two effects in this study: the one of interest is the effectiveness of the drug, and the second is the emotional effect of (not) taking the drug, which is difficult to quantify. In order to control for the emotional effect of taking a drug, the researchers decide to hide from patients which group they are in.\n\nBlinding\n\nThe practice of keeping someone uninformed about which subjects in the study have been assigned to treatment.\n\n\nWhen researchers keep the patients uninformed about the treatments they will receive, the study is said to be single-blind. But there is one problem: if a patient does not receive a treatment, they will know they’re in the control group. A solution to this problem is to give a fake treatment to patients in the control group. This is called a placebo, and an effective placebo is the key to making a study truly blind. A classic example of a placebo is a sugar pill that is made to look like the actual treatment pill. However, offering such a fake treatment may not be ethical in certain experiments. For example, in medical experiments, typically the control group must get the current standard of care. Oftentimes, a placebo results in a slight but real improvement in patients. This effect has been dubbed the placebo effect.\nThe patients are not the only ones who should be blinded: doctors and researchers can also unintentionally affect the outcome. When a doctor knows a patient has been given the real treatment, they might inadvertently give that patient more attention or care than a patient that they know is on the placebo. To guard against this, which again has been found to have a measurable effect in some instances, most modern studies employ a double-blind setup where doctors or researchers who interact with patients are, just like the patients, unaware of who is or is not receiving the treatment.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Randomized Experiments"
+    ]
+  },
+  {
+    "objectID": "4-causation/02-experiments/notes.html#using-additional-variables-in-experimental-design",
+    "href": "4-causation/02-experiments/notes.html#using-additional-variables-in-experimental-design",
+    "title": "Randomized Experiments",
+    "section": "Using additional variables in experimental design",
+    "text": "Using additional variables in experimental design\n\nCovariates\nLet’s return to our hypothetical pdf vs. website experiment and imagine that in addition to our subject’s names and understanding level we were able to collect some additional information about each of them.\n\n\n\n\n\n\n\n\nname\ngroup\nunderstanding\nmajor\nGPA\nnative_speaker\n\n\n\n\nEvelyn\npdf\ndeep\nStatistics\n3.81\nYes\n\n\nGrace\npdf\nshallow\nEconomics\n3.63\nNo\n\n\nJuan\npdf\ndeep\nEconomics\n3.20\nYes\n\n\nAlex\nwebsite\ndeep\nStatistics\n2.85\nNo\n\n\nMonica\nwebsite\nshallow\nEconomics\n3.19\nYes\n\n\nSriya\nwebsite\nshallow\nStatistics\n3.80\nYes\n\n\n\n\n\n\n\nWe introduce a new term to draw an important distinction based on when these additional variables were collected.\n\nCovariate\n\nA variable collected in a randomized experiment that was measured or determined prior to administering the treatment.\n\n\nNotice that covariates cannot be affected by the treatment since they were measured first. Variables measured after treatment, including the outcome variable, may be affected by the treatment.  In our example, it’s reasonable to imagine that major, GPA, and native speaker status could all have been measured prior to the assignment, so they are covariates.\n\n\n\nCovariate balance\nNote that many of these covariates seem likely to be associated with the outcome. For example, students with a higher GPA may be more committed to doing class readings and be more likely to gain a deep understanding regardless of format. If one group had more high-GPA students, that group might look like it had benefited from its reading format even if there were no difference between the formats for any single student. This motivates us to look for a quality called balance.\n\nCovariate balance\n\nA covariate is balanced if its empirical distribution in the treated group is similar to its empirical distribution in the control group.\n\n\nOn the other hand, if the distributions are very different between the treatment group and the control group, we say that the covariate is imbalanced.\nThere is a close link between covariate balance and randomized treatment assignment. Because treatment is randomly assigned with equal probability for each individual in our study, there is no way it should be able to systematically move higher-GPA students into one of the two groups. The same is true of all our other covariates. Thus we expect randomization to balance our covariates in general.\n\nTo check the balance of our GPA variable we can calculate a measure of difference between groups for a single covariate \\(x\\):\n\\[\nSMD(x) = \\frac{\\overline{x}_{treatment} - \\overline{x}_{control}}{\\sqrt{\\frac{1}{2}\\widehat{\\sigma}_{treatment}^2 + \\frac{1}{2}\\widehat{\\sigma}_{control}^2}}\n\\]\nThis quantity is called the standardized mean difference or SMD. The numerator is just the difference in means (subtracting the control mean from the treated mean). To make the differences in means comparable across variables with very different scales, we divide by a `pooled’ standard error estimate which comes from averaging the sample variances of the covariate in the two groups and taking its square error. For GPA in our data frame above, the difference in means between groups is 3.28 \\(-\\) 3.55 \\(=\\) -0.27 and the pooled standard error is 0.41, so the SMD is  -0.66.\n\n\nEvaluating covariate balance across an experiment\nTo get a quick look at balance across all our variables, we can create a Love plot:\n\n\n\n\n\n\n\n\n\nThe Love plot displays standardized mean differences (on a common scale on the x-axis) for all the covariates in our study, highlighting which covariates are most different between groups and in which direction.\nClearly in our experiment not all variables are perfectly balanced. This alone isn’t a red flag — after all, randomized experiments only balance covariates on average, and some small differences are expected — but it can be challenging to determine whether the differences are big enough to matter, especially in a study this small.\nOne way to address this problem is by using hypothesis tests. For each covariate, we can test the null hypothesis that this covariate is independent of treatment and produce a p-value. In practice this is just like the tests from the generalization unit, but it uses the covariate in the test statistic instead of the outcome. Here we conduct this test for GPA.\n\n\n\n\n\n\n\n\n\nThe p-value is 0.396. Clearly the difference in means we observed for GPA is not unexpected under random treatment assignment given our small sample size. Note that although our ultimate project here is investigating a causal claim, this particular step is an example of generalization: based on the particular set of treatment assignments we see in this dataset (the sample), we are making a claim about the broader process that generated the treatment assignments.\n\n\n\n\n\nOne of the most important reasons to check covariate balance is to catch problems with how the experiment was run. Suppose that we’d intended to sort a spreadsheet in a random order and assign the top half of the subjects to pdf, but that by accident we sorted on GPA instead of randomly. In this case our covariate balance test would likely have rejected the null hypothesis that treatment was randomly assigned, allowing us to catch the issue. For this reason it is often a good idea to check balance before actually running the experiment!",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Randomized Experiments"
+    ]
+  },
+  {
+    "objectID": "4-causation/02-experiments/notes.html#the-ideas-in-code",
+    "href": "4-causation/02-experiments/notes.html#the-ideas-in-code",
+    "title": "Randomized Experiments",
+    "section": "The Ideas in Code",
+    "text": "The Ideas in Code\nFirst we create a data frame to store the pdf vs. website data.\n\nformat_data &lt;- data.frame(name = c(\"Evelyn\", \"Grace\", \"Juan\", \"Alex\", \"Monica\", \"Sriya\"),\n                 group = c(\"pdf\", \"pdf\", \"pdf\", \"website\", \"website\", \"website\"),\n                 understanding = c(\"deep\", \"shallow\", \"deep\", \"deep\", \"shallow\", \n                                   \"shallow\"),\n                 major = c('Statistics', 'Economics', 'Economics', 'Statistics', \n                           'Economics', 'Statistics'),\n                 GPA = c(3.81, 3.63, 3.20, 2.85, 3.19, 3.80),\n                 native_speaker = c('Yes','No','Yes','No','Yes','Yes'))\n\nThe cobalt package in R contains the function bal.tab to create tables of standardized differences. By passing its output to plot you can create a Love plot. Note that cobalt expect treatment variables to be numeric or logical, so we begin by converting group to the logical variable is_website.\n\nlibrary(cobalt)\nformat_data &lt;- format_data |&gt;\n                mutate(is_website = group == 'website')\n\nbal.tab(is_website ~ major + GPA + native_speaker, data = format_data,\n        s.d.denom = 'pooled', binary = 'std') |&gt;\n  plot()\n\n\n\n\n\n\n\n\nRunning balance tests uses infer much like we did in the generalization unit. The covariate for which we are testing balance is the response and the treatment is the explanatory variable.\n\nlibrary(infer)\nset.seed(2024-3-25)\nobs_stat &lt;- format_data |&gt;\n   specify(explanatory = group,\n          response = GPA) |&gt;\n  calculate(stat = \"diff in means\", order = c(\"website\",\"pdf\"))\n\nnull &lt;- format_data |&gt;\n  specify(response = GPA,\n          explanatory = group) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 500, type = \"permute\") |&gt;\n  calculate(stat = \"diff in means\", order = c(\"website\",\"pdf\"))\n\nnull |&gt;\n  visualize() +\n  shade_p_value(obs_stat, direction = 'both')",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Randomized Experiments"
+    ]
+  },
+  {
+    "objectID": "4-causation/02-experiments/notes.html#summary",
+    "href": "4-causation/02-experiments/notes.html#summary",
+    "title": "Randomized Experiments",
+    "section": "Summary",
+    "text": "Summary\nYou may heard the phrase “Correlation does not imply causation … unless it’s seen in data from a randomized control trial.” While it is sometimes possible to make compelling causal claims from correlations found in data - a topic we will explore in depth soon - it does highlight the particular strength of RCTs. RCTs are able to isolate the effect of interest by creating a carefully selected control group and then assigning subjects to groups at random. By using a large number of replicates and checking balance on measured covariates we can demonstrate convincingly that our control group on average serves as a close counterfactual to our treatment group.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Randomized Experiments"
+    ]
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#making-claims-with-data",
+    "href": "4-causation/labs/taste-test/slides.html#making-claims-with-data",
+    "title": "Lab: A Matter of Taste",
+    "section": "Making Claims with Data",
+    "text": "Making Claims with Data\n\nSo far: Pose question -&gt; observe data -&gt; analyze data -&gt; make claim.\n\n\n\ne.g. Checking election results:\n\nDid fraud occur?\nObserve vote counts by city.\nTest of hypothesis that votes follow Benford’s law.\nVotes don’t follow Benford’s law well; but we wouldn’t expect them to in a fair election."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#making-claims-with-data-1",
+    "href": "4-causation/labs/taste-test/slides.html#making-claims-with-data-1",
+    "title": "Lab: A Matter of Taste",
+    "section": "Making Claims with Data",
+    "text": "Making Claims with Data\n\nThis week:\n\nIdentify possible claim\nImagine analysis that would show it.\nPlan data collection to allow that analysis.\nCarry out data collection + analysis.\nCheck claim.\n\n\n\nThis week students will work backwards: start with a claim that they think may be true, then decide how to collect data in a manner that will be most effective at determining whether or not the claim is true."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#but-first",
+    "href": "4-causation/labs/taste-test/slides.html#but-first",
+    "title": "Lab: A Matter of Taste",
+    "section": "But first",
+    "text": "But first\nPlease get into groups of 3 (or 4). Take turns introducing yourselves."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#a-matter-of-taste",
+    "href": "4-causation/labs/taste-test/slides.html#a-matter-of-taste",
+    "title": "Lab: A Matter of Taste",
+    "section": "A Matter of Taste",
+    "text": "A Matter of Taste\nYour challenge: Determine whether you can affect one your teammates’ perceptions of bubble water by manipulating their experience of tasting.\n\n\n\n\nEach team will have access to\n\n50 minutes (half of next class)\n2 cans of soda water, each one from a different flavor\nsmall paper cups\nsaltine crackers\nother materials welcome"
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#group-members",
+    "href": "4-causation/labs/taste-test/slides.html#group-members",
+    "title": "Lab: A Matter of Taste",
+    "section": "Group Members",
+    "text": "Group Members\n\n\nThe main reason for the roles here is to dedicate just one person to handling the materials for health safety."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#question-and-hypotheses",
+    "href": "4-causation/labs/taste-test/slides.html#question-and-hypotheses",
+    "title": "Lab: A Matter of Taste",
+    "section": "Question and Hypotheses",
+    "text": "Question and Hypotheses\n\n\nPrompt them to think carefully about their wording here in the question. How ambitious and general do they want to be?\nIt is also very common for people to suggest non-causal questions. It will help to underline the idea of intervention on this slide."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#hypotheses",
+    "href": "4-causation/labs/taste-test/slides.html#hypotheses",
+    "title": "Lab: A Matter of Taste",
+    "section": "Hypotheses",
+    "text": "Hypotheses"
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#protocol",
+    "href": "4-causation/labs/taste-test/slides.html#protocol",
+    "title": "Lab: A Matter of Taste",
+    "section": "Protocol",
+    "text": "Protocol\n\n\nHere they must be very precise. We’re spoken about reproducible science in class, so use that language to encourage careful work. They must be able to pass this protocol off to another group, and they should be able to carry out the intended experiment with no ambiguity."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#data",
+    "href": "4-causation/labs/taste-test/slides.html#data",
+    "title": "Lab: A Matter of Taste",
+    "section": "Data",
+    "text": "Data\n\n\nThis is intended to be a blank table with n rows and at least 1 column. They may plan to record either several extraneous variables or not enough to draw the conclusions they intend. As before, don’t correct them. They may discover mid-experiment that they did this part wrong, and that’s great."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#graphics",
+    "href": "4-causation/labs/taste-test/slides.html#graphics",
+    "title": "Lab: A Matter of Taste",
+    "section": "Graphics",
+    "text": "Graphics\n\n\nEncourage them to check that their viz is possible given their data frame and their data frame is possible give their protocol, and that their viz bears directly on their hypotheses."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#things-to-remember",
+    "href": "4-causation/labs/taste-test/slides.html#things-to-remember",
+    "title": "Lab: A Matter of Taste",
+    "section": "Things to remember",
+    "text": "Things to remember\n\nBe precise in your protocol.\nBe sure your claim corresponds to your protocol corresponds to your data corresponds to your plots.\nImportant: Part I must be fully completed and shown to instructor/tutor before beginning part II.\n\n\n  \n    −\n    +\n \n 50:00\n \n\nSTOP HERE ON DAY 1 OF THIS LAB!! The rest of the slides are to be covered once they have done the experiment on Day 2."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#the-essential-question-of-our-time",
+    "href": "4-causation/labs/taste-test/slides.html#the-essential-question-of-our-time",
+    "title": "Lab: A Matter of Taste",
+    "section": "The Essential Question of Our Time",
+    "text": "The Essential Question of Our Time\n\n\nWhich is the best flavor?\n\n\nThis purely for fun. Some people have strong opinions about this."
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/slides.html#section-1",
+    "href": "4-causation/labs/taste-test/slides.html#section-1",
+    "title": "Lab: A Matter of Taste",
+    "section": "",
+    "text": "Could your taster distinguish between flavors?\n\nYes, and it was statistically significant (p &lt; .05).\n\nYes, but it was not statistically significant (p &gt; .05).\n\nYes, but we haven’t conducted the test yet.\nNo.\n\nNot sure, we haven’t computed the difference in proportions yet.\nWe tested a different claim.\n\n\n\n\nThe goal of this question is to allow all groups to concisely share their results with the class. It also opens up the conversation about how there were many different ways to carry out this experiment. Two groups might have come to different conclusions because their tasters really had different abilities, or because their claims and experiments were slightly different, or just due to random chance.\nYou may want to project 1 or 2 protocols and ask the groups to talk through how they uses the principles of experimental design."
   },
   {
     "objectID": "3-generalization/11-hypothesis-tests-2/notes.html",
