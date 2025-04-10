@@ -214,7 +214,7 @@
     "href": "3-generalization/12-wrong-by-design/slides.html#section-5",
     "title": "Wrong By Design",
     "section": "",
-    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.482\n 2 2         0.509\n 3 3         0.490\n 4 4         0.5  \n 5 5         0.489\n 6 6         0.511\n 7 7         0.501\n 8 8         0.493\n 9 9         0.509\n10 10        0.490\n# ℹ 490 more rows"
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.497\n 2 2         0.492\n 3 3         0.504\n 4 4         0.513\n 5 5         0.487\n 6 6         0.470\n 7 7         0.507\n 8 8         0.479\n 9 9         0.490\n10 10        0.518\n# ℹ 490 more rows"
   },
   {
     "objectID": "3-generalization/12-wrong-by-design/slides.html#section-6",
@@ -1092,14 +1092,14 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 6: A Matter of Taste\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 6: A Matter of Taste\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 6: A Matter of Taste\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: UN Votes\n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 4: Elections\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 5: People's Park\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\n\nLab 6: A Matter of Taste\n\n  \n    Slides\n  \n\n  \n    Part I\n  \n\n  \n    Part II\n  \n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#worksheets",
@@ -1107,6 +1107,20 @@
     "title": "Assignments",
     "section": "Worksheets",
     "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Probability Foundations\n\n\nWS: Computing Probabilities\n\n\nWS: Probability Distributions\n\n\nWS: Random Variables\n\n\nWS: Expected Value and Variance\n\n\nWS: Sampling Distributions\n\n\nWS: Bootstrapping\n\n\nWS: Hypothesis Testing\n\n\nWS: Hypothesis Tests II\n\n\nWS: Wrong by Design\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/part-2.html",
+    "href": "4-causation/labs/taste-test/part-2.html",
+    "title": "A Matter of Taste",
+    "section": "",
+    "text": "List any changes that you made to your experimental protocol from when you formulated it on Tuesday/Wednesday and when you executed it on Thursday/Friday.\n\n\n\nCreate a data frame based of the data you collected, listed in the order in which it was collected, and print it out into your lab report. You can print all rows your data frame using slice(my_df, 1:100). Consult the tutorials from the beginning of the semester for a refresher on how to make a data frame. Does the data frame differ at all from the one that you sketched into your experimental protocol? If so, how?\n\n\n\nCreate a visualization of the data you collected (not the null distribution) similar to the one you sketched in the handout. Does it look clearly in support of your claim or contrary to your claim or somewhere in between?\n\n\n\nConsidering the order in which the data was collected as a numeric covariate, (i.e. 1 for the first observation, 2 for the second, etc.), compute and report its standardized mean difference. Conduct a hypothesis test to check whether run order differs significantly across your experimental groups and interpret the results.\n\n\n\nConduct a hypothesis test to determine whether your data is consistent with the null hypothesis. Be sure to provide.\n\nThe null and alternative hypotheses.\nThe value of the observed test statistic.\nA visualization of the null distribution and observed test statistic with the p-value shaded in.\nThe p-value and your conclusion (based on the \\(\\alpha\\)-value you selected in Part I) regarding the null hypothesis and the original claim.\n\n\n\n\nA thought experiment: if you did not find a significant effect, speculate as to what you could change about your protocol to increase the chance that you find an effect. If you did find a significant effect, speculate as to what you would change about your protocol if you wanted to decrease the chance that you’d find an effect if you were to repeat the experiment.\n\n\n\nWill you ensure that your submission to Gradescope…\n\nis of a pdf generated from a qmd file,\nhas all of your code visible to readers,\nand assigns each of the questions to all pages that show your work for that question?\n\n(This one is easy! Just answer “yes” or “no”)"
+  },
+  {
+    "objectID": "4-causation/labs/taste-test/part-2.html#part-ii-computing-on-the-data",
+    "href": "4-causation/labs/taste-test/part-2.html#part-ii-computing-on-the-data",
+    "title": "A Matter of Taste",
+    "section": "",
+    "text": "List any changes that you made to your experimental protocol from when you formulated it on Tuesday/Wednesday and when you executed it on Thursday/Friday.\n\n\n\nCreate a data frame based of the data you collected, listed in the order in which it was collected, and print it out into your lab report. You can print all rows your data frame using slice(my_df, 1:100). Consult the tutorials from the beginning of the semester for a refresher on how to make a data frame. Does the data frame differ at all from the one that you sketched into your experimental protocol? If so, how?\n\n\n\nCreate a visualization of the data you collected (not the null distribution) similar to the one you sketched in the handout. Does it look clearly in support of your claim or contrary to your claim or somewhere in between?\n\n\n\nConsidering the order in which the data was collected as a numeric covariate, (i.e. 1 for the first observation, 2 for the second, etc.), compute and report its standardized mean difference. Conduct a hypothesis test to check whether run order differs significantly across your experimental groups and interpret the results.\n\n\n\nConduct a hypothesis test to determine whether your data is consistent with the null hypothesis. Be sure to provide.\n\nThe null and alternative hypotheses.\nThe value of the observed test statistic.\nA visualization of the null distribution and observed test statistic with the p-value shaded in.\nThe p-value and your conclusion (based on the \\(\\alpha\\)-value you selected in Part I) regarding the null hypothesis and the original claim.\n\n\n\n\nA thought experiment: if you did not find a significant effect, speculate as to what you could change about your protocol to increase the chance that you find an effect. If you did find a significant effect, speculate as to what you would change about your protocol if you wanted to decrease the chance that you’d find an effect if you were to repeat the experiment.\n\n\n\nWill you ensure that your submission to Gradescope…\n\nis of a pdf generated from a qmd file,\nhas all of your code visible to readers,\nand assigns each of the questions to all pages that show your work for that question?\n\n(This one is easy! Just answer “yes” or “no”)"
   },
   {
     "objectID": "4-causation/notes.html",
@@ -1131,6 +1145,20 @@
       "Generalization",
       "Causation"
     ]
+  },
+  {
+    "objectID": "4-causation/02-experiments/slides.html#section",
+    "href": "4-causation/02-experiments/slides.html#section",
+    "title": "Experiments",
+    "section": "",
+    "text": "We run an experiment to see if informative phone calls encourage people to vote. We obtain phone numbers for 1000 registered voters and randomly assign half of them to receive calls from volunteers. The volunteers tell them the location of their polling place and the date of the election. Our outcome is whether or not the subjects vote in the next election.\n\nWhich of the following are possible covariates for our study?\n\nThe party affiliation of the voter (Republican or Democrat).\nWhether the next election is a presidential election or not.\nWhether the voter voted in the last election.\nWhether the voter votes primarily for Republicans or Democrats in the next election.\nWhether the treated voters hung up on the volunteer.\n\n\n\nThe point of this question is to get the students thinking about whether variables are measured before or after treatment assignment.A and C are correct answers, D and E are not (although E is measured before the primary outcome, it is still after treatment). B is technically a covariate but probably not a useful one; unless our experiments spans multiple election cycles, it will have the same value for all subjects.\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "4-causation/02-experiments/slides.html#section-1",
+    "href": "4-causation/02-experiments/slides.html#section-1",
+    "title": "Experiments",
+    "section": "",
+    "text": "Which of the following claims about covariate balance are true?\n\nRandomized treatment assignment tends to produce covariate balance.\nA standardized mean difference that is not equal to zero likely means that randomization was not conducted correctly.\nThe Love plot shows the (standardized) difference in means or proportions for each covariate across treatment groups.\nIn a hypothesis test for balance, the null hypothesis is that the treatment assignment and the covariate are independent.\n\n\n\nAll true except B\n\n\n\n\n−+\n01:00"
   },
   {
     "objectID": "4-causation/01-defining-causality/slides.html#section",
