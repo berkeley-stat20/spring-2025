@@ -214,7 +214,7 @@
     "href": "3-generalization/12-wrong-by-design/slides.html#section-5",
     "title": "Wrong By Design",
     "section": "",
-    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.505\n 2 2         0.507\n 3 3         0.510\n 4 4         0.513\n 5 5         0.529\n 6 6         0.489\n 7 7         0.484\n 8 8         0.481\n 9 9         0.502\n10 10        0.513\n# ℹ 490 more rows"
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.491\n 2 2         0.476\n 3 3         0.511\n 4 4         0.485\n 5 5         0.507\n 6 6         0.507\n 7 7         0.499\n 8 8         0.498\n 9 9         0.495\n10 10        0.530\n# ℹ 490 more rows"
   },
   {
     "objectID": "3-generalization/12-wrong-by-design/slides.html#section-6",
@@ -2941,7 +2941,14 @@
     "href": "5-prediction/01-method-of-least-squares/slides.html#concept-question-2",
     "title": "Method of Least Squares",
     "section": "Concept Question 2",
-    "text": "Concept Question 2\n\nHere is a function f.\n\n\nf &lt;- function(x, y) {\n  y*(x + 3) \n}\n\n\n\nWhat will the following line of code return?\n\n\n\n\nf(3,5)\n\n\nThis question reminds students that if function arguments are unnamed, they are assumed to have been input in the order they were originally specified as in the function definition. x will be assigned 3, and y will be assigned 5, so the correct answer is 30."
+    "text": "Concept Question 2\nAn analyst working for the UC Berkeley Admissions Office is working to help the university decide how many students to send offer letters to. They have a target class size (that fits within the budget and residence halls), but they’re not sure how many students will accept the offer. How many should they admit?\n\nThink of a potential response and predictor, and about whether this is a regression or classification problem.\n\n\n\n\n−+\n01:00\n\n\n\n\nThis is another very real task. Universities use what’s called a “yield model” to predict whether or not a student will accept the offer. That’s a classification method. Those classifiers aggregated up across all offers lead to a numerical prediction for the total yield, which looks more like a regression problem, so either answer could work. It could also be a direct regression model where they use aggregate stats of the class to predict the total yield.\nResponse is either the decision of a single student or the total number of students that accept. Predictors could be either student level covariates (for classification) or class-level averages (for regression). Those might also include broader economic indicators like unemployment rate."
+  },
+  {
+    "objectID": "5-prediction/01-method-of-least-squares/slides.html#concept-question-3",
+    "href": "5-prediction/01-method-of-least-squares/slides.html#concept-question-3",
+    "title": "Method of Least Squares",
+    "section": "Concept Question 3",
+    "text": "Concept Question 3\n\nHere is a function f.\n\n\nf &lt;- function(x, y) {\n  y*(x + 3) \n}\n\n\n\nWhat will the following line of code return?\n\n\n\n\nf(3,5)\n\n\nThis question reminds students that if function arguments are unnamed, they are assumed to have been input in the order they were originally specified as in the function definition. x will be assigned 3, and y will be assigned 5, so the correct answer is 30."
   },
   {
     "objectID": "5-prediction/05-logistic-regression/slides.html#agenda",
