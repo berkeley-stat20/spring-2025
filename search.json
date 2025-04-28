@@ -1013,7 +1013,7 @@
     "href": "3-generalization/12-wrong-by-design/slides.html#section-5",
     "title": "Wrong By Design",
     "section": "",
-    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.505\n 2 2         0.501\n 3 3         0.517\n 4 4         0.473\n 5 5         0.519\n 6 6         0.489\n 7 7         0.499\n 8 8         0.513\n 9 9         0.498\n10 10        0.5  \n# ℹ 490 more rows"
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.496\n 2 2         0.483\n 3 3         0.502\n 4 4         0.495\n 5 5         0.520\n 6 6         0.496\n 7 7         0.482\n 8 8         0.477\n 9 9         0.478\n10 10        0.522\n# ℹ 490 more rows"
   },
   {
     "objectID": "3-generalization/12-wrong-by-design/slides.html#section-6",
@@ -1749,111 +1749,6 @@
     "text": "Concept Question 3\n\nHere is a function f.\n\n\nf &lt;- function(x, y) {\n  y*(x + 3) \n}\n\n\n\nWhat will the following line of code return?\n\n\n\n\nf(3,5)\n\n\nThis question reminds students that if function arguments are unnamed, they are assumed to have been input in the order they were originally specified as in the function definition. x will be assigned 3, and y will be assigned 5, so the correct answer is 30."
   },
   {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#agenda",
-    "href": "5-prediction/05-logistic-regression/slides.html#agenda",
-    "title": "Logistic Regression",
-    "section": "Agenda",
-    "text": "Agenda\n\nAnnouncements\nConcept Questions\nBreak\nLab 6.2\nAppendix: Logistic Regression with the penguins dataset"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#announcements",
-    "href": "5-prediction/05-logistic-regression/slides.html#announcements",
-    "title": "Logistic Regression",
-    "section": "Announcements",
-    "text": "Announcements\n\nQuiz 4:\n\nMonday in class.\nWrong By Design through Logistic Regression\n\n\n\n\nProblem Sets:\n\nPS 18 (Overfitting) due next Tuesday at 9am\nExtra Practice (Logistic Regression)\n\n\n\n\n\nLab 6:\n\nboth parts due Tuesday at 9am"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section",
-    "href": "5-prediction/05-logistic-regression/slides.html#section",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "A logistic regression model was fit in an attempt to predict the sex of a penguin \"male\" or \"female\" based on its body mass (grams).\n\nAssuming that no change to the penguins dataset was made, will the model be predicting the probability of the penguin being male or the probability of the penguin being female?\n\n\n\n\n−+\n01:00"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section-1",
-    "href": "5-prediction/05-logistic-regression/slides.html#section-1",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "m1 &lt;- glm(sex ~ body_mass_g, data = penguins, family = \"binomial\")\n\n\n\n (Intercept)  body_mass_g \n-5.162541644  0.001239819 \n\n\n\nWhich of the expressions given in the poll (math or code) will correctly calculate the predicted probability that a penguin that weighs 4000 g is a female? Select all that apply\n\n\n\n\n−+\n01:00\n\n\n\n\nTo answer this one correctly, they’ll need to know (or remember from the RQ) that the reference level is female, so this model is predicting the probability male.\nYou can show that they can either use R as a calculator or use the predict function.\n1/(1 + exp(-(-5.15 + .00124 * 4000))) predict(m1, newdata = data.frame(body_mass_g = 4000), type = “response”)\nThe latter is more precise, which is useful here since p-hat (prob of male) is .449 therefore prob of female is .55.\nAs a bonus, try sketching this function on a scatterplot!\nWhen sketching this, the positive slope means the s-curve goes up and to the right. The negative intercept shifts the whole curve a tiny bit to the left, reflecting the base rate of a couple more males than females (168 vs 165)."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section-2",
-    "href": "5-prediction/05-logistic-regression/slides.html#section-2",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "What is the misclassification rate of this model?\n\n\n\n# A tibble: 4 × 3\n# Groups:   sex [2]\n  sex    y_hat      n\n  &lt;fct&gt;  &lt;chr&gt;  &lt;int&gt;\n1 female female   109\n2 female male      56\n3 male   female    74\n4 male   male      94\n\n\n\n\n\n−+\n01:00"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#section-3",
-    "href": "5-prediction/05-logistic-regression/slides.html#section-3",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "m2 &lt;- glm(sex ~ body_mass_g + bill_length_mm, \n          data = penguins, family = \"binomial\")\n\n\n\n   (Intercept)    body_mass_g bill_length_mm \n   -6.91208086     0.00101530     0.06112808 \n\n\n\nOpen up RStudio and fit the model here in the slides. What are the predicted sexes of these two penguins?\n\nbody mass = 3900 g, bill length = 50\nbody mass = 4100 g, bill length = 35\n\n\n\n\n\n−+\n01:00\n\n\n\n\nYou can have students work on their laptops for this question.\nThis one extends the task of the previous one by having them include another covariate and also to do the thresholding procedure to go from p-hat to y-hat. This doesn’t specify the threshold, so using .5 is probably a good default.\npredict(m2, newdata = data.frame(body_mass_g = 3900, bill_length_mm = 50), type = “response”) # male predict(m2, newdata = data.frame(body_mass_g = 4100, bill_length_mm = 35), type = “response”) # female"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
-    "href": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
-    "title": "Logistic Regression",
-    "section": "Building a predictive model",
-    "text": "Building a predictive model\n\nDecide on the mathematical form of the model: logistic linear regression\n\n\n\nSelect a metric that defines the “best” fit: the coefficients in logistic regression are the ones that minimize not the RSS function but a function called log-loss (which we don’t have time to cover)\n\n\n\n\nEstimating the coefficients of the model that are best using the training data: we know how to do this: test + train + glm()!\n\n\n\n\nEvaluating predictive accuracy using a test data set:\\(R^2\\) isn’t relevant here. We need a new metric!"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins",
-    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins",
-    "title": "Logistic Regression",
-    "section": "Example: penguins",
-    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
-    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
-    "title": "Logistic Regression",
-    "section": "Example: penguins",
-    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))\n\ntrain &lt;- penguins |&gt;\n  filter(set_type == \"train\")\n\ntest &lt;- penguins |&gt;\n  filter(set_type == \"test\")"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex)\n\n# A tibble: 70 × 1\n   sex   \n   &lt;fct&gt; \n 1 female\n 2 male  \n 3 female\n 4 male  \n 5 male  \n 6 female\n 7 male  \n 8 female\n 9 male  \n10 male  \n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat)\n\n# A tibble: 70 × 2\n   sex    p_hat\n   &lt;fct&gt;  &lt;dbl&gt;\n 1 female 0.345\n 2 male   0.566\n 3 female 0.259\n 4 male   0.280\n 5 male   0.365\n 6 female 0.196\n 7 male   0.428\n 8 female 0.220\n 9 male   0.559\n10 male   0.279\n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
-    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
-    "title": "Logistic Regression",
-    "section": "Predicting into test set",
-    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = predict(m2, test, type = \"response\"),\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"))\n\n# A tibble: 70 × 3\n   sex    p_hat y_hat \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt; \n 1 female 0.345 female\n 2 male   0.566 male  \n 3 female 0.259 female\n 4 male   0.280 female\n 5 male   0.365 female\n 6 female 0.196 female\n 7 male   0.428 female\n 8 female 0.220 female\n 9 male   0.559 male  \n10 male   0.279 female\n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#classification-errors",
-    "href": "5-prediction/05-logistic-regression/slides.html#classification-errors",
-    "title": "Logistic Regression",
-    "section": "Classification errors",
-    "text": "Classification errors\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"),\n         FP = sex == \"female\" & y_hat == \"male\",\n         FN = sex == \"male\" & y_hat == \"female\")\n\n# A tibble: 70 × 5\n   sex    p_hat y_hat  FP    FN   \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;lgl&gt; &lt;lgl&gt;\n 1 female 0.345 female FALSE FALSE\n 2 male   0.566 male   FALSE FALSE\n 3 female 0.259 female FALSE FALSE\n 4 male   0.280 female FALSE TRUE \n 5 male   0.365 female FALSE TRUE \n 6 female 0.196 female FALSE FALSE\n 7 male   0.428 female FALSE TRUE \n 8 female 0.220 female FALSE FALSE\n 9 male   0.559 male   FALSE FALSE\n10 male   0.279 female FALSE TRUE \n# ℹ 60 more rows"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
-    "href": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
-    "title": "Logistic Regression",
-    "section": "Misclassification Rate",
-    "text": "Misclassification Rate\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\")) |&gt;\n  summarize(MCR = mean(sex != y_hat))\n\n# A tibble: 1 × 1\n    MCR\n  &lt;dbl&gt;\n1 0.371"
-  },
-  {
     "objectID": "5-prediction/labs/07-baseball/part-2.html",
     "href": "5-prediction/labs/07-baseball/part-2.html",
     "title": "Baseball",
@@ -2477,55 +2372,6 @@
     "title": "Lab: Multiple Regression with Baseball",
     "section": "History of Sabermetrics",
     "text": "History of Sabermetrics\n\nHenry Chadwick, a NY sportswriter, developed the box score in 1859\n“Percentage Baseball” by Earnshaw Cook in 1964\nThe Bill James Baseball Abstract, annual book beginning in 1977\nMoneyball"
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html",
-    "href": "5-prediction/05-logistic-regression/notes.html",
-    "title": "Logistic Regression",
-    "section": "",
-    "text": "The framework that we used to build a predictive model for regression followed four distinct steps:\nWe used this process to build our first simple linear regression model to predict high school graduation rates but the same four steps are used by Zillow to build ZestimateTM, their deep learning model to predict house price.\nThese are also the same four steps that we will use as we shift in these notes to the task of classification. In a classification task, we seek to predict a response variable that is categorical, very often a two-level categorical variable. Classification models are everywhere: they help doctors determine whether or not a patient has a disease, whether or not an image contains a particular object (say, a person or a cat), and whether or not customer will purchase an item."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#example-spam-filters",
-    "href": "5-prediction/05-logistic-regression/notes.html#example-spam-filters",
-    "title": "Logistic Regression",
-    "section": "Example: Spam filters",
-    "text": "Example: Spam filters\nEmail spam, also referred to as junk email or simply spam, is unsolicited messages sent in bulk by email (spamming). The name comes from a Monty Python sketch in which the name of the canned pork product Spam is ubiquitous, unavoidable, and repetitive1. A spam filter is a classification model that determines whether or not a message is spam based on properties of that message. Every mainstream email client, including Gmail, has a spam filter built in to ensure that the messages that get through to the user are genuine messages.\n\nThe Data\nIn order to build a spam filter, we’ll need a data set to train our model on. This data set must have as the unit of observation a single email message, record whether or not the message was spam (the response), and record various features of the message that are associated with being spam (the predictors). Such a data set, with nearly 4000 observations, can be found in the email data frame in the openintro library.\n\n\n# A tibble: 3,921 × 21\n   spam  to_multiple from     cc sent_email time                image attach\n   &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;      &lt;dttm&gt;              &lt;dbl&gt;  &lt;dbl&gt;\n 1 0     0           1         0 0          2012-01-01 06:16:41     0      0\n 2 0     0           1         0 0          2012-01-01 07:03:59     0      0\n 3 0     0           1         0 0          2012-01-01 16:00:32     0      0\n 4 0     0           1         0 0          2012-01-01 09:09:49     0      0\n 5 0     0           1         0 0          2012-01-01 10:00:01     0      0\n 6 0     0           1         0 0          2012-01-01 10:04:46     0      0\n 7 0     1           1         0 1          2012-01-01 17:55:06     0      0\n 8 0     1           1         1 1          2012-01-01 18:45:21     1      1\n 9 0     0           1         0 0          2012-01-01 21:08:59     0      0\n10 0     0           1         0 0          2012-01-01 18:12:00     0      0\n# ℹ 3,911 more rows\n# ℹ 13 more variables: dollar &lt;dbl&gt;, winner &lt;fct&gt;, inherit &lt;dbl&gt;, viagra &lt;dbl&gt;,\n#   password &lt;dbl&gt;, num_char &lt;dbl&gt;, line_breaks &lt;int&gt;, format &lt;fct&gt;,\n#   re_subj &lt;fct&gt;, exclaim_subj &lt;dbl&gt;, urgent_subj &lt;fct&gt;, exclaim_mess &lt;dbl&gt;,\n#   number &lt;fct&gt;\n\n\nWe see in the left most column the response variable, spam, coded as 0 when a message is not spam and 1 when it is. The first predictor, to_multiple, is a 1 if the message was sent to multiple people and 0 otherwise. cc records the number of people who are cc’ed on the email. winner (listed as a variable below the glimpse of the dataframe) records whether or not the word “winner” showed up in the message. The remaining predictors you may be able to intuit by their names, but you can also read the help file that describes each one.\nThese variables seem like they might be useful in predicting whether or not an email is spam, but take a moment to consider: how were we able to get our hands on data like this?\nThis particular data set arose from selecting a single email account, saving every single messages that comes in to that address over the course of a month, processing each message to create values for the predictor variables, then visually classifying whether or not the message is spam. That’s to say: this data represents a human’s best effort to classify spam2. Can we build a model that will be able to identify the features that mark a message as spam to be able to automatically classify future messages?\n\n\n\n\n\nExploratory Data Analysis\nLet’s see how well a few tempting predictors work at separating spam from not spam by performing some exploratory data analysis. We might expect messages containing the word “winner” to be more likely to be spam than those that do not. A stacked, normalized bar chart can answer that question.\n\n\n\n\n\n\n\n\n\nIndeed, it looks like around 30% of emails with “winner” were spam, compared to roughly 10% of those without. At this point, we could consider a very simple spam filter: if the message contains “winner”, then classify it as spam.\nAlthough this is tempting, it is still a pretty weak classifier. Most of the messages with “winner” are not spam, so calling them spam will result in most of them being misclassified.\nSo if “winner” isn’t the silver bullet predictor we need, let’s try another: num_char. This variable records the total number of characters present in the message – how long it is. We probably have no prior sense of whether spam would be more likely to consist of short or long emails, so let’s visualize them. This predictor is numerical continuous, so let’s overlay two density plots to get a sense of the distribution between spam and not spam.\n\n\n\n\n\n\n\n\n\nThe original plot on the left is very difficult to read because this variable is heavily right-skewed: there are a small number of very long messages that obscure much of the data in the plot. On the right is a more useful visualization, one of the log-transformed version of the same variable.\nWe see a reasonable separation here: spam messages tend to be shorter than non-spam messages. We could consider another very simple spam filter: if the log number of characters is less than 1.2, classify it as spam.\nHowever, this simple filter suffers from the same problem as the first. Although these density plots have the same area, there are in fact far fewer overall instances of spam than not-spam. That means that there are far more not-spam messages with a log number of characters less than 1.2 than there are spam message. This filter, like the first, would misclassify much of the training data.\nWhat we need is a more general framework to fold the strength of these two variables - as well as many of the other ones in the data set - into a model that can produce a single, more accurate prediction. We will start from the framework of multiple linear regression and move to something that can be used for classification."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#from-linear-to-logistic-regression",
-    "href": "5-prediction/05-logistic-regression/notes.html#from-linear-to-logistic-regression",
-    "title": "Logistic Regression",
-    "section": "From Linear to Logistic Regression",
-    "text": "From Linear to Logistic Regression\nLet’s start by taking our existing simple linear regression model from the past few notes and applying it in this classification setting. We can visualize the relationship between log_num_char and spam using an ordinary scatter plot.\n\n\n\n\n\nThis is a strange looking scatter plot - the dots can only take y values of 0 or 1 - but it does capture the overall trend observed in the density plots, that spam messages are longer. Since we have a scatter plot, we can fit a simple linear regression model using the method of least squares (in gold).\n\\[ \\hat{y} = b_0 + b_1 x \\]\nWhile this is doable, it leaves us with a bit of a conundrum. For a low value of log_num_char it’s possible that we would predict \\(\\hat{y} = 1\\) and for a high value it’s possible that we’d predict \\(\\hat{y} = 0\\). But what if log_num_char is somewhere in the middle? What does it mean if we predict that the value of spam is .71?\nOne approach to resolving this is to treat our prediction not as a value of \\(y\\), but as a estimate of the probability, \\(\\hat{p}\\), that \\(y = 1\\). We can rewrite the model as:\n\\[ \\hat{p} = b_0 + b_1 x \\]\nThis resolves the conundrum of how to think about a prediction of .71. That is now the model’s determination of the probability that the message is spam. This tweak solves one problem, but it introduces another. How do we interpret predictions at very high values of log_num_char, where \\(\\hat{p}\\) is negative? Surely a probability cannot be negative!\nWe can fix this by changing the mathematical form of the model used to predict the response. Instead of it being a line, we can use an alternative function that prevents predictions greater than 1 and less than zero. The most commonly used function is called the standard logistic function:\n\\[ f(z) = \\frac{1}{1 + e^{-z}}\\]\n\\(z\\) can be any number of the real number line. As \\(z\\) gets large, \\(f(z)\\) approaches 1; as \\(z\\) is negative, \\(f(z)\\) approaches 0; when \\(z\\) is 0, \\(f(z)\\) is .5.\nThis is a very clever idea. It allows us to combine all of the information from our predictors into a single numerical score, \\(z\\). We can obtain \\(z\\) through a form that is familiar to us: \\(b_0 + b_1 x_1 + \\ldots + b_p x_p\\). This score can then be sent through the logistic function to estimate the probability that \\(y = 1\\). This method is called logistic regression.\n\nLogistic Regression (for prediction)\n\nA model to predict the probability that 0-1 response variable \\(y\\) is 1 using the inverse logit of a linear combination of predictors \\(x_1, x_2, \\ldots, x_p\\).\n\\[ \\hat{p} = \\frac{1}{1 + e^{-\\left(b_0 + b_1 x_1 + \\ldots + b_p x_p\\right)}} \\]\nCan be used as a classification model by setting up a rule of the form: if \\(\\hat{p}_i\\) &gt; threshold, then \\(\\hat{y}_i = 1\\).\n\n\nWe can visualize the approach that logistic regression takes by sketching the predictions as a green s-shaped curve on top of our scatter plot."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#classification-errors",
-    "href": "5-prediction/05-logistic-regression/notes.html#classification-errors",
-    "title": "Logistic Regression",
-    "section": "Classification errors",
-    "text": "Classification errors\nNow that we have a model archetype to move forward with, we are almost ready to build it and see how it does. First though, we should first consider what happens when our predictions are wrong. Hopefully, we will classify most of our e-mails correctly, but we will fail at least some of the time. We might predict that an e-mail is spam when it is not. In other cases, we might predict that an e-mail is not spam when it actually is. Therefore, there are two types of error we should consider.\nRecall that based on the email dataset, 1 refers to an e-mail which is truly spam. In a binary classification problem, we often call 1 a positive result. Likewise, 0 refers to an e-mail which is genuine. We call 0 a negative result. This sets up formal definitions for the two types of errors mentioned above.\n\nFalse Positives\n\nPredicting a 1 that is in fact a 0\n\nFalse Negatives\n\nPredicting a 0 that is in fact a 1\n\n\n\nMisclassification rate\nWhile thinking about failing is not exciting, it does give us a way to think about how well our classification model is doing. We would like the number of misclassifications over a large number of e-mails to be as small as possible. This fraction can be quantified as the misclassification rate or \\(\\text{MCR}\\) for short.\nMisclassification Rate\n\\[\\text{MCR} = \\frac{\\text{no. FP} + \\text{no. FN}}{\\text{no. of predictions}} = \\frac{\\text{no. of misclassifications}}{\\text{no. of predictions}}\\]\nJust like in a multiple linear regression context, we can fit a suite of different models on the training set and evaluate their performance on the testing set. Now, our model type of choice is logistic regression and our evaluation metric is \\(\\text{MCR}\\)."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#the-ideas-in-code",
-    "href": "5-prediction/05-logistic-regression/notes.html#the-ideas-in-code",
-    "title": "Logistic Regression",
-    "section": "The Ideas in Code",
-    "text": "The Ideas in Code\n\nFitting Logistic Regression with glm()\nThe computational machinery for fitting logistic regression looks almost identical to what we used for linear least squares regression. The primary function we’ll use is glm(). We will also use a different broom function called tidy() to display the coefficients \\(b_0\\) and \\(b_1\\). tidy() can also be used in a linear regression context as well.\n\n\n# A tibble: 2 × 3\n  term          estimate std.error\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)     -1.72     0.0606\n2 log(num_char)   -0.544    0.0365\n\n\nThese coefficients are a bit more challenging to interpret since they’re no longer linearly related to the response. The sign of the coefficient for log(num_char), however, is informative: it tells us that messages with more characters will be predicted to have a lower probability of being spam.\n\n\nEvaluating model performance\n\nCalculating \\(\\text{MCR}\\)\nLet’s take a look at the predictions that this model makes back into the data set that it was trained on. When using the predict() function on logistic regression models, there are several different types of predictions that it can return, so be sure to use the additional argument type and supply it with \"response\". This will return \\(\\hat{p}_i\\) (probability of 1) for each observation.\nWe can then move from values of \\(\\hat{p}_i\\) to values of \\(\\hat{y}_i\\). In general, our rule will be to check and see whether each value of \\(\\hat{p}_i\\) is greater than .5. If so, we will assign the value of 1; otherwise, we will assign it 0. This sounds similar to creating a logical variable, but assigning something different than TRUE and FALSE to each observation in the dataset. We will use a function called ifelse(), therefore, which will allow us to assign we want (1 and 0).\nThe following block of code completes both of these two steps and saves the results back into the email data frame.\nWe are now ready to calculate \\(\\text{MCR}\\). First, we can find all of the emails for which the y and y_hat_m1 don’t match. Then, we can take the proportion of those e-mails out of all e-mails in the dataset.\n\n\n# A tibble: 1 × 1\n     MCR\n   &lt;dbl&gt;\n1 0.0956\n\n\nOverall, we are misclassifying around 10 percent of all e-mails (both spam and genuine), which doesn’t look like a bad start, but we might want to take a little deeper of a dive to see how the model is misclassifying observations.\n\n\n\nFalse positives versus false negatives\nIndeed, we can see if the model is failing at classifiying one type of e-mail more than another. To do this, we can find the number of false positives and false negatives. We can group our observations by their actual class versus their predicted class. There are four possibilities, so there will be four groups.\n\nemail |&gt;\n  group_by(spam, y_hat_m1) |&gt;\n  summarise(n = n())\n\n# A tibble: 4 × 3\n# Groups:   spam [2]\n  spam  y_hat_m1     n\n  &lt;fct&gt;    &lt;dbl&gt; &lt;int&gt;\n1 0            0  3541\n2 0            1    13\n3 1            0   362\n4 1            1     5\n\n\nWe actually see that the model is doing great at predicting correctly when the e-mail is genuine (few false positives), but doing horribly at detecting spam (many, many false negatives). Only \\(5\\) out of the \\(367\\) spam e-mails are being classified correctly. Essentially all of our mistakes are in the form of false negatives! We also can see here that there are way more genuine e-mails than spam e-mails in the dataset, so our misclassification rate is being inflated as a result. Clearly, more than just the length of an e-mail is necessary to help us detect spam.\n\nTraining and testing sets\nOne final note: this \\(\\text{MCR}\\) was calculated over all of the data. The best way to evaluate the performance of the model is to split the data into training and testing sets, fit the model on the training set and evaluate it on the testing set. We can calculate both training and testing versions of \\(\\text{MCR}\\) and compare them to see if the model is doing well on e-mails it hasn’t yet seen."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#summary",
-    "href": "5-prediction/05-logistic-regression/notes.html#summary",
-    "title": "Logistic Regression",
-    "section": "Summary",
-    "text": "Summary\nIn these notes we introduced the concept of classification using a logistic regression model. Logistic regression uses the logistic function to transform predictions into a probability that the response is 1. These probabilities can be used to classify y as 0 or 1 by checked to see if they exceed a threshold (often .5).\nWe then went through the process of fitting logistic regression to help us classify spam e-mails, and evaluated our results using the misclassification rate."
-  },
-  {
-    "objectID": "5-prediction/05-logistic-regression/notes.html#footnotes",
-    "href": "5-prediction/05-logistic-regression/notes.html#footnotes",
-    "title": "Logistic Regression",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nDefinition from Wikipedia, along with the image, by freezelight/flickr.↩︎\nThis data collection and manual processing was done by a graduate student in statistics at UCLA. One of the many humdrum but valuable tasks asked of graduates students . . .↩︎"
   },
   {
     "objectID": "5-prediction/01-method-of-least-squares/notes.html",
