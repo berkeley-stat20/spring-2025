@@ -1013,7 +1013,7 @@
     "href": "3-generalization/12-wrong-by-design/slides.html#section-5",
     "title": "Wrong By Design",
     "section": "",
-    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.497\n 2 2         0.508\n 3 3         0.496\n 4 4         0.502\n 5 5         0.512\n 6 6         0.488\n 7 7         0.520\n 8 8         0.489\n 9 9         0.505\n10 10        0.516\n# ℹ 490 more rows"
+    "text": "null &lt;- ppk |&gt;\n  specify(response = support_before,\n          success = \"TRUE\") |&gt;\n  hypothesize(null = \"point\", p = .5) |&gt;\n  generate(reps = 500, type = \"draw\") |&gt;\n  calculate(stat = \"prop\")\nnull\n\nResponse: support_before (factor)\nNull Hypothesis: point\n# A tibble: 500 × 2\n   replicate  stat\n   &lt;fct&gt;     &lt;dbl&gt;\n 1 1         0.537\n 2 2         0.525\n 3 3         0.507\n 4 4         0.489\n 5 5         0.496\n 6 6         0.511\n 7 7         0.501\n 8 8         0.486\n 9 9         0.510\n10 10        0.505\n# ℹ 490 more rows"
   },
   {
     "objectID": "3-generalization/12-wrong-by-design/slides.html#section-6",
@@ -1747,6 +1747,97 @@
     "title": "Method of Least Squares",
     "section": "Concept Question 3",
     "text": "Concept Question 3\n\nHere is a function f.\n\n\nf &lt;- function(x, y) {\n  y*(x + 3) \n}\n\n\n\nWhat will the following line of code return?\n\n\n\n\nf(3,5)\n\n\nThis question reminds students that if function arguments are unnamed, they are assumed to have been input in the order they were originally specified as in the function definition. x will be assigned 3, and y will be assigned 5, so the correct answer is 30."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section",
+    "href": "5-prediction/05-logistic-regression/slides.html#section",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "A logistic regression model was fit in an attempt to predict the sex of a penguin \"male\" or \"female\" based on its body mass (grams).\n\nAssuming that no change to the penguins dataset was made, will the model be predicting the probability of the penguin being male or the probability of the penguin being female?\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section-1",
+    "href": "5-prediction/05-logistic-regression/slides.html#section-1",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "m1 &lt;- glm(sex ~ body_mass_g, data = penguins, family = \"binomial\")\n\n\n\n (Intercept)  body_mass_g \n-5.162541644  0.001239819 \n\n\n\nWhich of the expressions given in the poll (math or code) will correctly calculate the predicted probability that a penguin that weighs 4000 g is a female? Select all that apply\n\n\n\n\n−+\n01:00\n\n\n\n\nTo answer this one correctly, they’ll need to know (or remember from the RQ) that the reference level is female, so this model is predicting the probability male.\nYou can show that they can either use R as a calculator or use the predict function.\n1/(1 + exp(-(-5.15 + .00124 * 4000))) predict(m1, newdata = data.frame(body_mass_g = 4000), type = “response”)\nThe latter is more precise, which is useful here since p-hat (prob of male) is .449 therefore prob of female is .55.\nAs a bonus, try sketching this function on a scatterplot!\nWhen sketching this, the positive slope means the s-curve goes up and to the right. The negative intercept shifts the whole curve a tiny bit to the left, reflecting the base rate of a couple more males than females (168 vs 165)."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section-2",
+    "href": "5-prediction/05-logistic-regression/slides.html#section-2",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "What is the misclassification rate of this model?\n\n\n\n# A tibble: 4 × 3\n# Groups:   sex [2]\n  sex    y_hat      n\n  &lt;fct&gt;  &lt;chr&gt;  &lt;int&gt;\n1 female female   109\n2 female male      56\n3 male   female    74\n4 male   male      94\n\n\n\n\n\n−+\n01:00\n\n\n\n\n(56+74)/(109+56+74+94) = 130/333"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#section-3",
+    "href": "5-prediction/05-logistic-regression/slides.html#section-3",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "m2 &lt;- glm(sex ~ body_mass_g + bill_length_mm, \n          data = penguins, family = \"binomial\")\n\n\n\n   (Intercept)    body_mass_g bill_length_mm \n   -6.91208086     0.00101530     0.06112808 \n\n\n\nOpen up RStudio and fit the model here in the slides. What are the predicted sexes of these two penguins?\n\nbody mass = 3900 g, bill length = 50\nbody mass = 4100 g, bill length = 35\n\n\n\n\n\n−+\n01:00\n\n\n\n\nYou can have students work on their laptops for this question.\nThis one extends the task of the previous one by having them include another covariate and also to do the thresholding procedure to go from p-hat to y-hat. This doesn’t specify the threshold, so using .5 is probably a good default.\npredict(m2, newdata = data.frame(body_mass_g = 3900, bill_length_mm = 50), type = “response”) # male predict(m2, newdata = data.frame(body_mass_g = 4100, bill_length_mm = 35), type = “response”) # female\nOr they can do it “by hand”, in which case, the first one uses \\(z = -6.91208086 + 0.00101530 \\times 3900 + 0.06112808\\times 50 = 0.1039931\\) so \\(\\hat{p} = \\frac{1}{1+exp(-0.1039931)} = 0.5259749\\) and we would predict male. For the second, we have that \\(z = -6.91208086 + 0.00101530 \\times 4100 + 0.06112808 \\times 35 = -0.6098681\\). Plugging this into the logistic function gives \\(\\hat{p} = \\frac{1}{1+exp(0.6098681)} = 0.3520893\\), so we would predict female."
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
+    "href": "5-prediction/05-logistic-regression/slides.html#building-a-predictive-model",
+    "title": "Logistic Regression",
+    "section": "Building a predictive model",
+    "text": "Building a predictive model\n\nDecide on the mathematical form of the model: logistic linear regression\n\n\n\nSelect a metric that defines the “best” fit: the coefficients in logistic regression are the ones that minimize not the RSS function but a function called log-loss (which we don’t have time to cover)\n\n\n\n\nEstimating the coefficients of the model that are best using the training data: we know how to do this: test + train + glm()!\n\n\n\n\nEvaluating predictive accuracy using a test data set:\\(R^2\\) isn’t relevant here. We need a new metric!"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins",
+    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins",
+    "title": "Logistic Regression",
+    "section": "Example: penguins",
+    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
+    "href": "5-prediction/05-logistic-regression/slides.html#example-penguins-1",
+    "title": "Logistic Regression",
+    "section": "Example: penguins",
+    "text": "Example: penguins\n\nset.seed(132)\n\n# randomly sample train/test set split\nset_type &lt;- sample(x = c('train', 'test'), \n                   size = nrow(penguins), \n                   replace = TRUE, \n                   prob = c(0.8, 0.2))\n\ntrain &lt;- penguins |&gt;\n  filter(set_type == \"train\")\n\ntest &lt;- penguins |&gt;\n  filter(set_type == \"test\")"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-1",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex)\n\n# A tibble: 70 × 1\n   sex   \n   &lt;fct&gt; \n 1 female\n 2 male  \n 3 female\n 4 male  \n 5 male  \n 6 female\n 7 male  \n 8 female\n 9 male  \n10 male  \n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-2",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\np_hat &lt;- predict(m2, test, type = \"response\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat)\n\n# A tibble: 70 × 2\n   sex    p_hat\n   &lt;fct&gt;  &lt;dbl&gt;\n 1 female 0.345\n 2 male   0.566\n 3 female 0.259\n 4 male   0.280\n 5 male   0.365\n 6 female 0.196\n 7 male   0.428\n 8 female 0.220\n 9 male   0.559\n10 male   0.279\n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
+    "href": "5-prediction/05-logistic-regression/slides.html#predicting-into-test-set-3",
+    "title": "Logistic Regression",
+    "section": "Predicting into test set",
+    "text": "Predicting into test set\n\nm2 &lt;- glm(sex ~ body_mass_g + bill_length_mm,\n          data = train, family = \"binomial\")\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = predict(m2, test, type = \"response\"),\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"))\n\n# A tibble: 70 × 3\n   sex    p_hat y_hat \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt; \n 1 female 0.345 female\n 2 male   0.566 male  \n 3 female 0.259 female\n 4 male   0.280 female\n 5 male   0.365 female\n 6 female 0.196 female\n 7 male   0.428 female\n 8 female 0.220 female\n 9 male   0.559 male  \n10 male   0.279 female\n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#classification-errors",
+    "href": "5-prediction/05-logistic-regression/slides.html#classification-errors",
+    "title": "Logistic Regression",
+    "section": "Classification errors",
+    "text": "Classification errors\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\"),\n         FP = sex == \"female\" & y_hat == \"male\",\n         FN = sex == \"male\" & y_hat == \"female\")\n\n# A tibble: 70 × 5\n   sex    p_hat y_hat  FP    FN   \n   &lt;fct&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;lgl&gt; &lt;lgl&gt;\n 1 female 0.345 female FALSE FALSE\n 2 male   0.566 male   FALSE FALSE\n 3 female 0.259 female FALSE FALSE\n 4 male   0.280 female FALSE TRUE \n 5 male   0.365 female FALSE TRUE \n 6 female 0.196 female FALSE FALSE\n 7 male   0.428 female FALSE TRUE \n 8 female 0.220 female FALSE FALSE\n 9 male   0.559 male   FALSE FALSE\n10 male   0.279 female FALSE TRUE \n# ℹ 60 more rows"
+  },
+  {
+    "objectID": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
+    "href": "5-prediction/05-logistic-regression/slides.html#misclassification-rate",
+    "title": "Logistic Regression",
+    "section": "Misclassification Rate",
+    "text": "Misclassification Rate\n\ntest |&gt;\n  select(sex) |&gt;\n  mutate(p_hat = p_hat,\n         y_hat = ifelse(p_hat &gt; .5, \"male\", \"female\")) |&gt;\n  summarize(MCR = mean(sex != y_hat))\n\n# A tibble: 1 × 1\n    MCR\n  &lt;dbl&gt;\n1 0.371"
   },
   {
     "objectID": "5-prediction/labs/08-cancer/slides.html#fine-needle-aspiration-biopsy",
@@ -4119,7 +4210,7 @@
     "href": "assignments.html#worksheets",
     "title": "Assignments",
     "section": "Worksheets",
-    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Probability Foundations\n\n\nWS: Computing Probabilities\n\n\nWS: Probability Distributions\n\n\nWS: Random Variables\n\n\nWS: Expected Value and Variance\n\n\nWS: Sampling Distributions\n\n\nWS: Bootstrapping\n\n\nWS: Hypothesis Testing\n\n\nWS: Hypothesis Tests II\n\n\nWS: Wrong by Design\n\n\nWS: Causal Effects in Observational Studies\n\n\nWS: Using Time to Measure Causal Effects\n\n\nWS: The Method of Least Squares\n\n\nWS: Evaluating and Improving Predictions\n\n\nWS: Diagnosing Cancer\n\n\nWS: Diagnosing Cancer\n\n\nWS: Overfitting\n\n\n\nNo matching items"
+    "text": "Worksheets\nWorksheets are pen-and-paper practice problems that we work on in class. The goal of the worksheets is simply practice: they help you drill the techniques needed to complete the labs.\n\n\n\nWS: Taxonomy of Data\n\n\nWS: Summarizing Categorical Data\n\n\nWS: Summarizing Numerical Data\n\n\nWS: A Grammar of Graphics\n\n\nWS: Conditioning\n\n\nWS: Summarizing Numerical Associations\n\n\nWS: Probability Foundations\n\n\nWS: Computing Probabilities\n\n\nWS: Probability Distributions\n\n\nWS: Random Variables\n\n\nWS: Expected Value and Variance\n\n\nWS: Sampling Distributions\n\n\nWS: Bootstrapping\n\n\nWS: Hypothesis Testing\n\n\nWS: Hypothesis Tests II\n\n\nWS: Wrong by Design\n\n\nWS: Causal Effects in Observational Studies\n\n\nWS: Using Time to Measure Causal Effects\n\n\nWS: The Method of Least Squares\n\n\nWS: Evaluating and Improving Predictions\n\n\nWS: Diagnosing Cancer\n\n\nWS: Diagnosing Cancer\n\n\nWS: Overfitting\n\n\nWS: Diagnosing Cancer\n\n\n\nNo matching items"
   },
   {
     "objectID": "2-summarizing-data/labs/flights/slides.html#section",
