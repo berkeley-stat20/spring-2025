@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/index.html",
-    "items": []
-  },
-  {
     "listing": "/assignments.html",
     "items": [
       "/4-causation/labs/taste-test/slides.html",
@@ -50,5 +46,9 @@
       "/4-causation/04-time/ws.pdf",
       "/3-generalization/12-wrong-by-design/ws.pdf"
     ]
+  },
+  {
+    "listing": "/index.html",
+    "items": []
   }
 ]
